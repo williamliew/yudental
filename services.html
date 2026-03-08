@@ -15,7 +15,10 @@
       <a href="index.html" class="logo" aria-label="Yu Dental Laboratory home">
         <img src="yu-dental.png" alt="Yu Dental Laboratory" width="160" height="56">
       </a>
-      <nav class="main-nav" aria-label="Main navigation">
+      <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="services.html" class="current">Services</a>
@@ -73,5 +76,22 @@
   <footer class="site-footer">
     <p>&copy; Yu Dental Laboratory. All rights reserved.</p>
   </footer>
+  <script>
+    (function() {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('main-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function() {
+        var open = document.body.classList.toggle('nav-open');
+        btn.setAttribute('aria-expanded', open);
+      });
+      nav.addEventListener('click', function(e) {
+        if (e.target.closest('a')) {
+          document.body.classList.remove('nav-open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
