@@ -10,46 +10,112 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="logo" aria-label="Yu Dental Laboratory home">
-        <img src="yu-dental.png" alt="Yu Dental Laboratory" width="160" height="56">
-      </a>
-      <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
-        <span></span><span></span><span></span>
-      </button>
-      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="services.html">Services</a>
-        <a href="team.html">Our Team</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="book.html" class="nav-cta current">Book Online</a>
-      </nav>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header site-header--lumino">
+    <div class="header-topbar">
+      <div class="header-topbar-inner">
+        <p class="header-tagline"><a href="about.html">Quality NZ-made appliances · family laboratory since 2000</a></p>
+        <a class="header-phone" href="tel:+6443887491" aria-label="Call Yu Dental Laboratory">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span>04-388 7491</span>
+        </a>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="header-main-inner">
+        <a href="index.html" class="logo" aria-label="Yu Dental Laboratory home">
+          <img src="yu-dental.png" alt="Yu Dental Laboratory" width="180" height="60">
+        </a>
+        <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="header-nav-cluster">
+          <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="denture-services.html">Treatment/ Dental Services</a>
+            <a href="dental-lab-services.html">Dental lab</a>
+            <a href="team.html">The Team</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <div class="header-actions">
+            <button type="button" class="header-search-toggle" aria-expanded="false" aria-controls="site-search" aria-label="Search this site">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            </button>
+            <a href="book.html" class="header-book-cta" aria-label="Book online now">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2z"/></svg>
+              <span>Book online<br>now</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="site-search" class="site-search" hidden>
+      <div class="site-search-inner">
+        <label class="sr-only" for="site-search-input">Search this site</label>
+        <input type="search" id="site-search-input" placeholder="Search (use the menu for main sections)" autocomplete="off">
+        <p class="site-search-hint">Patients: <strong>Treatment/ Dental Services</strong> and <strong>Book online</strong>. Clinicians: <strong>Dental lab</strong> and <strong>Contact</strong>.</p>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section class="page-hero">
-      <h1>Book Online</h1>
+  <main id="main-content">
+    <section class="page-banner" aria-labelledby="page-banner-heading">
+      <div class="page-banner-bg" aria-hidden="true"></div>
+      <div class="page-banner-inner">
+        <h1 id="page-banner-heading">Book an appointment</h1>
+        <p class="page-banner-tagline">New or existing patient, then choose your treatment.</p>
+      </div>
     </section>
 
-    <div class="page-content">
-      <p class="book-intro">We work with referring clinicians. To discuss a case, request a quote or arrange a lab visit, get in touch by phone or use the form below. We'll respond as soon as we can.</p>
+    <div class="page-content page-content--book">
+      <p class="book-intro">Tell us whether you are new to us or returning, then choose the treatment you need. Add your contact details and preferred times; we will get back to you to confirm an appointment.</p>
 
-      <div class="form-placeholder">
-        <p><strong>Example form (for content inspiration)</strong></p>
-        <p>Name / Practice</p>
-        <input type="text" placeholder="Your name or practice name" disabled>
-        <p>Email</p>
-        <input type="email" placeholder="email@example.com" disabled>
-        <p>Message</p>
-        <textarea placeholder="Brief description of case or enquiry..." disabled></textarea>
+      <div class="contact-form-card">
+        <p class="form-message" data-form-message hidden></p>
+        <form id="book-form" data-static-form novalidate>
+          <div class="form-row">
+            <label for="b-patient">Patient type</label>
+            <select id="b-patient" name="patient_type" required>
+              <option value="">Select…</option>
+              <option>New patient</option>
+              <option>Existing patient</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="b-treatment">Treatment</label>
+            <select id="b-treatment" name="treatment" required>
+              <option value="">Select…</option>
+              <option>Consultation</option>
+              <option>New dentures</option>
+              <option>Reline / refitting</option>
+              <option>Addition to existing denture</option>
+              <option>Repair</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="b-name">Your name <span aria-hidden="true">*</span></label>
+            <input id="b-name" name="name" type="text" required autocomplete="name">
+          </div>
+          <div class="form-row">
+            <label for="b-phone">Contact number <span aria-hidden="true">*</span></label>
+            <input id="b-phone" name="phone" type="tel" required autocomplete="tel">
+          </div>
+          <div class="form-row">
+            <label for="b-email">Email <span aria-hidden="true">*</span></label>
+            <input id="b-email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div class="form-row">
+            <label for="b-pref">Preferred days / times</label>
+            <textarea id="b-pref" name="preferred" placeholder="Optional"></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Submit request</button>
+        </form>
       </div>
 
       <div class="book-actions">
-        <a href="tel:04-3887491" class="btn-read">Call 04-388 7491</a>
-        <a href="contact.html" class="btn-read">View Contact &amp; Map</a>
+        <a href="tel:+6443887491" class="btn-read">Call 04-388 7491</a>
+        <a href="contact.html" class="btn-read">Contact &amp; map</a>
       </div>
     </div>
   </main>
@@ -57,22 +123,6 @@
   <footer class="site-footer">
     <p>&copy; Yu Dental Laboratory. All rights reserved.</p>
   </footer>
-  <script>
-    (function() {
-      var btn = document.querySelector('.nav-toggle');
-      var nav = document.getElementById('main-nav');
-      if (!btn || !nav) return;
-      btn.addEventListener('click', function() {
-        var open = document.body.classList.toggle('nav-open');
-        btn.setAttribute('aria-expanded', open);
-      });
-      nav.addEventListener('click', function(e) {
-        if (e.target.closest('a')) {
-          document.body.classList.remove('nav-open');
-          btn.setAttribute('aria-expanded', 'false');
-        }
-      });
-    })();
-  </script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>

@@ -10,51 +10,83 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="logo" aria-label="Yu Dental Laboratory home">
-        <img src="yu-dental.png" alt="Yu Dental Laboratory" width="160" height="56">
-      </a>
-      <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
-        <span></span><span></span><span></span>
-      </button>
-      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html" class="current">About Us</a>
-        <a href="services.html">Services</a>
-        <a href="team.html">Our Team</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="book.html" class="nav-cta">Book Online</a>
-      </nav>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header site-header--lumino">
+    <div class="header-topbar">
+      <div class="header-topbar-inner">
+        <p class="header-tagline"><a href="about.html">Quality NZ-made appliances · family laboratory since 2000</a></p>
+        <a class="header-phone" href="tel:+6443887491" aria-label="Call Yu Dental Laboratory">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span>04-388 7491</span>
+        </a>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="header-main-inner">
+        <a href="index.html" class="logo" aria-label="Yu Dental Laboratory home">
+          <img src="yu-dental.png" alt="Yu Dental Laboratory" width="180" height="60">
+        </a>
+        <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="header-nav-cluster">
+          <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="current">About</a>
+            <a href="denture-services.html">Treatment/ Dental Services</a>
+            <a href="dental-lab-services.html">Dental lab</a>
+            <a href="team.html">The Team</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <div class="header-actions">
+            <button type="button" class="header-search-toggle" aria-expanded="false" aria-controls="site-search" aria-label="Search this site">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            </button>
+            <a href="book.html" class="header-book-cta" aria-label="Book online now">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2z"/></svg>
+              <span>Book online<br>now</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="site-search" class="site-search" hidden>
+      <div class="site-search-inner">
+        <label class="sr-only" for="site-search-input">Search this site</label>
+        <input type="search" id="site-search-input" placeholder="Search (use the menu for main sections)" autocomplete="off">
+        <p class="site-search-hint">Patients: <strong>Treatment/ Dental Services</strong> and <strong>Book online</strong>. Clinicians: <strong>Dental lab</strong> and <strong>Contact</strong>.</p>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section class="page-hero">
-      <h1>About Us</h1>
-    </section>
-
-    <section class="about">
-      <div class="about-story">
-        <h2>Our Story</h2>
-        <a href="contact.html" class="btn-read btn-read-light">Get in Touch</a>
-      </div>
-      <div class="about-content">
-        <h2>Get to Know Us</h2>
-        <p>Established in 2000, Yu Dental Laboratory started as a small family business working from the basement of their home in the eastern suburbs of Wellington. Along with 50 years of industry experience, our aim is to provide our clients and patients with quality New Zealand made dental appliances and comprehensive professional service.</p>
-        <p>As a team, we are passionate about the art and skill of providing quality aesthetics, functionality &amp; phonetics made with materials that are certified to NZ and European standards. We deal with a full spectrum of complexity on a daily basis and no case is too difficult. Building relationships with our clients &amp; patients is important to us as we aim to give you confidence in both our work and services.</p>
+  <main id="main-content">
+    <section class="page-banner" aria-labelledby="page-banner-heading">
+      <div class="page-banner-bg" aria-hidden="true"></div>
+      <div class="page-banner-inner">
+        <h1 id="page-banner-heading">Yu Dental Laboratory</h1>
+        <p>A family-oriented Wellington lab with decades of combined experience.</p>
       </div>
     </section>
 
-    <section class="gallery" aria-label="Gallery">
-      <h2 class="section-title">In the Lab</h2>
+    <div class="about-family page-banner-follow">
+      <div class="about-family-photo" role="img" aria-label="Family portrait placeholder: replace with your photo of dad, mum and you"></div>
+    </div>
+
+    <div class="about-longform">
+      <p>Established in 2000, Yu Dental Laboratory started as a small family business working from the basement of their home in the eastern suburbs of Wellington. Along with 50 years of industry experience, our aim is to provide our clients and patients with quality New Zealand made dental appliances and comprehensive professional service. As a team, we are passionate about the art and skill of providing quality aesthetics, functionality &amp; phonetics made with materials that are certified to NZ and European standards. We deal with a full spectrum of complexity on a daily basis and no case is too difficult. Building relationships with our clients &amp; patients is important to us as we aim to give you confidence in both our work and services.</p>
+      <p class="text-muted">We have kept this page as one family story rather than separate bios for each team member, as requested.</p>
+    </div>
+
+    <section class="gallery" aria-label="Historical laboratory photographs">
+      <h2 class="section-title">From the family archive</h2>
+      <p class="section-intro">Swap these placeholders for older photos of the lab when you have scans ready.</p>
       <div class="honeycomb">
-        <div class="honeycomb-cell" style="background-image: url(https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=400&fit=crop);"></div>
         <div class="honeycomb-cell" style="background-image: url(https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=400&fit=crop);"></div>
-        <div class="honeycomb-cell" style="background-image: url(https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&h=400&fit=crop);"></div>
-        <div class="honeycomb-cell" style="background-image: url(https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&h=400&fit=crop);"></div>
-        <div class="honeycomb-cell" style="background-image: url(https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&h=400&fit=crop);"></div>
         <div class="honeycomb-cell" style="background-image: url(https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=400&fit=crop);"></div>
+        <div class="honeycomb-cell" style="background-image: url(https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&h=400&fit=crop);"></div>
+        <div class="honeycomb-cell" style="background-image: url(https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=400&fit=crop);"></div>
+        <div class="honeycomb-cell" style="background-image: url(https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&h=400&fit=crop);"></div>
+        <div class="honeycomb-cell" style="background-image: url(https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=400&fit=crop);"></div>
       </div>
     </section>
   </main>
@@ -62,22 +94,6 @@
   <footer class="site-footer">
     <p>&copy; Yu Dental Laboratory. All rights reserved.</p>
   </footer>
-  <script>
-    (function() {
-      var btn = document.querySelector('.nav-toggle');
-      var nav = document.getElementById('main-nav');
-      if (!btn || !nav) return;
-      btn.addEventListener('click', function() {
-        var open = document.body.classList.toggle('nav-open');
-        btn.setAttribute('aria-expanded', open);
-      });
-      nav.addEventListener('click', function(e) {
-        if (e.target.closest('a')) {
-          document.body.classList.remove('nav-open');
-          btn.setAttribute('aria-expanded', 'false');
-        }
-      });
-    })();
-  </script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>

@@ -10,84 +10,196 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="logo" aria-label="Yu Dental Laboratory home">
-        <img src="yu-dental.png" alt="Yu Dental Laboratory" width="160" height="56">
-      </a>
-      <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
-        <span></span><span></span><span></span>
-      </button>
-      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-        <a href="index.html" class="current">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="services.html">Services</a>
-        <a href="team.html">Our Team</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="book.html" class="nav-cta">Book Online</a>
-      </nav>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header site-header--lumino">
+    <div class="header-topbar">
+      <div class="header-topbar-inner">
+        <p class="header-tagline"><a href="about.html">Quality NZ-made appliances · family laboratory since 2000</a></p>
+        <a class="header-phone" href="tel:+6443887491" aria-label="Call Yu Dental Laboratory">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span>04-388 7491</span>
+        </a>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="header-main-inner">
+        <a href="index.html" class="logo" aria-label="Yu Dental Laboratory home">
+          <img src="yu-dental.png" alt="Yu Dental Laboratory" width="180" height="60">
+        </a>
+        <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="header-nav-cluster">
+          <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+            <a href="index.html" class="current">Home</a>
+            <a href="about.html">About</a>
+            <a href="denture-services.html">Treatment/ Dental Services</a>
+            <a href="dental-lab-services.html">Dental lab</a>
+            <a href="team.html">The Team</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <div class="header-actions">
+            <button type="button" class="header-search-toggle" aria-expanded="false" aria-controls="site-search" aria-label="Search this site">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            </button>
+            <a href="book.html" class="header-book-cta" aria-label="Book online now">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2z"/></svg>
+              <span>Book online<br>now</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="site-search" class="site-search" hidden>
+      <div class="site-search-inner">
+        <label class="sr-only" for="site-search-input">Search this site</label>
+        <input type="search" id="site-search-input" placeholder="Search (use the menu for main sections)" autocomplete="off">
+        <p class="site-search-hint">Patients: <strong>Treatment/ Dental Services</strong> and <strong>Book online</strong>. Clinicians: <strong>Dental lab</strong> and <strong>Contact</strong>.</p>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-bg" role="img" aria-label="Patient smile close-up"></div>
-      <a href="contact.html" class="chat-cta">Let's Chat!</a>
+  <main id="main-content">
+    <section id="home" class="hero hero--home" aria-labelledby="hero-heading">
+      <div class="hero-bg" role="img" aria-hidden="true"></div>
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-kicker">Quality · craftsmanship · New Zealand made</p>
+        <h1 id="hero-heading" class="hero-title">Yu Dental Laboratory</h1>
+        <p class="hero-intro">Wellington family laboratory since 2000. We make dental appliances on site for patients and referring clinicians, with materials certified to NZ and European standards.</p>
+        <p class="hero-intro hero-intro--secondary">Whether you need dentures and appliances or crown, bridge and implant work, we focus on aesthetics, function and honest timelines.</p>
+        <div class="hero-actions">
+          <a href="book.html" class="hero-cta hero-cta--primary">Book online</a>
+          <a href="contact.html" class="hero-cta hero-cta--secondary">Let&apos;s chat</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="departments" aria-labelledby="dept-heading">
+      <h2 id="dept-heading" class="section-title">Patients and referring clinicians</h2>
+      <p class="departments-intro">Patients see us for dentures, relines, repairs, mouthguards and related care. Referring practices rely on us for crown, bridge and implant laboratory work—everything is planned and made here in Wellington.</p>
+      <div class="departments-grid">
+        <a class="dept-card dept-card--denture" href="denture-services.html">
+          <h2>Denture clinic</h2>
+          <p>For patients and the community: dentures, relines, repairs, guards and more.</p>
+          <span class="dept-cta">View denture services</span>
+        </a>
+        <a class="dept-card dept-card--lab" href="dental-lab-services.html">
+          <h2>Dental lab</h2>
+          <p>For clinicians: NZ-made appliances, turnaround times and nationwide courier.</p>
+          <span class="dept-cta">View dental lab</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="dental-icons" aria-labelledby="dental-icons-heading">
+      <h2 id="dental-icons-heading" class="section-title">Dental services</h2>
+      <p class="section-intro">A snapshot of how we help patients and referrers. Full detail sits on the denture and laboratory pages.</p>
+      <div class="icon-grid">
+        <div class="icon-tile">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="22" r="10"/><path d="M18 34c2 4 10 4 12 0"/><path d="M20 20h2M26 20h2"/></svg>
+          <span>Dentures &amp; partials</span>
+        </div>
+        <div class="icon-tile">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="10" width="20" height="26" rx="3"/><path d="M18 18h12M18 24h8"/></svg>
+          <span>Repairs &amp; relines</span>
+        </div>
+        <div class="icon-tile">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 30c8-6 20-6 28 0"/><path d="M16 22l4 4 8-10"/></svg>
+          <span>Mouthguards</span>
+        </div>
+        <div class="icon-tile">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="22" r="8"/><path d="M14 38h20"/></svg>
+          <span>Whitening trays</span>
+        </div>
+        <div class="icon-tile">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 8v8M24 32v8M8 24h8M32 24h8"/><circle cx="24" cy="24" r="6"/></svg>
+          <span>Sleep apnoea devices</span>
+        </div>
+        <div class="icon-tile">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="12" y="14" width="24" height="20" rx="2"/><path d="M16 22h16"/></svg>
+          <span>Lab prescriptions</span>
+        </div>
+      </div>
     </section>
 
     <section id="services" class="services">
-      <h2 class="section-title">Our Services</h2>
-      <p class="section-intro">We fabricate a full range of dental appliances for referring clinicians across New Zealand. All work is made on-site using materials certified to NZ and European standards.</p>
+      <h2 class="section-title">Featured work</h2>
+      <p class="section-intro">We fabricate a full range of dental appliances for patients and referring clinicians. Materials are certified to NZ and European standards.</p>
       <div class="services-grid">
         <article class="service-card">
           <div class="service-image" style="background-image: url(https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=400&fit=crop);"></div>
           <div class="service-body">
-            <h3>Crowns &amp; Bridges</h3>
-            <p>Single crowns and fixed bridgework for restorative and aesthetic cases. We work with high-strength ceramics and precious alloys to match your prescriptions and shade guides.</p>
-            <a href="services.html" class="btn-read">Read More</a>
+            <h3>Crowns &amp; bridges</h3>
+            <p>Single crowns and fixed bridgework for restorative and aesthetic cases.</p>
+            <a href="dental-lab-services.html" class="btn-read">Dental lab</a>
           </div>
         </article>
         <article class="service-card">
           <div class="service-image" style="background-image: url(https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&h=400&fit=crop);"></div>
           <div class="service-body">
-            <h3>Full &amp; Partial Dentures</h3>
-            <p>Complete and partial removable dentures with attention to aesthetics, function and phonetics. Conventional and implant-retained options; we handle complex cases and relines.</p>
-            <a href="services.html" class="btn-read">Read More</a>
+            <h3>Full &amp; partial dentures</h3>
+            <p>Removable dentures with attention to aesthetics, function and phonetics.</p>
+            <a href="denture-services.html" class="btn-read">Treatment/ Dental Services</a>
           </div>
         </article>
         <article class="service-card">
           <div class="service-image" style="background-image: url(https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&h=400&fit=crop);"></div>
           <div class="service-body">
-            <h3>Implant Prosthetics</h3>
-            <p>Implant-supported crowns, bridges and overdentures. We work from your implant-level impressions and provide restorations that integrate with your surgical and restorative plan.</p>
-            <a href="services.html" class="btn-read">Read More</a>
+            <h3>Implant prosthetics</h3>
+            <p>Implant-supported crowns, bridges and overdentures from your impressions.</p>
+            <a href="dental-lab-services.html" class="btn-read">Dental lab</a>
           </div>
         </article>
         <article class="service-card">
           <div class="service-image" style="background-image: url(https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&h=400&fit=crop);"></div>
           <div class="service-body">
-            <h3>Orthodontics &amp; Mouthguards</h3>
-            <p>Removable orthodontic appliances and custom-fit mouthguards for sport and bruxism. Fabricated to fit and designed for patient compliance and durability.</p>
-            <a href="services.html" class="btn-read">Read More</a>
+            <h3>Guards &amp; appliances</h3>
+            <p>Sports mouthguards, splints and related appliances made to fit.</p>
+            <a href="denture-services.html" class="btn-read">Treatment/ Dental Services</a>
           </div>
         </article>
       </div>
     </section>
 
-    <section id="about" class="about">
-      <div class="about-story">
-        <h2>Our Story</h2>
-        <a href="about.html" class="btn-read btn-read-light">Read More</a>
+    <section class="promise-section" aria-labelledby="promise-heading">
+      <div class="promise-shell">
+        <div class="promise-text">
+          <h2 id="promise-heading">Our promise</h2>
+          <p>We combine craftsmanship with modern materials so every appliance looks natural, feels stable and supports clear speech. Whether you are a patient or a referring clinician, you get the same careful technical standards.</p>
+        </div>
+        <div class="promise-image" role="img" aria-label="Modern dental laboratory environment"></div>
+        <div class="promise-list-wrap">
+          <h3>Services</h3>
+          <ul class="promise-list">
+            <li>Full and partial dentures</li>
+            <li>Relines, repairs and additions</li>
+            <li>Implant-supported prosthetics</li>
+            <li>Sports mouthguards</li>
+            <li>Sleep apnoea devices</li>
+            <li>Whitening trays</li>
+            <li>Crown, bridge and lab work for practices</li>
+          </ul>
+        </div>
       </div>
-      <div class="about-content">
-        <h2>Get to Know Us</h2>
-        <p>Established in 2000, Yu Dental Laboratory started as a small family business working from the basement of their home in the eastern suburbs of Wellington. Along with 50 years of industry experience, our aim is to provide our clients and patients with quality New Zealand made dental appliances and comprehensive professional service.</p>
-        <p>As a team, we are passionate about the art and skill of providing quality aesthetics, functionality &amp; phonetics made with materials that are certified to NZ and European standards. We deal with a full spectrum of complexity on a daily basis and no case is too difficult. Building relationships with our clients &amp; patients is important to us as we aim to give you confidence in both our work and services.</p>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="about-shell">
+        <div class="about-story">
+          <h2>Our story</h2>
+          <a href="about.html" class="btn-read btn-read-light">Read more</a>
+        </div>
+        <div class="about-content">
+          <h2>Get to know us</h2>
+          <p>Established in 2000, Yu Dental Laboratory started as a small family business working from the basement of their home in the eastern suburbs of Wellington. Along with 50 years of industry experience, our aim is to provide our clients and patients with quality New Zealand made dental appliances and comprehensive professional service.</p>
+          <p>As a team, we are passionate about the art and skill of providing quality aesthetics, functionality &amp; phonetics made with materials that are certified to NZ and European standards. We deal with a full spectrum of complexity on a daily basis and no case is too difficult.</p>
+        </div>
       </div>
     </section>
 
     <section class="gallery" aria-label="Gallery">
-      <h2 class="section-title">In the Lab</h2>
+      <h2 class="section-title">In the lab</h2>
       <div class="honeycomb">
         <div class="honeycomb-cell" style="background-image: url(https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=400&fit=crop);"></div>
         <div class="honeycomb-cell" style="background-image: url(https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=400&fit=crop);"></div>
@@ -99,59 +211,36 @@
     </section>
 
     <section id="team" class="team">
-      <h2 class="section-title">Our Team</h2>
-      <p class="section-intro">Our dedicated team works closely with referring clinicians to deliver exceptional technical support and consistent results. We focus on clear communication, turnaround times and quality control so you can trust every case that leaves the lab.</p>
-      <div class="team-grid">
-        <figure class="team-card">
-          <div class="team-photo" style="background-image: url(https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=500&fit=crop);"></div>
-          <figcaption>
-            <strong>Name</strong><br>
-            <span>Role / e.g. Senior Dental Technician</span>
-          </figcaption>
-        </figure>
-        <figure class="team-card">
-          <div class="team-photo" style="background-image: url(https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=500&fit=crop);"></div>
-          <figcaption>
-            <strong>Name</strong><br>
-            <span>Role / e.g. Clinical Dental Technician</span>
-          </figcaption>
-        </figure>
-        <figure class="team-card">
-          <div class="team-photo" style="background-image: url(https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=500&fit=crop);"></div>
-          <figcaption>
-            <strong>Name</strong><br>
-            <span>Role / e.g. Dental Technician</span>
-          </figcaption>
-        </figure>
-      </div>
+      <h2 class="section-title">Our team</h2>
+      <p class="section-intro">We are a close-knit laboratory family. Meet the team on the dedicated page; we focus on how we work together rather than long individual bios.</p>
+      <p class="section-intro section-intro--cta"><a href="team.html" class="btn-read">The Team</a></p>
     </section>
 
     <section id="contact" class="contact">
-      <h2 class="section-title">Contact Us</h2>
+      <h2 class="section-title">Contact us</h2>
       <div class="contact-block">
         <div class="contact-details">
-          <h3>Our Address</h3>
+          <h3>Our address</h3>
           <p>12 College Street<br>Te Aro, Wellington</p>
-          <p><strong>Tel:</strong> 04-388 7491</p>
+          <p><strong>Tel:</strong> <a href="tel:+6443887491">04-388 7491</a></p>
         </div>
         <div class="contact-details">
-          <h3>Opening Hours</h3>
+          <h3>Opening hours</h3>
           <p>Monday – Friday 8.30am – 5pm</p>
-          <p>Saturday Closed</p>
-          <p>Sunday Closed</p>
+          <p>Saturday closed</p>
+          <p>Sunday closed</p>
         </div>
       </div>
       <div class="map-wrap">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.272909999754!2d174.776!3d-41.292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDE3JzMxLjIiUyAxNzTCsDQ2JzMzLjYiRQ!5e0!3m2!1sen!2snz!4v1"
+          title="Map: Yu Dental Laboratory, Wellington"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=174.7695%2C-41.2918%2C174.7785%2C-41.2965&amp;layer=mapnik&amp;marker=-41.2941,174.7740"
           width="100%"
           height="320"
-          style="border:0;"
-          allowfullscreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Yu Dental Laboratory location map">
+          referrerpolicy="no-referrer-when-downgrade">
         </iframe>
+        <p class="map-link"><a href="https://www.google.com/maps/search/?api=1&amp;query=12+College+Street+Te+Aro+Wellington">Open in Google Maps</a></p>
       </div>
     </section>
   </main>
@@ -159,22 +248,6 @@
   <footer class="site-footer">
     <p>&copy; Yu Dental Laboratory. All rights reserved.</p>
   </footer>
-  <script>
-    (function() {
-      var btn = document.querySelector('.nav-toggle');
-      var nav = document.getElementById('main-nav');
-      if (!btn || !nav) return;
-      btn.addEventListener('click', function() {
-        var open = document.body.classList.toggle('nav-open');
-        btn.setAttribute('aria-expanded', open);
-      });
-      nav.addEventListener('click', function(e) {
-        if (e.target.closest('a')) {
-          document.body.classList.remove('nav-open');
-          btn.setAttribute('aria-expanded', 'false');
-        }
-      });
-    })();
-  </script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>

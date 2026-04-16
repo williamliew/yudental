@@ -10,79 +10,126 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="logo" aria-label="Yu Dental Laboratory home">
-        <img src="yu-dental.png" alt="Yu Dental Laboratory" width="160" height="56">
-      </a>
-      <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
-        <span></span><span></span><span></span>
-      </button>
-      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="services.html">Services</a>
-        <a href="team.html">Our Team</a>
-        <a href="contact.html" class="current">Contact Us</a>
-        <a href="book.html" class="nav-cta">Book Online</a>
-      </nav>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header site-header--lumino">
+    <div class="header-topbar">
+      <div class="header-topbar-inner">
+        <p class="header-tagline"><a href="about.html">Quality NZ-made appliances · family laboratory since 2000</a></p>
+        <a class="header-phone" href="tel:+6443887491" aria-label="Call Yu Dental Laboratory">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span>04-388 7491</span>
+        </a>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="header-main-inner">
+        <a href="index.html" class="logo" aria-label="Yu Dental Laboratory home">
+          <img src="yu-dental.png" alt="Yu Dental Laboratory" width="180" height="60">
+        </a>
+        <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="header-nav-cluster">
+          <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="denture-services.html">Treatment/ Dental Services</a>
+            <a href="dental-lab-services.html">Dental lab</a>
+            <a href="team.html">The Team</a>
+            <a href="contact.html" class="current">Contact</a>
+          </nav>
+          <div class="header-actions">
+            <button type="button" class="header-search-toggle" aria-expanded="false" aria-controls="site-search" aria-label="Search this site">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            </button>
+            <a href="book.html" class="header-book-cta" aria-label="Book online now">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2z"/></svg>
+              <span>Book online<br>now</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="site-search" class="site-search" hidden>
+      <div class="site-search-inner">
+        <label class="sr-only" for="site-search-input">Search this site</label>
+        <input type="search" id="site-search-input" placeholder="Search (use the menu for main sections)" autocomplete="off">
+        <p class="site-search-hint">Patients: <strong>Treatment/ Dental Services</strong> and <strong>Book online</strong>. Clinicians: <strong>Dental lab</strong> and <strong>Contact</strong>.</p>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section class="page-hero">
-      <h1>Contact Us</h1>
+  <main id="main-content">
+    <section class="page-banner" aria-labelledby="page-banner-heading">
+      <div class="page-banner-bg" aria-hidden="true"></div>
+      <div class="page-banner-inner">
+        <h1 id="page-banner-heading">Contact us</h1>
+        <p class="page-banner-tagline">Send a message, find us on the map and read parking notes.</p>
+      </div>
     </section>
 
-    <section class="contact">
-      <div class="contact-block">
-        <div class="contact-details">
-          <h3>Our Address</h3>
+    <div class="contact-page-grid">
+      <div class="contact-form-card">
+        <h2>Send us a message</h2>
+        <p class="form-note">Dental lab enquiries and patient questions both welcome. This demo form does not send email from the server; submit shows a confirmation note so you can wire up a backend later.</p>
+        <p class="form-message" data-form-message hidden></p>
+        <form id="contact-form" data-static-form novalidate>
+          <div class="form-row">
+            <label for="c-name">Your name <span aria-hidden="true">*</span></label>
+            <input id="c-name" name="name" type="text" required autocomplete="name">
+          </div>
+          <div class="form-row">
+            <label for="c-phone">Contact number <span aria-hidden="true">*</span></label>
+            <input id="c-phone" name="phone" type="tel" required autocomplete="tel">
+          </div>
+          <div class="form-row">
+            <label for="c-email">Email address <span aria-hidden="true">*</span></label>
+            <input id="c-email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div class="form-row">
+            <label for="c-subject">Subject</label>
+            <input id="c-subject" name="subject" type="text" autocomplete="on">
+          </div>
+          <div class="form-row">
+            <label for="c-msg">Your message</label>
+            <textarea id="c-msg" name="message"></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send</button>
+        </form>
+      </div>
+      <aside class="contact-aside">
+        <div class="contact-details contact-details-card">
+          <h3>Our address</h3>
           <p>12 College Street<br>Te Aro, Wellington</p>
-          <p><strong>Tel:</strong> 04-388 7491</p>
+          <p><strong>Tel:</strong> <a href="tel:+6443887491">04-388 7491</a></p>
+          <h3>Opening hours</h3>
+          <p>Monday – Friday 8.30am – 5pm<br>Saturday &amp; Sunday closed</p>
         </div>
-        <div class="contact-details">
-          <h3>Opening Hours</h3>
-          <p>Monday – Friday 8.30am – 5pm</p>
-          <p>Saturday Closed</p>
-          <p>Sunday Closed</p>
+        <div class="amenities">
+          <h3>Parking &amp; access</h3>
+          <ul>
+            <li>Off-street parking nearby (update with your exact arrangement).</li>
+            <li>Free parking options if applicable (placeholder text).</li>
+          </ul>
         </div>
-      </div>
-      <div class="map-wrap">
-        <!-- Replace src with embed code from Google Maps (Search 12 College St, Te Aro, Wellington → Share → Embed map). -->
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.272909999754!2d174.776!3d-41.292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDE3JzMxLjIiUyAxNzTCsDQ2JzMzLjYiRQ!5e0!3m2!1sen!2snz!4v1"
-          width="100%"
-          height="320"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Yu Dental Laboratory location map">
-        </iframe>
-      </div>
-    </section>
+        <div class="map-wrap">
+          <iframe
+            title="Map: Yu Dental Laboratory, Wellington"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=174.7695%2C-41.2918%2C174.7785%2C-41.2965&amp;layer=mapnik&amp;marker=-41.2941,174.7740"
+            width="100%"
+            height="320"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <p class="map-link"><a href="https://www.google.com/maps/search/?api=1&amp;query=12+College+Street+Te+Aro+Wellington">Open in Google Maps</a></p>
+        </div>
+      </aside>
+    </div>
   </main>
 
   <footer class="site-footer">
     <p>&copy; Yu Dental Laboratory. All rights reserved.</p>
   </footer>
-  <script>
-    (function() {
-      var btn = document.querySelector('.nav-toggle');
-      var nav = document.getElementById('main-nav');
-      if (!btn || !nav) return;
-      btn.addEventListener('click', function() {
-        var open = document.body.classList.toggle('nav-open');
-        btn.setAttribute('aria-expanded', open);
-      });
-      nav.addEventListener('click', function(e) {
-        if (e.target.closest('a')) {
-          document.body.classList.remove('nav-open');
-          btn.setAttribute('aria-expanded', 'false');
-        }
-      });
-    })();
-  </script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>
