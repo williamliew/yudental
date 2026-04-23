@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Denture referrals | Yu Dental Laboratory</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header site-header--lumino">
+    <div class="header-accent" aria-hidden="true"></div>
+    <div class="header-pre">
+      <div class="header-pre-inner">
+        <p class="header-tagline"><em>Quality, Craftsmanship,</em> NZ Made.</p>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="header-main-inner">
+        <div class="header-brand">
+          <a href="index.html" class="logo logo--framed" aria-label="Yu Dental Laboratory home">
+            <img src="yu-dental.png" alt="Yu Dental Laboratory" width="200" height="67">
+          </a>
+        </div>
+        <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="header-nav-cluster">
+          <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="denture-services.html">Treatment/ Dental Services</a>
+            <a href="dental-lab-services.html">Dental lab</a>
+            <a href="denture-referrals.html" class="current">Referrals</a>
+            <a href="team.html">Our team</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <div class="header-actions">
+            <a class="header-phone header-phone--inline" href="tel:+6443887491" aria-label="Call Yu Dental Laboratory">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>04-388 7491</span>
+            </a>
+            <button type="button" class="header-search-toggle" aria-expanded="false" aria-controls="site-search" aria-label="Search this site">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            </button>
+            <a href="book.html" class="header-book-cta" aria-label="Book online now">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2z"/></svg>
+              <span>Book online<br>now</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="site-search" class="site-search" hidden>
+      <div class="site-search-inner">
+        <label class="sr-only" for="site-search-input">Search this site</label>
+        <input type="search" id="site-search-input" placeholder="Search (use the menu for main sections)" autocomplete="off">
+        <p class="site-search-hint">Patients: <strong>Treatment/ Dental Services</strong> and <strong>Book online</strong>. Clinicians: <strong>Dental lab</strong>, <strong>Referrals</strong> and <strong>Contact</strong>.</p>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="referral-page">
+      <h1 class="referral-page-title">Denture referrals</h1>
+      <p class="referral-page-lead">We welcome referrals from dentists and specialists. Use this form to send patient details and supporting documents so we can tailor treatment and keep your practice informed.</p>
+
+      <div class="referral-form-card">
+        <p class="form-note">This form is a front-end demo: it does not email the server yet. Submit shows a confirmation message; connect your backend or form service when you are ready.</p>
+        <p class="form-message" data-form-message hidden></p>
+
+        <form id="referral-form" data-static-form novalidate>
+          <fieldset class="referral-fieldset">
+            <legend class="referral-legend">Referring dentist information</legend>
+            <div class="form-row">
+              <label for="ref-surgery">Dental surgery name <span class="label-required" aria-hidden="true">*</span></label>
+              <input id="ref-surgery" name="surgery_name" type="text" required autocomplete="organization">
+            </div>
+            <div class="form-row">
+              <label for="ref-dentist">Dentist name <span class="label-required" aria-hidden="true">*</span></label>
+              <input id="ref-dentist" name="dentist_name" type="text" required autocomplete="name">
+            </div>
+          </fieldset>
+
+          <fieldset class="referral-fieldset">
+            <legend class="referral-legend">Patient&apos;s information</legend>
+            <div class="form-row">
+              <label for="ref-patient-name">Name <span class="label-required" aria-hidden="true">*</span></label>
+              <input id="ref-patient-name" name="patient_name" type="text" required autocomplete="name">
+            </div>
+            <div class="form-row">
+              <span class="referral-label" id="ref-dob-label">Date of birth <span class="label-required" aria-hidden="true">*</span></span>
+              <div class="referral-dob-row" role="group" aria-labelledby="ref-dob-label">
+                <div class="form-row referral-dob-field">
+                  <label class="referral-sublabel" for="ref-dob-day">Day</label>
+                  <select id="ref-dob-day" name="dob_day" required aria-required="true">
+                    <option value="">Day</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                  </select>
+                </div>
+                <div class="form-row referral-dob-field">
+                  <label class="referral-sublabel" for="ref-dob-month">Month</label>
+                  <select id="ref-dob-month" name="dob_month" required aria-required="true">
+                    <option value="">Month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                  </select>
+                </div>
+                <div class="form-row referral-dob-field">
+                  <label class="referral-sublabel" for="ref-dob-year">Year</label>
+                  <select id="ref-dob-year" name="dob_year" required aria-required="true">
+                    <option value="">Year</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-row form-row--split">
+              <div class="form-row-split-item">
+                <label for="ref-email">Email <span class="label-required" aria-hidden="true">*</span></label>
+                <input id="ref-email" name="patient_email" type="email" required autocomplete="email">
+              </div>
+              <div class="form-row-split-item">
+                <label for="ref-phone">Phone <span class="label-required" aria-hidden="true">*</span></label>
+                <input id="ref-phone" name="patient_phone" type="tel" required autocomplete="tel">
+              </div>
+            </div>
+            <div class="form-row">
+              <label for="ref-address">Address <span class="label-required" aria-hidden="true">*</span></label>
+              <input id="ref-address" name="patient_address" type="text" required autocomplete="street-address">
+            </div>
+          </fieldset>
+
+          <fieldset class="referral-fieldset">
+            <legend class="referral-legend">Referral details</legend>
+            <div class="form-row">
+              <label for="ref-help">How can we help? <span class="label-required" aria-hidden="true">*</span></label>
+              <select id="ref-help" name="help_type" required>
+                <option value="assessment">Assessment / consultation</option>
+                <option value="new-dentures">New dentures</option>
+                <option value="reline">Reline / refitting</option>
+                <option value="repair">Repair</option>
+                <option value="addition">Addition to existing denture</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <span class="referral-label" id="ref-files-label">Referral letter / supporting documents</span>
+              <div class="file-dropzone">
+                <label class="file-dropzone-label">
+                  <input id="referral-files" type="file" name="documents[]" accept=".pdf,application/pdf" multiple aria-labelledby="ref-files-label">
+                  <span class="file-dropzone-hint">Drop files here or</span>
+                  <span class="file-dropzone-btn">Select files</span>
+                </label>
+                <p class="file-hint">Accepted file types: PDF. Max. file size: 15 MB per file. Max. files: 5.</p>
+                <p class="file-list" id="referral-file-list" aria-live="polite"></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="form-row referral-verify">
+            <p class="form-note form-note--compact">When you go live, replace this block with Google reCAPTCHA (or your host&apos;s spam protection) and keep the privacy notice in your privacy policy.</p>
+            <label class="referral-checkbox">
+              <input type="checkbox" name="confirm_human" value="1" required>
+              <span>I confirm this referral is submitted by someone at the referring practice.</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn-submit-referral">Submit</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; Yu Dental Laboratory. All rights reserved.</p>
+  </footer>
+  <script>
+    (function () {
+      var yearSel = document.getElementById('ref-dob-year');
+      if (yearSel) {
+        var y = new Date().getFullYear();
+        var minY = 1920;
+        for (var yr = y; yr >= minY; yr--) {
+          var opt = document.createElement('option');
+          opt.value = String(yr);
+          opt.textContent = String(yr);
+          yearSel.appendChild(opt);
+        }
+      }
+    })();
+  </script>
+  <script src="js/site.js" defer></script>
+</body>
+</html>
