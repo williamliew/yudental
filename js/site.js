@@ -51,28 +51,8 @@
         var t = w.querySelector('.nav-dropdown-toggle');
         if (t) t.setAttribute('aria-expanded', 'false');
       });
-      var search = document.getElementById('site-search');
-      if (search && !search.hidden) {
-        search.hidden = true;
-        var st = document.querySelector('.header-search-toggle');
-        if (st) st.setAttribute('aria-expanded', 'false');
-      }
     }
   });
-
-  var searchToggle = document.querySelector('.header-search-toggle');
-  var searchPanel = document.getElementById('site-search');
-  if (searchToggle && searchPanel) {
-    searchToggle.addEventListener('click', function () {
-      var open = searchPanel.hidden;
-      searchPanel.hidden = !open;
-      searchToggle.setAttribute('aria-expanded', open);
-      if (open) {
-        var inp = searchPanel.querySelector('input');
-        if (inp) inp.focus();
-      }
-    });
-  }
 
   document.querySelectorAll('form[data-static-form]').forEach(function (form) {
     form.addEventListener('submit', function (e) {

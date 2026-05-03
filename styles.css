@@ -275,28 +275,6 @@ a:hover {
   gap: 0.5rem;
 }
 
-.header-search-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border: none;
-  border-radius: 0.25rem;
-  background: transparent;
-  color: var(--white);
-  cursor: pointer;
-}
-
-.header-search-toggle:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.header-search-toggle svg {
-  width: 22px;
-  height: 22px;
-}
-
 .header-book-cta {
   display: flex;
   flex-direction: column;
@@ -327,43 +305,6 @@ a:hover {
   width: 22px;
   height: 22px;
   fill: currentColor;
-}
-
-.site-search {
-  background: var(--lumino-navy-deep);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 0.75rem 1.5rem 1rem;
-}
-
-.site-search-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.site-search input[type="search"] {
-  width: 100%;
-  max-width: 420px;
-  padding: 0.55rem 0.75rem;
-  border-radius: 0.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--white);
-  font-family: var(--font-sans);
-}
-
-.site-search input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.site-search-hint {
-  margin: 0.5rem 0 0;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.site-search-hint a {
-  color: var(--lumino-teal);
-  font-weight: 600;
 }
 
 .nav-dropdown {
@@ -2066,14 +2007,15 @@ body.nav-open .nav-toggle span:nth-child(3) {
 .denture-accordions .denture-panel-body {
   display: grid;
   grid-template-columns: 100px 1fr;
-  gap: 1rem;
-  padding: 0 1.1rem 1.1rem;
+  gap: 1.25rem;
+  padding: 1.25rem 1.35rem 1.35rem;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 @media (max-width: 600px) {
   .denture-accordions .denture-panel-body {
     grid-template-columns: 1fr;
+    padding: 1.15rem 1.25rem 1.3rem;
   }
 }
 
@@ -2099,6 +2041,193 @@ body.nav-open .nav-toggle span:nth-child(3) {
   margin: 0;
   font-size: 0.95rem;
   color: var(--grey-mid);
+}
+
+/* --- SuperGold strip (denture services + FAQ layout helpers) --- */
+.supergold-strip {
+  max-width: 900px;
+  margin: clamp(1rem, 3vw, 1.5rem) auto clamp(1.25rem, 3vw, 1.75rem);
+  padding: 0 1.5rem;
+}
+
+.supergold-strip-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: clamp(1rem, 3vw, 1.75rem);
+  padding: clamp(1.1rem, 3vw, 1.35rem) clamp(1.15rem, 3vw, 1.5rem);
+  background: var(--white);
+  border: 1px solid rgba(0, 59, 92, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 14px rgba(0, 59, 92, 0.06);
+}
+
+.supergold-strip-logo {
+  width: clamp(140px, 28vw, 200px);
+  height: auto;
+  flex-shrink: 0;
+  display: block;
+  margin-inline: auto;
+}
+
+.supergold-strip-body {
+  flex: 1;
+  min-width: min(100%, 16rem);
+}
+
+.supergold-strip-title {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.2vw, 1.35rem);
+  font-weight: 700;
+  color: var(--lumino-navy);
+}
+
+.supergold-strip-lead,
+.supergold-strip-action,
+.supergold-strip-more {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--grey-dark);
+}
+
+.supergold-strip-action {
+  margin-top: 0.65rem;
+  font-weight: 600;
+}
+
+.supergold-strip-more {
+  margin-top: 0.5rem;
+  font-size: 0.88rem;
+}
+
+.supergold-strip-more a,
+.supergold-strip-action a {
+  font-weight: 700;
+  color: var(--lumino-navy);
+}
+
+.faq-supergold-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.25rem;
+  align-items: flex-start;
+}
+
+.faq-supergold-logo {
+  width: clamp(120px, 32vw, 180px);
+  height: auto;
+  flex-shrink: 0;
+  display: block;
+  margin-inline: auto;
+}
+
+.faq-supergold-copy {
+  flex: 1;
+  min-width: min(100%, 14rem);
+}
+
+.faq-supergold-copy p {
+  margin: 0;
+}
+
+.faq-supergold-copy p + p {
+  margin-top: 0.65rem;
+}
+
+.faq-supergold-copy a {
+  font-weight: 600;
+  color: var(--lumino-navy);
+}
+
+/* --- FAQ page (accordion card) --- */
+.faq-section {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 2.5rem) 1.5rem 3rem;
+}
+
+.faq-card {
+  background: var(--surface-muted);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  box-shadow: 0 2px 18px rgba(0, 59, 92, 0.07);
+}
+
+.faq-card details {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.faq-card details:last-of-type {
+  border-bottom: none;
+}
+
+.faq-card summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 1.35rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--lumino-navy);
+  line-height: 1.4;
+}
+
+.faq-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-summary-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.faq-card summary::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  background:
+    linear-gradient(var(--accent-lime), var(--accent-lime)) center/12px 2px no-repeat,
+    linear-gradient(var(--accent-lime), var(--accent-lime)) center/2px 12px no-repeat;
+}
+
+.faq-card details[open] summary::after {
+  background: linear-gradient(var(--accent-lime), var(--accent-lime)) center/12px 2px no-repeat;
+}
+
+.faq-card details[open] summary {
+  padding-bottom: 0.5rem;
+}
+
+.faq-answer {
+  padding: 0 1.35rem 1.25rem;
+}
+
+.faq-answer p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--grey-dark);
+}
+
+.faq-outro {
+  margin: 1.75rem 0 0;
+  text-align: center;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--grey-dark);
+}
+
+.faq-outro a {
+  font-weight: 600;
+  color: var(--lumino-navy);
 }
 
 /* --- Dental lab: welcome band + triptych --- */
@@ -2863,6 +2992,21 @@ body.nav-open .nav-toggle span:nth-child(3) {
   font-size: 0.92rem;
   line-height: 1.55;
   color: var(--grey-mid);
+}
+
+.team-profile-bio {
+  margin: 0;
+}
+
+.team-profile-bio p {
+  margin: 0 0 0.85rem;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--grey-dark);
+}
+
+.team-profile-bio p:last-child {
+  margin-bottom: 0;
 }
 
 .team-outro {

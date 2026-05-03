@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book Online | Yu Dental Laboratory</title>
+  <title>Frequently asked questions | Yu Dental Laboratory</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +36,7 @@
             <a href="dental-lab-services.html">Dental lab</a>
             <a href="denture-referrals.html">Referrals</a>
             <a href="team.html">Our team</a>
-            <a href="faq.html">FAQ</a>
+            <a href="faq.html" class="current">FAQ</a>
             <a href="contact.html">Contact</a>
           </nav>
           <div class="header-actions">
@@ -58,61 +58,53 @@
     <section class="page-banner" aria-labelledby="page-banner-heading">
       <div class="page-banner-bg" aria-hidden="true"></div>
       <div class="page-banner-inner">
-        <h1 id="page-banner-heading">Book an appointment</h1>
-        <p class="page-banner-tagline">New or existing patient, then choose your treatment.</p>
+        <h1 id="page-banner-heading">Frequently asked questions</h1>
+        <p class="page-banner-tagline">Straight answers about dentures, timing and bookings.</p>
       </div>
     </section>
 
-    <div class="page-content page-content--book">
-      <p class="book-intro">Tell us whether you are new to us or returning, then choose the treatment you need. Add your contact details and preferred times; we will get back to you to confirm an appointment.</p>
-
-      <div class="contact-form-card">
-        <p class="form-message" data-form-message hidden></p>
-        <form id="book-form" data-static-form novalidate>
-          <div class="form-row">
-            <label for="b-patient">Patient type</label>
-            <select id="b-patient" name="patient_type" required>
-              <option value="">Select…</option>
-              <option>New patient</option>
-              <option>Existing patient</option>
-            </select>
+    <section class="faq-section page-banner-follow" aria-label="Question and answer list">
+      <div class="faq-card">
+        <details>
+          <summary><span class="faq-summary-text">1. What types of dentures do you offer?</span></summary>
+          <div class="faq-answer">
+            <p>We provide full dentures, partial dentures, implant-retained overdentures, and All-on-4 solutions. Our team will guide you to the best option for your needs.</p>
           </div>
-          <div class="form-row">
-            <label for="b-treatment">Treatment</label>
-            <select id="b-treatment" name="treatment" required>
-              <option value="">Select…</option>
-              <option>Consultation</option>
-              <option>New dentures</option>
-              <option>Reline / refitting</option>
-              <option>Addition to existing denture</option>
-              <option>Repair</option>
-            </select>
+        </details>
+        <details>
+          <summary><span class="faq-summary-text">2. How long does it take to get new dentures?</span></summary>
+          <div class="faq-answer">
+            <p>Most patients can expect their new dentures within 2–4 weeks, depending on the type of denture and individual requirements.</p>
           </div>
-          <div class="form-row">
-            <label for="b-name">Your name <span aria-hidden="true">*</span></label>
-            <input id="b-name" name="name" type="text" required autocomplete="name">
+        </details>
+        <details>
+          <summary><span class="faq-summary-text">3. Can you repair or adjust my existing dentures?</span></summary>
+          <div class="faq-answer">
+            <p>Yes. We offer relines and same-day repairs in most cases to restore comfort and function quickly.</p>
           </div>
-          <div class="form-row">
-            <label for="b-phone">Contact number <span aria-hidden="true">*</span></label>
-            <input id="b-phone" name="phone" type="tel" required autocomplete="tel">
+        </details>
+        <details>
+          <summary><span class="faq-summary-text">4. Do I need a referral to book a consultation?</span></summary>
+          <div class="faq-answer">
+            <p>No referral is needed. You can book directly with us whether you are a new patient or replacing an existing appliance.</p>
           </div>
-          <div class="form-row">
-            <label for="b-email">Email <span aria-hidden="true">*</span></label>
-            <input id="b-email" name="email" type="email" required autocomplete="email">
+        </details>
+        <details>
+          <summary><span class="faq-summary-text">5. Do you offer SuperGold card discounts?</span></summary>
+          <div class="faq-answer">
+            <div class="faq-supergold-layout">
+              <img src="images/supergold-logo.png" alt="SuperGold; Te kāri kōura" width="180" height="151" class="faq-supergold-logo" decoding="async" loading="lazy">
+              <div class="faq-supergold-copy">
+                <p>SuperGold cardholders are welcome. When you book or visit, tell us you hold a card and we will explain how our fees relate to your treatment plan.</p>
+                <p>The SuperGold card is a government-issued card for New Zealand residents aged 65 and over and eligible veterans. Participating businesses may offer discounts on goods and services; programme information is on <a href="https://www.supergold.govt.nz/" target="_blank" rel="noopener noreferrer">supergold.govt.nz<span class="sr-only"> (opens in new tab)</span></a>.</p>
+                <p>You can also read more on our <a href="denture-services.html">Treatment / Denture Services</a> page.</p>
+              </div>
+            </div>
           </div>
-          <div class="form-row">
-            <label for="b-pref">Preferred days / times</label>
-            <textarea id="b-pref" name="preferred" placeholder="Optional"></textarea>
-          </div>
-          <button type="submit" class="btn-submit">Submit request</button>
-        </form>
+        </details>
       </div>
-
-      <div class="book-actions">
-        <a href="tel:+6443887491" class="btn-read">Call 04-388 7491</a>
-        <a href="contact.html" class="btn-read">Contact &amp; map</a>
-      </div>
-    </div>
+      <p class="faq-outro">Still have questions? <a href="contact.html">Contact us</a> or <a href="book.html">book online</a>.</p>
+    </section>
   </main>
 
   <footer class="site-footer">
