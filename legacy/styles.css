@@ -1987,21 +1987,21 @@ body.nav-open .nav-toggle span:nth-child(3) {
   display: none;
 }
 
+/* Fixed 14×14 slot so heading text stays aligned; clip-path swaps chevron only (no layout shift). */
 .denture-accordions summary::before {
   content: "";
-  width: 0;
-  height: 0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 7px solid var(--accent-lime);
+  flex: 0 0 14px;
+  width: 14px;
+  min-width: 14px;
+  height: 14px;
   flex-shrink: 0;
+  align-self: center;
+  background-color: var(--accent-lime);
+  clip-path: polygon(12% 32%, 12% 68%, 72% 50%);
 }
 
 .denture-accordions details[open] summary::before {
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 7px solid var(--accent-lime);
-  border-bottom: 0;
+  clip-path: polygon(32% 18%, 68% 18%, 50% 72%);
 }
 
 .denture-accordions .denture-panel-body {

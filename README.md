@@ -1,10 +1,33 @@
-# Yu Dental
+# Yu Dental Laboratory
 
-## Overview
+Marketing site for Yu Dental Laboratory, Wellington NZ. Built with Next.js 15 (static export), TypeScript, Tailwind CSS v4, deployed to Cloudflare Pages.
 
-Established in 2000, Yu Dental Laboratory started as a small family business working from the basement of their home in the eastern suburbs of Wellington. Along with 50 years of industry experience, our aim is to provide our clients and patients with quality New Zealand made dental appliances and comprehensive professional service. As a team, we are passionate about the art and skill of providing quality aesthetics, functionality & phonetics made with materials that are certified to NZ and European standards. We deal with a full spectrum of complexity on a daily basis and no case is too difficult. Building relationships with our clients & patients is important to us as we aim to give you confidence in both our work and services.
+## Stack
 
-## Examples client liked
-https://miracledenture.co.nz/
-https://www.wellingtondentures.co.nz/
+- Next.js 15 App Router (`output: 'export'`)
+- TypeScript (strict)
+- Tailwind CSS v4
+- Biome (lint/format)
+- Vitest + Playwright
 
+## Commands
+
+```bash
+npm run dev        # local development
+npm run build      # static export to out/
+npm run lint       # Biome check
+npm run test       # Vitest component tests
+npm run test:e2e   # Playwright (builds out/ first via webServer)
+```
+
+## Cloudflare Pages
+
+- Build command: `npm run build`
+- Output directory: `out`
+- Node.js 20+
+
+Legacy static HTML/CSS is preserved in `legacy/` for reference.
+
+## Forms
+
+Contact, book and referral forms are visual-only demos (no backend). Wire Formspree or a Cloudflare Worker when ready.

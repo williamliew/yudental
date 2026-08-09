@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #003b5c;
+  --color-navy-deep: #002a45;
+  --color-teal: #00b5ad;
+  --color-teal-hover: #009a94;
+  --color-teal-dark: #238276;
+  --color-grey-dark: #2d3748;
+  --color-grey-mid: #718096;
+  --color-surface-muted: #f0f2f4;
+  --color-accent-lime: #86bc25;
+  --color-peach: #f5e6dc;
+  --color-lavender: #e8e4ef;
+
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+  --font-display: var(--font-playfair), Georgia, serif;
+
+  --max-width-content: 75rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-grey-dark font-sans text-base leading-relaxed antialiased;
+  }
+
+  a {
+    @apply text-teal transition-colors duration-200;
+  }
+
+  a:hover {
+    @apply text-teal-hover;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
