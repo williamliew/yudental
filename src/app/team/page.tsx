@@ -9,12 +9,31 @@ export const metadata = createPageMetadata({
   path: "/team/",
 });
 
-const TEAM = [
+type Qualification = {
+  title: string;
+  institution?: string;
+  note?: string;
+};
+
+type TeamMember = {
+  id: string;
+  name: string;
+  role: string;
+  quals: Qualification[];
+  bio: string[];
+};
+
+const TEAM: TeamMember[] = [
   {
     id: "steven-yu",
     name: "Steven Yu",
     role: "Director/Owner Operator",
-    quals: ["Diploma of Dental Technology, C.I.T Wellington, 1999"],
+    quals: [
+      {
+        title: "Diploma of Dental Technology",
+        institution: "C.I.T Wellington, 1999",
+      },
+    ],
     bio: [
       "Steven (Lap Wai) Yu's journey in dental technology is a remarkable testament to passion, perseverance, and family legacy. Growing up in China during the 1950s, he was surrounded by the tools of the trade, inspired by his father and brother, who both dedicated their lives to this craft. From a young age, Steven absorbed their knowledge and skills, nurturing his own growing interest.",
       "Determined to broaden his horizons, he moved to Hong Kong, where he honed his craft further before taking a bold step to New Zealand in 1983. Embracing the challenge of a new country, he spent 13 dedicated years working in a local lab, pouring his heart and soul into his work, and proving his resilience and commitment to excellence.",
@@ -25,7 +44,7 @@ const TEAM = [
     id: "leanne-yu",
     name: "Leanne Yu",
     role: "Co-Owner / Dental Manufacturer / Co-Ordinator",
-    quals: [] as string[],
+    quals: [],
     bio: [
       "Leanne (Shik Jing) Yu's journey to New Zealand began in the 1980s, a pivotal era that would shape her and her family's future.",
       "Meeting Steven in China was just the beginning of a beautiful partnership that bloomed anew in their adopted home.",
@@ -43,10 +62,26 @@ const TEAM = [
     name: "Allan Yu",
     role: "Dental Prosthetist/Technician",
     quals: [
-      "Bachelor of Commerce and Administration, Victoria University (NZ)",
-      "Diploma of Dental Technology, Royal Melbourne Institute of Technology University (AU)",
-      "Advanced Diploma of Dental Prosthetics, Royal Melbourne Institute of Technology University (AU)",
-      "Master's of Dental Technology, Cardiff Metropolitan University (UK)",
+      {
+        title: "Master of Science (MSc) in Dental Technology — Distinction",
+        institution: "Cardiff Metropolitan University, Cardiff, Wales, UK",
+        note:
+          "Programme Award — Highest Postgraduate Academic Performance in the MSc Dental Technology programme",
+      },
+      {
+        title: "Advanced Diploma of Dental Prosthetics",
+        institution:
+          "Royal Melbourne Institute of Technology (RMIT University), Melbourne, Australia",
+      },
+      {
+        title: "Diploma of Dental Technology",
+        institution:
+          "Royal Melbourne Institute of Technology (RMIT University), Melbourne, Australia",
+      },
+      {
+        title: "Bachelor of Commerce and Administration (BCA)",
+        institution: "Victoria University of Wellington, New Zealand",
+      },
     ],
     bio: [
       "Allan Yu's journey in dental technology is a testament to dedication, legacy, and passion. His path began at the tender age of 18 when his father, with a vision for the family business, offered him a part-time job.",
@@ -62,7 +97,7 @@ const TEAM = [
       "Allan Yu is not just a dental technologist; he is a passionate steward of a family legacy, committed to improving the lives of others through his craft.",
     ],
   },
-] as const;
+];
 
 export default function TeamPage() {
   return (
@@ -107,9 +142,15 @@ export default function TeamPage() {
                   {member.quals.length > 0 && (
                     <>
                       <h3 className="mt-4 text-sm font-bold text-navy">Qualifications</h3>
-                      <ul className="mt-2 space-y-1 text-sm text-grey-mid">
-                        {member.quals.map((q) => (
-                          <li key={q}>{q}</li>
+                      <ul className="mt-2 space-y-3 text-sm text-grey-mid">
+                        {member.quals.map((qual) => (
+                          <li key={qual.title}>
+                            <span className="font-medium text-grey-dark">{qual.title}</span>
+                            {qual.institution && (
+                              <span className="mt-0.5 block">{qual.institution}</span>
+                            )}
+                            {qual.note && <span className="mt-0.5 block">{qual.note}</span>}
+                          </li>
                         ))}
                       </ul>
                     </>
