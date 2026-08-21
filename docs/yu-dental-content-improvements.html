@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Yu Dental — Specific Content Improvements</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 14mm 12mm 16mm 12mm;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", system-ui, sans-serif;
+        font-size: 9.5pt;
+        line-height: 1.45;
+        color: #2d3748;
+        margin: 0;
+      }
+
+      .cover {
+        padding: 12mm 0 8mm;
+        border-bottom: 3px solid #00b5ad;
+        margin-bottom: 6mm;
+      }
+
+      .cover h1 {
+        font-size: 20pt;
+        color: #003b5c;
+        margin: 0 0 4mm;
+        line-height: 1.2;
+      }
+
+      .cover .subtitle {
+        font-size: 11pt;
+        color: #718096;
+        margin: 0;
+      }
+
+      .intro {
+        background: #f0f2f4;
+        padding: 4mm 5mm;
+        margin-bottom: 6mm;
+        font-size: 9pt;
+      }
+
+      h2 {
+        font-size: 12pt;
+        color: #003b5c;
+        margin: 6mm 0 3mm;
+        padding-bottom: 1.5mm;
+        border-bottom: 2px solid #00b5ad;
+        page-break-after: avoid;
+      }
+
+      h3 {
+        font-size: 10pt;
+        color: #003b5c;
+        margin: 4mm 0 2mm;
+        page-break-after: avoid;
+      }
+
+      .location {
+        font-size: 8.5pt;
+        color: #718096;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin-bottom: 2mm;
+      }
+
+      .pair {
+        margin-bottom: 5mm;
+        page-break-inside: avoid;
+      }
+
+      .label {
+        font-size: 8pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 1.5mm;
+      }
+
+      .label-before {
+        color: #c53030;
+      }
+
+      .label-after {
+        color: #009a94;
+      }
+
+      .box-before {
+        background: #fff5f5;
+        border: 1px solid #feb2b2;
+        border-radius: 2mm;
+        padding: 3mm 4mm;
+        margin-bottom: 2mm;
+      }
+
+      .box-after {
+        background: #f0fff4;
+        border: 1px solid #9ae6b4;
+        border-radius: 2mm;
+        padding: 3mm 4mm;
+      }
+
+      .arrow-row {
+        text-align: center;
+        color: #00b5ad;
+        font-weight: bold;
+        font-size: 10pt;
+        margin: 1mm 0;
+      }
+
+      table.swap {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 2mm 0 4mm;
+        font-size: 9pt;
+      }
+
+      table.swap th {
+        background: #003b5c;
+        color: #fff;
+        padding: 2mm 3mm;
+        text-align: left;
+        width: 50%;
+      }
+
+      table.swap td {
+        border: 1px solid #e2e8f0;
+        padding: 2.5mm 3mm;
+        vertical-align: top;
+      }
+
+      table.swap td.before {
+        background: #fff5f5;
+      }
+
+      table.swap td.after {
+        background: #f0fff4;
+      }
+
+      .note {
+        font-size: 8.5pt;
+        color: #718096;
+        margin-top: 2mm;
+        font-style: italic;
+      }
+
+      .page-break {
+        page-break-before: always;
+      }
+
+      .new-item {
+        border-left: 3px solid #00b5ad;
+        padding-left: 3mm;
+        margin: 2mm 0 4mm;
+        font-size: 9pt;
+      }
+
+      ul.tight {
+        margin: 1mm 0;
+        padding-left: 4mm;
+      }
+
+      li {
+        margin-bottom: 1mm;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cover">
+      <h1>Yu Dental Laboratory<br />Specific Content Improvements</h1>
+      <p class="subtitle">Current site text → suggested replacement (copy-paste ready)</p>
+    </div>
+
+    <div class="intro">
+      Each item shows <strong>exactly what is on the site today</strong> and a <strong>concrete
+      suggested alternative</strong>. Review, edit in your own words where you prefer, then approve
+      for implementation. Items marked <em>New</em> are additions, not replacements.
+    </div>
+
+  <h2>1. Navigation &amp; labels</h2>
+
+  <div class="pair">
+    <div class="location">Main navigation</div>
+    <table class="swap">
+      <tr>
+        <th>Current</th>
+        <th>Suggested</th>
+      </tr>
+      <tr>
+        <td class="before">Treatment/ Dental Services</td>
+        <td class="after">Denture services</td>
+      </tr>
+      <tr>
+        <td class="before">Dental lab</td>
+        <td class="after">For dentists</td>
+      </tr>
+      <tr>
+        <td class="before">Referrals</td>
+        <td class="after">Refer a patient</td>
+      </tr>
+      <tr>
+        <td class="before">Our team</td>
+        <td class="after">Our team <span class="note">(keep — or &ldquo;Meet the team&rdquo;)</span></td>
+      </tr>
+    </table>
+    <p class="note">Book online stays in the header; optional: add &ldquo;Book&rdquo; to main nav on mobile.</p>
+  </div>
+
+  <div class="pair">
+    <div class="location">Header strip</div>
+    <table class="swap">
+      <tr>
+        <th>Current</th>
+        <th>Suggested</th>
+      </tr>
+      <tr>
+        <td class="before"><em>Quality, Craftsmanship,</em> NZ Made.</td>
+        <td class="after">Quality craftsmanship · NZ-made dentures · Wellington since 2000</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="pair">
+    <div class="location">Homepage hero — button</div>
+    <table class="swap">
+      <tr>
+        <th>Current</th>
+        <th>Suggested</th>
+      </tr>
+      <tr>
+        <td class="before">Let&apos;s chat</td>
+        <td class="after">Call 04-388 7491 or Contact us</td>
+      </tr>
+    </table>
+  </div>
+
+  <h2>2. Homepage</h2>
+
+  <div class="pair">
+    <div class="location">Hero — main heading (H1)</div>
+    <div class="label label-before">Current</div>
+    <div class="box-before">Yu Dental Laboratory</div>
+    <div class="label label-after">Suggested</div>
+    <div class="box-after">Dentures, relines &amp; repairs in Wellington</div>
+  </div>
+
+  <div class="pair">
+    <div class="location">Hero — opening paragraph</div>
+    <div class="label label-before">Current</div>
+    <div class="box-before">
+      Since 2000, Wellington Family Laboratory has been dedicated to crafting high-quality dental
+      appliances right here in our lab. We serve both patients and referring clinicians, utilising
+      materials that meet rigorous New Zealand and European standards. With an unwavering commitment
+      to aesthetics, functionality, and reliable timelines, we ensure that your dental needs are met
+      with excellence and transparency.
+    </div>
+    <div class="label label-after">Suggested</div>
+    <div class="box-after">
+      Family-run dental laboratory and denture clinic in Te Aro. We make NZ-made dentures, relines
+      and repairs on site, and provide lab services for referring dentists across Wellington and New
+      Zealand. Book a consultation online or call us during clinic hours.
+    </div>
+  </div>
+
+  <div class="pair">
+    <div class="location">Department card — patient column heading</div>
+    <table class="swap">
+      <tr>
+        <th>Current</th>
+        <th>Suggested</th>
+      </tr>
+      <tr>
+        <td class="before">Denture clinic</td>
+        <td class="after">For patients</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="pair">
+    <div class="location">Department card — patient blurb</div>
+    <div class="label label-before">Current</div>
+    <div class="box-before">
+      For Patients and the Community: Get quality denture care with our services, including dentures,
+      relines, repairs, and more. We&apos;re committed to helping you smile confidently and to serving
+      our community with personalised care. Trust us for all your dental needs!
+    </div>
+    <div class="label label-after">Suggested</div>
+    <div class="box-after">
+      New dentures, relines, repairs and same-day fixes where possible. No referral needed — book
+      online or call. SuperGold cardholders welcome; ask us about fees and WINZ quotes at your
+      first visit.
+    </div>
+  </div>
+
+  <div class="pair">
+    <div class="location">Department card — dentist blurb</div>
+    <div class="label label-before">Current</div>
+    <div class="box-before">
+      For Dentists: Discover high-quality, New Zealand-made appliances that enhance patient care.
+      Enjoy fast turnaround times and reliable courier services to ensure your practice runs smoothly.
+    </div>
+    <div class="label label-after">Suggested</div>
+    <div class="box-after">
+      NZ-made prosthetics, digital scan acceptance (iTero, 3Shape, Sirona), nationwide courier, and
+      direct communication on every case. Refer online or download our referral form.
+    </div>
+  </div>
+
+  <div class="pair">
+    <div class="location">Process section — footer link text</div>
+    <table class="swap">
+      <tr>
+        <th>Current</th>
+        <th>Suggested</th>
+      </tr>
+      <tr>
+        <td class="before">Treatment / dental services</td>
+        <td class="after">Denture services</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="page-break"></div>
+
+  <h2>3. Page titles (browser tab &amp; Google)</h2>
+
+  <table class="swap">
+    <tr>
+      <th>Page — current title</th>
+      <th>Suggested title</th>
+    </tr>
+    <tr>
+      <td class="before">Yu Dental Laboratory | Wellington</td>
+      <td class="after">Dentures &amp; dental laboratory Wellington | Yu Dental</td>
+    </tr>
+    <tr>
+      <td class="before">Treatment / Denture Services | Yu Dental Laboratory</td>
+      <td class="after">Denture services Wellington | Yu Dental Laboratory</td>
+    </tr>
+    <tr>
+      <td class="before">Dental lab | Yu Dental Laboratory</td>
+      <td class="after">Dental laboratory for dentists NZ | Yu Dental Wellington</td>
+    </tr>
+    <tr>
+      <td class="before">Contact Us | Yu Dental Laboratory</td>
+      <td class="after">Contact us — Te Aro, Wellington | Yu Dental Laboratory</td>
+    </tr>
+  </table>
+
+  <h2>4. About page</h2>
+
+  <div class="pair">
+    <div class="location">Page banner — subtitle (remove draft instruction)</div>
+    <div class="label label-before">Current</div>
+    <div class="box-before">
+      How we began as a family workshop, and how we work together today; add your own dates and
+      memories below when you are ready.
+    </div>
+    <div class="label label-after">Suggested</div>
+    <div class="box-after">
+      From a home workshop in Wellington to a combined denture clinic and laboratory in Te Aro.
+    </div>
+  </div>
+
+  <div class="pair">
+    <div class="location">Timeline section — subtitle</div>
+    <table class="swap">
+      <tr>
+        <th>Current</th>
+        <th>Suggested</th>
+      </tr>
+      <tr>
+        <td class="before">Yu Dental Laboratory: A Heartfelt Family Journey</td>
+        <td class="after">Key dates in our history</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="pair">
+    <div class="location">Timeline — &ldquo;Today&rdquo; entry</div>
+    <div class="label label-before">Current</div>
+    <div class="box-before">
+      <strong>Opening hearts and doors</strong> — Now welcoming the public for denture services, Yu
+      Dental Laboratory continues to weave compassion into their work, crafting smiles while
+      strengthening community ties. Each denture reflects the love and dedication that the family
+      pours into their mission.
+    </div>
+    <div class="label label-after">Suggested</div>
+    <div class="box-after">
+      <strong>Clinic and lab, Te Aro</strong> — We welcome patients for denture care at 12 College
+      Street and continue to serve referring dentists nationwide. Same family, same bench — now with
+      a purpose-built space for consultations and manufacturing.
+    </div>
+  </div>
+
+  <div class="pair">
+    <div class="location">Archive section intro (remove placeholder instruction)</div>
+    <div class="label label-before">Current</div>
+    <div class="box-before">
+      We will replace these placeholders with your own photographs of the original lab.
+      Black-and-white prints often scan with grain or softness; we can treat that as part of the
+      look so the archive feels genuinely of its era.
+    </div>
+    <div class="label label-after">Suggested</div>
+    <div class="box-after">
+      Photographs from our early workshop years — garage, basement bench, and the move to our current
+      clinic.
+    </div>
+    <p class="note">Action: replace stock images with real archive photos when available.</p>
+  </div>
+
+  <div class="pair">
+    <div class="location">About — Steven Yu card (short version for About page)</div>
+    <div class="label label-before">Current</div>
+    <div class="box-before">
+      Steven Yu is a passionate dental technician and the visionary founder behind his successful
+      practice. With a commitment to quality and patient care, he has dedicated his career to
+      creating beautiful smiles and enhancing the dental experience for his clients…
+    </div>
+    <div class="label label-after">Suggested (2–3 sentences max on About; full story on Team)</div>
+    <div class="box-after">
+      Steven Yu, Director. Founded the laboratory in 2000 after decades at the bench in New Zealand.
+      Diploma in Dental Technology (C.I.T Wellington, 1999). Still involved in case planning and
+      quality on every appliance we make.
+    </div>
+  </div>
+
+  <h2>5. Team page</h2>
+
+  <div class="pair">
+    <div class="location">Intro paragraph (remove builder instructions)</div>
+    <div class="label label-before">Current</div>
+    <div class="box-before">
+      We are a small, experienced family laboratory. Below are our roles, formal qualifications
+      where they apply, and a little of our story in our own words. A group portrait can sit above
+      the profiles when you add your photographs, or you can use individual headshots in each card.
+    </div>
+    <div class="label label-after">Suggested</div>
+    <div class="box-after">
+      Registered dental prosthetists and technicians. Qualifications, roles, and how we work together
+      at the Wellington clinic and laboratory.
+    </div>
+  </div>
+
+  <div class="pair">
+    <div class="location">Steven Yu — bio (replace 3 long paragraphs)</div>
+    <div class="label label-before">Current (opening paragraph only)</div>
+    <div class="box-before">
+      Steven (Lap Wai) Yu&apos;s journey in dental technology is a remarkable testament to passion,
+      perseverance, and family legacy. Growing up in China during the 1950s, he was surrounded by
+      the tools of the trade… <em>(+ 2 more long paragraphs)</em>
+    </div>
+    <div class="label label-after">Suggested</div>
+    <div class="box-after">
+      Steven (Lap Wai) Yu trained in dental technology in China and Hong Kong before moving to New
+      Zealand in 1983. He worked in Wellington laboratories for 13 years, then completed his Diploma
+      of Dental Technology at C.I.T Wellington in 1999 at age 50. He founded Yu Dental Laboratory
+      with Leanne and continues as Director, overseeing case quality and the standards every
+      appliance must meet before it leaves the bench.
+    </div>
+  </div>
+
+  <div class="pair">
+    <div class="location">Leanne Yu — bio (replace 9 short paragraphs)</div>
+    <div class="label label-before">Current</div>
+    <div class="box-before">
+      Nine paragraphs on journey, partnership, factory work, grandchildren, gardening… <em>(generic
+      marketing tone)</em>
+    </div>
+    <div class="label label-after">Suggested</div>
+    <div class="box-after">
+      Leanne (Shik Jing) Yu, Co-owner and co-ordinator. She joined the business when Steven started
+      the laboratory, learned dental manufacturing on the bench, and now coordinates cases,
+      appointments, and day-to-day clinic operations. Patients and referring dentists often speak
+      with Leanne first — she keeps timelines clear and communication straightforward.
+    </div>
+  </div>
+
+  <div class="pair">
+    <div class="location">Allan Yu — bio (replace 11 paragraphs; keep qualifications as-is)</div>
+    <div class="label label-before">Current</div>
+    <div class="box-before">
+      Allan Yu&apos;s journey in dental technology is a testament to dedication, legacy, and passion…
+      <em>(+ 10 more paragraphs repeating qualifications already listed above)</em>
+    </div>
+    <div class="label label-after">Suggested</div>
+    <div class="box-after">
+      Allan Yu, Dental Prosthetist and Technician. BCA (Victoria University), diplomas from RMIT
+      Melbourne, and MSc Dental Technology with Distinction from Cardiff Metropolitan University. He
+      sees patients for assessments, impressions, and fittings, and leads technical work on complex
+      cases. Allan works with dentists across New Zealand and Australia on prosthetic planning and
+      digital workflows.
+    </div>
+    <p class="note">Qualifications block already updated — no change needed there.</p>
+  </div>
+
+  <div class="page-break"></div>
+
+  <h2>6. Contact page</h2>
+
+  <div class="pair">
+    <div class="location">Parking section (replace placeholders)</div>
+    <div class="label label-before">Current</div>
+    <div class="box-before">
+      <ul class="tight">
+        <li>Off-street parking nearby (update with your exact arrangement).</li>
+        <li>Free parking options if applicable (placeholder text).</li>
+      </ul>
+    </div>
+    <div class="label label-after">Suggested — fill in your actual details</div>
+    <div class="box-after">
+      <ul class="tight">
+        <li>Street parking on College Street and surrounding streets (check signs for time limits).</li>
+        <li>[Add: nearest paid car park name and walking time, if applicable]</li>
+        <li>Clinic entrance at street level — [confirm step-free access if true].</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>7. Denture services page</h2>
+
+  <div class="pair">
+    <div class="location">Page banner title</div>
+    <table class="swap">
+      <tr>
+        <th>Current</th>
+        <th>Suggested</th>
+      </tr>
+      <tr>
+        <td class="before">Treatment / Denture Services</td>
+        <td class="after">Denture services</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="pair">
+    <div class="location">Full dentures accordion — opening (example service blurb)</div>
+    <div class="label label-before">Current</div>
+    <div class="box-before">
+      Full dentures are removable dental appliances designed to replace all the natural teeth in
+      either the upper or lower jaw… Regular check-ups with a dental professional are essential to
+      ensure they remain well-fitted and comfortable.
+    </div>
+    <div class="label label-after">Suggested</div>
+    <div class="box-after">
+      Full dentures replace all teeth in the upper or lower jaw (or both). We take impressions,
+      plan shade and shape with you, and fit the finished denture at our Te Aro clinic. Typical
+      timeline: about four appointments over two weeks (Ivobase cases may need extra visits). We
+      recommend annual checks so fit and comfort stay right as your mouth changes.
+    </div>
+    <p class="note">Apply same pattern to partial dentures, relines, mouthguards, etc.: what it is → what we do → how long → book/call.</p>
+  </div>
+
+  <h2>8. FAQ — new questions to add</h2>
+  <p class="note">These are not on the site yet; suggested additions patients and dentists search for.</p>
+
+  <div class="new-item">
+    <strong>New FAQ</strong><br />
+    <strong>Q:</strong> How much do dentures cost?<br />
+    <strong>A:</strong> Fees depend on the type of denture and materials. We explain costs at your
+    consultation. SuperGold cardholders and WINZ quotes welcome — mention your card when you book.
+  </div>
+
+  <div class="new-item">
+    <strong>New FAQ</strong><br />
+    <strong>Q:</strong> Can you repair my denture today?<br />
+    <strong>A:</strong> Many repairs and adjustments can be done same day if we have capacity. Call
+    us in the morning with your situation; we will tell you if we can fit you in.
+  </div>
+
+  <div class="new-item">
+    <strong>New FAQ</strong><br />
+    <strong>Q:</strong> Do you accept digital scans from my dentist?<br />
+    <strong>A:</strong> Yes. We accept files from iTero, 3Shape, and Dentsply Sirona workflows.
+    Dentists: see our <em>For dentists</em> page for how to send a case.
+  </div>
+
+  <div class="new-item">
+    <strong>New FAQ</strong><br />
+    <strong>Q:</strong> Do you see patients from outside Wellington?<br />
+    <strong>A:</strong> Yes. Patients travel from across the Wellington region; we can discuss
+    appointment spacing if you are coming from further away.
+  </div>
+
+  <h2>9. Images &amp; placeholders to replace</h2>
+  <table class="swap">
+    <tr>
+      <th>Current</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td class="before">Unsplash stock — hero, banners, team headshots</td>
+      <td class="after">Real clinic, lab, team, and finished work (with patient consent)</td>
+    </tr>
+    <tr>
+      <td class="before">Aria labels: &ldquo;Headshot placeholder for…&rdquo;</td>
+      <td class="after">Remove once real photos uploaded</td>
+    </tr>
+    <tr>
+      <td class="before">About archive: 6 duplicate stock tiles</td>
+      <td class="after">Family archive photos or remove section until ready</td>
+    </tr>
+  </table>
+
+  <div style="margin-top: 8mm; padding: 4mm; background: #003b5c; color: #fff; border-radius: 2mm; font-size: 9pt;">
+    <strong>How to use this document:</strong> Tick items you approve, edit suggested text in your
+    own voice where needed, and note anything to leave as-is. We can then implement approved changes
+    in one pass.
+  </div>
+  </body>
+</html>
