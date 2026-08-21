@@ -9,7 +9,7 @@ import { createPageMetadata } from "@/lib/metadata";
 import { SITE } from "@/lib/site";
 
 export const metadata = createPageMetadata({
-  title: SITE.name,
+  title: "Dentures & dental laboratory Wellington",
   description: SITE.description,
   path: "/",
 });

@@ -1,5 +1,5 @@
 import { ButtonLink } from "@/components/ui/ButtonLink";
-import Link from "next/link";
+import { SITE } from "@/lib/site";
 
 export function Hero() {
   return (
@@ -25,21 +25,19 @@ export function Hero() {
           id="hero-heading"
           className="mt-4 font-display text-4xl font-bold tracking-tight text-balance md:text-5xl lg:text-6xl"
         >
-          Yu Dental Laboratory
+          Dentures, relines &amp; repairs in Wellington
         </h1>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/90 md:text-xl">
-          Since 2000, Wellington Family Laboratory has been dedicated to crafting high-quality
-          dental appliances right here in our lab. We serve both patients and referring clinicians,
-          utilising materials that meet rigorous New Zealand and European standards. With an
-          unwavering commitment to aesthetics, functionality, and reliable timelines, we ensure that
-          your dental needs are met with excellence and transparency.
+          Family-run dental laboratory and denture clinic in Te Aro. We make NZ-made dentures,
+          relines and repairs on site, and provide lab services for referring dentists across
+          Wellington and New Zealand. Book a consultation online or call us during clinic hours.
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <ButtonLink href="/book/" variant="primary">
             Book online
           </ButtonLink>
-          <ButtonLink href="/contact/" variant="secondary">
-            Let&apos;s chat
+          <ButtonLink href={`tel:${SITE.phoneTel}`} variant="secondary">
+            Call {SITE.phone}
           </ButtonLink>
         </div>
       </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = createPageMetadata({
-  title: "Dental lab",
+  title: "Dental laboratory for dentists NZ",
   description:
     "Crown, bridge and implant lab services for referring Wellington and New Zealand dental practices.",
   path: "/dental-lab-services/",
@@ -36,7 +36,7 @@ export default function DentalLabServicesPage() {
   return (
     <>
       <PageBanner
-        title="Dental lab"
+        title="For dentists"
         tagline="Crown, bridge & implant work for referring practices."
       />
       <section className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="lab-welcome-title">

@@ -4,7 +4,7 @@ import { createPageMetadata } from "@/lib/metadata";
 import { SITE } from "@/lib/site";
 
 export const metadata = createPageMetadata({
-  title: "Contact Us",
+  title: "Contact us — Te Aro, Wellington",
   description: "Contact Yu Dental Laboratory in Te Aro, Wellington. Phone, map, hours and parking.",
   path: "/contact/",
 });
@@ -41,8 +41,15 @@ export default function ContactPage() {
           <div className="rounded-lg border border-surface-muted bg-white p-6 shadow-sm md:p-8">
             <h2 className="font-display text-xl font-bold text-navy">Parking &amp; access</h2>
             <ul className="mt-3 space-y-2 text-grey-mid">
-              <li>Off-street parking nearby (update with your exact arrangement).</li>
-              <li>Free parking options if applicable (placeholder text).</li>
+              <li>
+                Street parking on College Street and surrounding streets (check signs for time
+                limits).
+              </li>
+              <li>
+                Nearest paid parking: confirm your preferred car park and walking time with us when
+                you book.
+              </li>
+              <li>Clinic entrance at street level — contact us if you need access assistance.</li>
             </ul>
             <p className="mt-8 text-grey-mid">
               Prefer to call? Reach us on{" "}

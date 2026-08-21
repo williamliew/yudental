@@ -26,13 +26,12 @@ export function DepartmentCards() {
           className="group rounded-lg border border-surface-muted bg-white p-6 no-underline shadow-sm transition-shadow hover:shadow-md md:p-8"
         >
           <h3 className="font-display text-xl font-bold text-navy group-hover:text-teal">
-            Denture clinic
+            For patients
           </h3>
           <p className="mt-3 text-grey-mid leading-relaxed">
-            For Patients and the Community: Get quality denture care with our services, including
-            dentures, relines, repairs, and more. We&apos;re committed to helping you smile
-            confidently and to serving our community with personalised care. Trust us for all your
-            dental needs!
+            New dentures, relines, repairs and same-day fixes where possible. No referral needed —
+            book online or call. SuperGold cardholders welcome; ask us about fees and WINZ quotes at
+            your first visit.
           </p>
           <span className="mt-4 inline-block text-sm font-semibold text-teal">
             View denture services →
@@ -43,15 +42,15 @@ export function DepartmentCards() {
           className="group rounded-lg border border-surface-muted bg-white p-6 no-underline shadow-sm transition-shadow hover:shadow-md md:p-8"
         >
           <h3 className="font-display text-xl font-bold text-navy group-hover:text-teal">
-            Dental lab
+            For dentists
           </h3>
           <p className="mt-3 text-grey-mid leading-relaxed">
-            For Dentists: Discover high-quality, New Zealand-made appliances that enhance patient
-            care. Enjoy fast turnaround times and reliable courier services to ensure your practice
-            runs smoothly.
+            NZ-made prosthetics, digital scan acceptance (iTero, 3Shape, Sirona), nationwide
+            courier, and direct communication on every case. Refer online or download our referral
+            form.
           </p>
           <span className="mt-4 inline-block text-sm font-semibold text-teal">
-            View dental lab →
+            View lab services →
           </span>
         </Link>
       </div>

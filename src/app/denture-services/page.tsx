@@ -15,7 +15,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 export const metadata = createPageMetadata({
-  title: "Treatment / Denture Services",
+  title: "Denture services Wellington",
   description:
     "Patient information on dentures, appliances and ongoing care at Yu Dental Laboratory Wellington.",
   path: "/denture-services/",
@@ -31,7 +31,7 @@ const TREATMENTS: Treatment[] = [
   {
     title: "Full dentures",
     icon: <IconFullDenture size={36} />,
-    body: "Full dentures are removable dental appliances designed to replace all the natural teeth in either the upper or lower jaw. They are custom-made to fit comfortably in the mouth and restore function and aesthetics. Made from durable materials, full dentures not only improve the appearance of your smile but also help support facial structure, making individuals appear more youthful. Regular check-ups with a dental professional are essential to ensure they remain well-fitted and comfortable.",
+    body: "Full dentures replace all teeth in the upper or lower jaw (or both). We take impressions, plan shade and shape with you, and fit the finished denture at our Te Aro clinic. Typical timeline: about four appointments over two weeks (Ivobase cases may need extra visits). We recommend annual checks so fit and comfort stay right as your mouth changes.",
   },
   {
     title: "Partial dentures",
@@ -74,7 +74,7 @@ export default function DentureServicesPage() {
   return (
     <>
       <PageBanner
-        title="Treatment / Denture Services"
+        title="Denture services"
         tagline="Patient information on dentures, appliances and ongoing care."
       />
       <aside

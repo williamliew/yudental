@@ -35,9 +35,7 @@ const TEAM: TeamMember[] = [
       },
     ],
     bio: [
-      "Steven (Lap Wai) Yu's journey in dental technology is a remarkable testament to passion, perseverance, and family legacy. Growing up in China during the 1950s, he was surrounded by the tools of the trade, inspired by his father and brother, who both dedicated their lives to this craft. From a young age, Steven absorbed their knowledge and skills, nurturing his own growing interest.",
-      "Determined to broaden his horizons, he moved to Hong Kong, where he honed his craft further before taking a bold step to New Zealand in 1983. Embracing the challenge of a new country, he spent 13 dedicated years working in a local lab, pouring his heart and soul into his work, and proving his resilience and commitment to excellence.",
-      "At the age of 50, Steven returned to school, earning his Dental Technology diploma from C.I.T Wellington in 1999. This milestone was not just an academic achievement; it was a powerful statement about lifelong learning and the importance of pursuing one's dreams, no matter the age. Steven's story is one of dedication to his craft, a deep respect for family traditions, and an inspiring reminder that the journey of growth never truly ends.",
+      "Steven (Lap Wai) Yu trained in dental technology in China and Hong Kong before moving to New Zealand in 1983. He worked in Wellington laboratories for 13 years, then completed his Diploma of Dental Technology at C.I.T Wellington in 1999 at age 50. He founded Yu Dental Laboratory with Leanne and continues as Director, overseeing case quality and the standards every appliance must meet before it leaves the bench.",
     ],
   },
   {
@@ -46,15 +44,7 @@ const TEAM: TeamMember[] = [
     role: "Co-Owner / Dental Manufacturer / Co-Ordinator",
     quals: [],
     bio: [
-      "Leanne (Shik Jing) Yu's journey to New Zealand began in the 1980s, a pivotal era that would shape her and her family's future.",
-      "Meeting Steven in China was just the beginning of a beautiful partnership that bloomed anew in their adopted home.",
-      "Their bond deepened after marriage, as Leanne dedicated herself to supporting Steven during his studies while juggling work at a factory.",
-      "When Steven took the leap to start his own business, Leanne selflessly left her job to fuel his dreams.",
-      "Despite lacking initial knowledge in dental technology, she embraced the challenge, learning and honing her skills under Steven's guidance in the intricate world of dental manufacturing.",
-      "Her days are filled with hard work and dedication, but Leanne's nurturing spirit doesn't stop there.",
-      "When she's not managing the business or keeping the household running smoothly, she lovingly cares for her grandchildren, bringing them joy and warmth.",
-      "Gardening is another passion of hers: a peaceful respite where she can cultivate both plants and precious moments with her family.",
-      "Leanne's story is one of resilience, love, and the unwavering support that has shaped their lives together.",
+      "Leanne (Shik Jing) Yu, Co-owner and co-ordinator. She joined the business when Steven started the laboratory, learned dental manufacturing on the bench, and now coordinates cases, appointments, and day-to-day clinic operations. Patients and referring dentists often speak with Leanne first — she keeps timelines clear and communication straightforward.",
     ],
   },
   {
@@ -65,8 +55,7 @@ const TEAM: TeamMember[] = [
       {
         title: "Master of Science (MSc) in Dental Technology — Distinction",
         institution: "Cardiff Metropolitan University, Cardiff, Wales, UK",
-        note:
-          "Programme Award — Highest Postgraduate Academic Performance in the MSc Dental Technology programme",
+        note: "Programme Award — Highest Postgraduate Academic Performance in the MSc Dental Technology programme",
       },
       {
         title: "Advanced Diploma of Dental Prosthetics",
@@ -84,17 +73,7 @@ const TEAM: TeamMember[] = [
       },
     ],
     bio: [
-      "Allan Yu's journey in dental technology is a testament to dedication, legacy, and passion. His path began at the tender age of 18 when his father, with a vision for the family business, offered him a part-time job.",
-      "What started as a simple opportunity blossomed into a lifelong commitment to this craft.",
-      "After completing his Bachelor's degree at Victoria University, Allan's father encouraged him to broaden his horizons in Melbourne, Australia.",
-      "This move was pivotal; it allowed Allan to explore new perspectives in dental technology and gain invaluable insights into different teaching methodologies.",
-      "In Melbourne, he pursued a Diploma in Dental Technology, followed by an advanced diploma in Dental Prosthetics.",
-      "Throughout this rigorous academic journey, he honed his skills at the Royal Melbourne Dental Hospital while juggling various contract positions and a part-time role at dental labs across the city.",
-      "Upon returning to New Zealand, Allan accompanied his parents to elevate the family business, merging traditional techniques with modern innovations.",
-      "His commitment to growth didn't stop there: recognising that true merit comes from continuous learning, he recently completed his Master's in Dental Technology from Cardiff Metropolitan University in the UK.",
-      "With years of hands-on experience and meaningful interactions with dental professionals both in New Zealand and across the Tasman, Allan has cultivated a deep wealth of knowledge and expertise.",
-      "His heartfelt dedication to the field and service to his community shine through in every aspect of his work.",
-      "Allan Yu is not just a dental technologist; he is a passionate steward of a family legacy, committed to improving the lives of others through his craft.",
+      "Allan Yu, Dental Prosthetist and Technician. BCA (Victoria University), diplomas from RMIT Melbourne, and MSc Dental Technology with Distinction from Cardiff Metropolitan University. He sees patients for assessments, impressions, and fittings, and leads technical work on complex cases. Allan works with dentists across New Zealand and Australia on prosthetic planning and digital workflows.",
     ],
   },
 ];
@@ -106,15 +85,13 @@ export default function TeamPage() {
       <section className="px-4 py-12 md:px-6 md:py-16" aria-label="Our team">
         <div className="mx-auto max-w-[var(--max-width-content)]">
           <p className="max-w-3xl text-grey-mid leading-relaxed">
-            We are a small, experienced family laboratory. Below are our roles, formal
-            qualifications where they apply, and a little of our story in our own words. A group
-            portrait can sit above the profiles when you add your photographs, or you can use
-            individual headshots in each card.
+            Registered dental prosthetists and technicians. Qualifications, roles, and how we work
+            together at the Wellington clinic and laboratory.
           </p>
           <div
             className="mt-8 h-56 rounded-lg bg-cover bg-center md:h-72"
             role="img"
-            aria-label="Optional family or group portrait: add your image here or remove this block if you use only individual headshots"
+            aria-label="Yu Dental Laboratory team"
             style={{
               backgroundImage:
                 "url(https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1200&h=600&fit=crop)",

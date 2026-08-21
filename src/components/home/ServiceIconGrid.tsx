@@ -34,7 +34,7 @@ export function ServiceIconGrid() {
       </h2>
       <p className="mt-3 max-w-3xl text-grey-mid">
         A snapshot of denture-related care we offer patients and referrers. Full detail sits on the
-        Treatment / Dental Services and dental lab pages.
+        Denture services and lab pages.
       </p>
       <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
         {SERVICES.map((service) => (

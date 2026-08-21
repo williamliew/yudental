@@ -63,8 +63,8 @@ export function ProcessSteps() {
       </ol>
       <p className="mt-10 text-center text-sm text-grey-mid">
         Crowns, implants and lab work for practices:{" "}
-        <Link href="/dental-lab-services/">Dental lab</Link>. Full treatment detail:{" "}
-        <Link href="/denture-services/">Treatment / dental services</Link>.
+        <Link href="/dental-lab-services/">For dentists</Link>. Full treatment detail:{" "}
+        <Link href="/denture-services/">Denture services</Link>.
       </p>
     </Section>
   );

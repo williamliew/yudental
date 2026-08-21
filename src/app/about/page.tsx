@@ -36,9 +36,9 @@ const TIMELINE = [
     copy: "The family's dedication led to a new facility that combined a denture clinic and lab, symbolising their growth and commitment to quality service.",
   },
   {
-    title: "Opening hearts and doors",
+    title: "Clinic and lab, Te Aro",
     era: "Today",
-    copy: "Now welcoming the public for denture services, Yu Dental Laboratory continues to weave compassion into their work, crafting smiles while strengthening community ties. Each denture reflects the love and dedication that the family pours into their mission.",
+    copy: "We welcome patients for denture care at 12 College Street and continue to serve referring dentists nationwide. Same family, same bench — now with a purpose-built space for consultations and manufacturing.",
   },
 ] as const;
 
@@ -47,19 +47,19 @@ const PEOPLE = [
     name: "Steven Yu",
     role: "Director, owner operator",
     ariaLabel: "Portrait placeholder for Steven Yu",
-    copy: "Steven Yu is a passionate dental technician and the visionary founder behind his successful practice. With a commitment to quality and patient care, he has dedicated his career to creating beautiful smiles and enhancing the dental experience for his clients. His journey began with a simple idea, but through hard work and determination, he has built a thriving business that reflects his love for the dental profession. Steven's understanding and empathy for his patients' needs set him apart, making him a trusted figure in the community.",
+    copy: "Steven Yu, Director. Founded the laboratory in 2000 after decades at the bench in New Zealand. Diploma in Dental Technology (C.I.T Wellington, 1999). Still involved in case planning and quality on every appliance we make.",
   },
   {
     name: "Leanne Yu",
     role: "Dental manufacturer, co-ordinator, co-founder",
     ariaLabel: "Portrait placeholder for Leanne Yu",
-    copy: "Leanne Yu is the heartbeat of our dental manufacturing company and a dedicated co-founder. With her expertise and passion for quality, she ensures our products meet the highest standards while genuinely serving our customers' needs. Beyond her manufacturing skills, Leanne's ability to connect with the team keeps us motivated and united. Her organisational talents create a flourishing environment for creativity, and her commitment to making a positive impact in the community empowers others. In every aspect, Leanne leads with heart and purpose, making her an invaluable asset and inspiration to us all.",
+    copy: "Leanne Yu, Co-owner and co-ordinator. She joined the business when Steven started the laboratory, learned dental manufacturing on the bench, and now coordinates cases, appointments, and day-to-day clinic operations.",
   },
   {
     name: "Allan Yu",
     role: "Dental prosthetist, technician, second in charge",
     ariaLabel: "Portrait placeholder for Allan Yu",
-    copy: "Allan Yu is a skilled Dental Prosthetist and Dental Technician with expertise in creating and fitting dental appliances. With a keen eye for detail and a commitment to patient satisfaction, he combines technical precision with a strong understanding of dental aesthetics to restore smiles and enhance oral health. Allan's dedication to his craft ensures that his patients receive high-quality, customised solutions tailored to their needs.",
+    copy: "Allan Yu, Dental Prosthetist and Technician. BCA (Victoria University), diplomas from RMIT Melbourne, and MSc Dental Technology with Distinction from Cardiff Metropolitan University. He sees patients for assessments, impressions, and fittings, and leads technical work on complex cases.",
   },
 ] as const;
 
@@ -77,7 +77,7 @@ export default function AboutPage() {
     <>
       <PageBanner
         title="Our story"
-        lead="How we began as a family workshop, and how we work together today; add your own dates and memories below when you are ready."
+        lead="From a home workshop in Wellington to a combined denture clinic and laboratory in Te Aro."
       />
       <div
         className="mx-auto max-w-[var(--max-width-content)] px-4 py-8 md:px-6"
@@ -133,7 +133,7 @@ export default function AboutPage() {
           >
             Our journey
           </h2>
-          <p className="mt-2 text-grey-mid">Yu Dental Laboratory: A Heartfelt Family Journey</p>
+          <p className="mt-2 text-grey-mid">Key dates in our history</p>
           <ol className="mt-8 space-y-8">
             {TIMELINE.map((item) => (
               <li key={item.title} className="border-l-2 border-teal pl-6">
@@ -186,9 +186,8 @@ export default function AboutPage() {
             From the family archive
           </h2>
           <p className="mt-3 max-w-3xl text-grey-mid">
-            We will replace these placeholders with your own photographs of the original lab.
-            Black-and-white prints often scan with grain or softness; we can treat that as part of
-            the look so the archive feels genuinely of its era.
+            Photographs from our early workshop years — garage, basement bench, and the move to our
+            current clinic.
           </p>
           <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 md:gap-4">
             {ARCHIVE_IMAGES.map((src) => (

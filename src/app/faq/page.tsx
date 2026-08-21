@@ -31,6 +31,26 @@ const FAQS = [
     answer:
       "No referral is needed. You can book directly with us whether you are a new patient or replacing an existing appliance.",
   },
+  {
+    question: "5. How much do dentures cost?",
+    answer:
+      "Fees depend on the type of denture and materials. We explain costs at your consultation. SuperGold cardholders and WINZ quotes welcome — mention your card when you book.",
+  },
+  {
+    question: "6. Can you repair my denture today?",
+    answer:
+      "Many repairs and adjustments can be done same day if we have capacity. Call us in the morning with your situation; we will tell you if we can fit you in.",
+  },
+  {
+    question: "7. Do you accept digital scans from my dentist?",
+    answer:
+      "Yes. We accept files from iTero, 3Shape, and Dentsply Sirona workflows. Dentists: see our For dentists page for how to send a case.",
+  },
+  {
+    question: "8. Do you see patients from outside Wellington?",
+    answer:
+      "Yes. Patients travel from across the Wellington region; we can discuss appointment spacing if you are coming from further away.",
+  },
 ] as const;
 
 export default function FaqPage() {
@@ -48,7 +68,7 @@ export default function FaqPage() {
                 <p>{faq.answer}</p>
               </AccordionItem>
             ))}
-            <AccordionItem title="5. Do you offer SuperGold card discounts?">
+            <AccordionItem title="9. Do you offer SuperGold card discounts?">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
                 <Image
                   src="/images/supergold-logo.png"
@@ -79,7 +99,7 @@ export default function FaqPage() {
                   </p>
                   <p>
                     You can also read more on our{" "}
-                    <Link href="/denture-services/">Treatment / Denture Services</Link> page.
+                    <Link href="/denture-services/">Denture services</Link> page.
                   </p>
                 </div>
               </div>
