@@ -16,7 +16,10 @@ export const SITE = {
 } as const;
 
 export const MAP_EMBED_URL =
-  "https://www.openstreetmap.org/export/embed.html?bbox=174.7695%2C-41.2918%2C174.7785%2C-41.2965&layer=hot&marker=-41.2941,174.7740";
+  "https://www.openstreetmap.org/export/embed.html?bbox=174.7710%2C-41.2956%2C174.7770%2C-41.2926&layer=hot&marker=-41.2941%2C174.7740";
 
 export const MAP_GOOGLE_URL =
   "https://www.google.com/maps/search/?api=1&query=12+College+Street+Te+Aro+Wellington";
+
+export const MAP_GOOGLE_DIRECTIONS_URL =
+  "https://www.google.com/maps/dir/?api=1&destination=12+College+Street+Te+Aro+Wellington";

@@ -28,7 +28,7 @@ export function Header() {
       <div className="mx-auto flex max-w-[var(--max-width-content)] items-center gap-4 px-4 py-3 md:px-6">
         <Link
           href="/"
-          className="shrink-0 rounded bg-white/95 p-2 no-underline"
+          className="inline-flex shrink-0 overflow-hidden rounded-lg bg-white leading-none no-underline"
           aria-label="Yu Dental Laboratory home"
         >
           <Image
@@ -36,7 +36,7 @@ export function Header() {
             alt="Yu Dental Laboratory"
             width={200}
             height={67}
-            className="h-12 w-auto md:h-14"
+            className="block h-12 w-auto md:h-14"
             priority
           />
         </Link>
