@@ -2,7 +2,7 @@
 
 import { WEB3FORMS_ACCESS_KEY, WEB3FORMS_SUBMIT_URL } from "@/lib/site";
 import Script from "next/script";
-import { type FormEvent, type ReactNode, useRef, useState } from "react";
+import { type FormEvent, type ReactNode, useEffect, useRef, useState } from "react";
 
 type Web3FormProps = {
   id: string;
@@ -35,6 +35,20 @@ export function Web3Form({
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const isConfigured = Boolean(WEB3FORMS_ACCESS_KEY);
+
+  useEffect(() => {
+    if (!status) {
+      return;
+    }
+
+    const statusElement = statusRef.current;
+    if (!statusElement) {
+      return;
+    }
+
+    statusElement.scrollIntoView?.({ behavior: "smooth", block: "center" });
+    statusElement.focus({ preventScroll: true });
+  }, [status]);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -74,9 +88,6 @@ export function Web3Form({
       if (response.ok && result.success) {
         form.reset();
         setStatus({ type: "success", message: successMessage });
-        requestAnimationFrame(() => {
-          statusRef.current?.focus();
-        });
       } else {
         setStatus({
           type: "error",

@@ -21,10 +21,12 @@ describe("Web3Form", () => {
   beforeEach(() => {
     mockSite.WEB3FORMS_ACCESS_KEY = "test-access-key";
     vi.stubGlobal("fetch", vi.fn());
+    HTMLElement.prototype.scrollIntoView = vi.fn();
   });
 
   afterEach(() => {
     vi.unstubAllGlobals();
+    vi.restoreAllMocks();
   });
 
   it("renders children and honeypot field hidden from tab order", () => {
@@ -69,6 +71,30 @@ describe("Web3Form", () => {
         body: expect.stringContaining("test-access-key"),
       }),
     );
+  });
+
+  it("scrolls the status message into view after submission", async () => {
+    const scrollIntoView = vi.mocked(HTMLElement.prototype.scrollIntoView);
+
+    vi.mocked(fetch).mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({ success: true, message: "OK" }),
+    } as Response);
+
+    render(
+      <Web3Form id="test-form" successMessage="Referral received">
+        <input name="name" aria-label="Name" required />
+      </Web3Form>,
+    );
+
+    fireEvent.change(screen.getByRole("textbox", { name: "Name" }), {
+      target: { value: "Test Surgery" },
+    });
+    fireEvent.click(screen.getByRole("button", { name: "Submit" }));
+
+    await waitFor(() => {
+      expect(scrollIntoView).toHaveBeenCalledWith({ behavior: "smooth", block: "center" });
+    });
   });
 
   it("shows error message when submission fails", async () => {
