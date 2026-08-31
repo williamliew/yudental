@@ -1,7 +1,7 @@
 "use client";
 
-import { StaticForm } from "@/components/forms/StaticForm";
-import { type DragEvent, useRef, useState } from "react";
+import { Web3Form } from "@/components/forms/Web3Form";
+import { SITE } from "@/lib/site";
 
 const inputClass =
   "w-full rounded border border-grey-mid/30 bg-white px-3 py-2.5 text-grey-dark outline-none transition-colors focus:border-teal focus:ring-2 focus:ring-teal/20";
@@ -24,64 +24,73 @@ const MONTHS = [
 const currentYear = new Date().getFullYear();
 const years = Array.from({ length: currentYear - 1920 + 1 }, (_, i) => currentYear - i);
 
+function buildReferralPayload(formData: FormData): Record<string, string> {
+  const data = Object.fromEntries(
+    Array.from(formData.entries()).map(([key, value]) => [key, String(value)]),
+  );
+
+  const day = data.dob_day?.padStart(2, "0");
+  const month = data.dob_month?.padStart(2, "0");
+  const year = data.dob_year;
+
+  if (day && month && year) {
+    data.date_of_birth = `${day}/${month}/${year}`;
+  }
+
+  return {
+    ...data,
+    subject: `Denture referral: ${data.patient_name} (${data.surgery_name})`,
+    replyto: data.patient_email,
+    from_name: "Yu Dental referrals",
+  };
+}
+
+function getReferralSuccessMessage(): string {
+  const base =
+    "Thank you. We have received your referral and will be in touch shortly to request any referral letters or supporting documents.";
+
+  if (SITE.showReferralsEmailOnSite && SITE.referralsEmail) {
+    return `${base} You can also email documents to ${SITE.referralsEmail}.`;
+  }
+
+  return base;
+}
+
 export function ReferralForm() {
-  const fileInputRef = useRef<HTMLInputElement>(null);
-  const [fileList, setFileList] = useState<string>("");
-  const [dragActive, setDragActive] = useState(false);
-
-  const updateFileList = () => {
-    const files = fileInputRef.current?.files;
-    if (!files) {
-      setFileList("");
-      return;
-    }
-    const names = Array.from(files).map((f) => f.name);
-    setFileList(names.length ? `Selected: ${names.join(", ")}` : "");
-  };
-
-  const validateFiles = (): boolean => {
-    const files = fileInputRef.current?.files;
-    if (!files) return true;
-    if (files.length > 5) {
-      alert("Please choose at most 5 files.");
-      return false;
-    }
-    const maxBytes = 15 * 1024 * 1024;
-    for (const file of Array.from(files)) {
-      if (file.size > maxBytes) {
-        alert("Each file must be 15 MB or smaller.");
-        return false;
-      }
-    }
-    return true;
-  };
-
-  const handleDrop = (event: DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    setDragActive(false);
-    const dt = event.dataTransfer;
-    if (!dt?.files?.length || !fileInputRef.current) return;
-    const buffer = new DataTransfer();
-    const max = Math.min(dt.files.length, 5);
-    for (let i = 0; i < max; i++) {
-      buffer.items.add(dt.files[i]);
-    }
-    fileInputRef.current.files = buffer.files;
-    updateFileList();
-  };
-
   return (
     <div className="rounded-lg border border-surface-muted bg-white p-6 shadow-sm md:p-8">
-      <p className="text-sm text-grey-mid">
-        This form is a front-end demo: it does not email the server yet. Submit shows a confirmation
-        message; connect your backend or form service when you are ready.
-      </p>
+      <div className="space-y-2 text-sm text-grey-mid">
+        <p>
+          Submit patient details below. We will contact you to request any referral letters or
+          supporting documents.
+        </p>
+        {SITE.showReferralsEmailOnSite && SITE.referralsEmail ? (
+          <p>
+            You can also email documents to{" "}
+            <a
+              href={`mailto:${SITE.referralsEmail}?subject=${encodeURIComponent("Referral")}`}
+              className="font-semibold text-teal underline-offset-2 hover:underline"
+            >
+              {SITE.referralsEmail}
+            </a>
+            .
+          </p>
+        ) : null}
+        <p>
+          For urgent enquiries, call{" "}
+          <a href={`tel:${SITE.phoneTel}`} className="font-semibold text-teal hover:underline">
+            {SITE.phone}
+          </a>
+          .
+        </p>
+      </div>
+
       <div className="mt-6">
-        <StaticForm
+        <Web3Form
           id="referral-form"
-          successMessage="Thank you. Your referral details are shown here for demo purposes only. Please call 04-388 7491 or use your usual channel until this form is connected to email or your practice software."
-          onValidate={validateFiles}
-          onReset={() => setFileList("")}
+          successMessage={getReferralSuccessMessage()}
+          buildPayload={buildReferralPayload}
+          submitLabel="Submit referral"
         >
           <fieldset className="mb-6 space-y-4">
             <legend className="mb-3 font-display text-lg font-bold text-navy">
@@ -269,53 +278,20 @@ export function ReferralForm() {
               </select>
             </div>
             <div>
-              <span id="ref-files-label" className="mb-2 block text-sm font-semibold text-navy">
-                Referral letter / supporting documents
-              </span>
-              <div
-                className={`rounded border-2 border-dashed p-6 text-center transition-colors ${
-                  dragActive ? "border-teal bg-teal/5" : "border-grey-mid/30"
-                }`}
-                onDragEnter={(e) => {
-                  e.preventDefault();
-                  setDragActive(true);
-                }}
-                onDragOver={(e) => e.preventDefault()}
-                onDragLeave={() => setDragActive(false)}
-                onDrop={handleDrop}
-              >
-                <label className="cursor-pointer">
-                  <input
-                    ref={fileInputRef}
-                    id="referral-files"
-                    type="file"
-                    name="documents[]"
-                    accept=".pdf,application/pdf"
-                    multiple
-                    className="hidden"
-                    aria-labelledby="ref-files-label"
-                    onChange={updateFileList}
-                  />
-                  <span className="text-sm text-grey-mid">Drop files here or </span>
-                  <span className="text-sm font-semibold text-teal">Select files</span>
-                </label>
-                <p className="mt-2 text-xs text-grey-mid">
-                  Accepted file types: PDF. Max. file size: 15 MB per file. Max. files: 5.
-                </p>
-                {fileList && (
-                  <p className="mt-2 text-sm text-navy" aria-live="polite">
-                    {fileList}
-                  </p>
-                )}
-              </div>
+              <label htmlFor="ref-notes" className="mb-1 block text-sm font-semibold text-navy">
+                Additional notes
+              </label>
+              <textarea
+                id="ref-notes"
+                name="referral_notes"
+                rows={4}
+                className={inputClass}
+                placeholder="Optional clinical context or timing requirements"
+              />
             </div>
           </fieldset>
 
-          <div className="mb-6 space-y-3">
-            <p className="text-xs text-grey-mid">
-              When you go live, replace this block with Google reCAPTCHA (or your host&apos;s spam
-              protection) and keep the privacy notice in your privacy policy.
-            </p>
+          <div className="mb-6">
             <label className="flex items-start gap-3 text-sm">
               <input type="checkbox" name="confirm_human" value="1" required className="mt-1" />
               <span>
@@ -323,14 +299,7 @@ export function ReferralForm() {
               </span>
             </label>
           </div>
-
-          <button
-            type="submit"
-            className="rounded bg-navy px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-navy-deep"
-          >
-            Submit
-          </button>
-        </StaticForm>
+        </Web3Form>
       </div>
     </div>
   );

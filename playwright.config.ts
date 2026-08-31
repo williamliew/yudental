@@ -22,8 +22,11 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: "npx serve out -l 4173",
+    command: "npm run build && npx serve out -l 4173",
     url: "http://127.0.0.1:4173",
     reuseExistingServer: !process.env.CI,
+    env: {
+      NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY: "e2e-test-key",
+    },
   },
 });

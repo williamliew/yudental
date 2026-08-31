@@ -13,8 +13,8 @@ export default function DentureReferralsPage() {
     <div className="mx-auto max-w-3xl px-4 py-12 md:px-6 md:py-16">
       <h1 className="font-display text-3xl font-bold text-navy md:text-4xl">Denture referrals</h1>
       <p className="mt-4 text-grey-mid leading-relaxed">
-        We welcome referrals from dentists and specialists. Use this form to send patient details
-        and supporting documents so we can tailor treatment and keep your practice informed.
+        We welcome referrals from dentists and specialists. Use this form to send patient details;
+        we will contact you to request any referral letters or supporting documents.
       </p>
       <div className="mt-8">
         <ReferralForm />

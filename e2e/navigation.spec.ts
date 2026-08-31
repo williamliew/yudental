@@ -30,7 +30,7 @@ test.describe("navigation", () => {
   });
 
   test("smoke: key routes load", async ({ page }) => {
-    const routes = ["/about/", "/denture-services/", "/contact/", "/book/"];
+    const routes = ["/about/", "/denture-services/", "/contact/", "/book/", "/denture-referrals/"];
     for (const route of routes) {
       await page.goto(route);
       await expect(page.locator("main#main-content")).toBeVisible();

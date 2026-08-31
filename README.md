@@ -30,4 +30,19 @@ Legacy static HTML/CSS is preserved in `legacy/` for reference.
 
 ## Forms
 
-Contact, book and referral forms are visual-only demos (no backend). Wire Formspree or a Cloudflare Worker when ready.
+### Referral form (`/denture-referrals/`)
+
+Submissions are sent via [Web3Forms](https://web3forms.com) (text fields only). Referral letters and PDFs are requested separately after submit; no file upload on the form.
+
+**Setup:**
+
+1. Create an access key at [web3forms.com](https://web3forms.com) using the clinic inbox that should receive referrals.
+2. Enable **hCaptcha** in the Web3Forms dashboard (Settings → Block Spam).
+3. Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`.
+4. On Cloudflare Pages, add the same variable under Settings → Environment variables, then redeploy.
+
+The notification inbox is configured in the Web3Forms dashboard only; it is not displayed on the public site while using a personal address. When a domain email (e.g. `referrals@yudental.co.nz`) is ready, set `referralsEmail` and `showReferralsEmailOnSite: true` in `src/lib/site.ts`.
+
+### Booking (`/book/`)
+
+Halaxy online booking iframe (external).
