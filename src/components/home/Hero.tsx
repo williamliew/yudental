@@ -17,8 +17,8 @@ export function Hero() {
         aria-hidden="true"
       />
       <div className="absolute inset-0 bg-navy-deep/80" aria-hidden="true" />
-      <div className="relative mx-auto max-w-[var(--max-width-content)] px-4 py-16 md:px-6 md:py-24">
-        <p className="text-sm font-semibold uppercase tracking-widest text-teal">
+      <div className="surface-dark relative mx-auto max-w-[var(--max-width-content)] px-4 py-16 md:px-6 md:py-24">
+        <p className="text-sm font-semibold uppercase tracking-widest text-accent-on-dark">
           Quality · craftsmanship · New Zealand made
         </p>
         <h1

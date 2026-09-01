@@ -20,7 +20,7 @@ export function Header() {
   const closeNav = () => setNavOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-navy text-white shadow-md">
+    <header className="surface-dark sticky top-0 z-50 bg-navy text-white shadow-md">
       <div className="h-1 bg-teal" aria-hidden="true" />
       <div className="border-b border-white/10 bg-navy-deep/50 px-4 py-1.5 text-center text-sm text-white/90">
         <p>Quality craftsmanship · NZ-made dentures · Wellington since 2000</p>
@@ -78,7 +78,9 @@ export function Header() {
                 href={item.href}
                 onClick={closeNav}
                 className={`rounded px-2 py-2 text-sm font-medium no-underline transition-colors md:py-1 ${
-                  isActive(item.href) ? "text-teal" : "text-white/90 hover:text-teal"
+                  isActive(item.href)
+                    ? "text-accent-on-dark"
+                    : "text-white/90 hover:text-accent-on-dark"
                 }`}
               >
                 {item.label}
@@ -88,7 +90,7 @@ export function Header() {
           <div className="mt-6 flex flex-col gap-3 border-t border-white/10 pt-6 md:mt-0 md:flex-row md:items-center md:border-0 md:pt-0">
             <a
               href={`tel:${SITE.phoneTel}`}
-              className="inline-flex items-center gap-2 text-sm font-semibold text-white no-underline hover:text-teal"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white no-underline hover:text-accent-on-dark"
               aria-label="Call Yu Dental Laboratory"
             >
               <IconPhone size={18} />

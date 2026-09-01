@@ -78,7 +78,7 @@ export default function DentureServicesPage() {
         tagline="Patient information on dentures, appliances and ongoing care."
       />
       <aside
-        className="bg-navy px-4 py-8 text-white md:px-6"
+        className="surface-dark bg-navy px-4 py-8 text-white md:px-6"
         aria-labelledby="supergold-denture-heading"
       >
         <div className="mx-auto flex max-w-[var(--max-width-content)] flex-col gap-6 md:flex-row md:items-start">
@@ -101,11 +101,11 @@ export default function DentureServicesPage() {
             </p>
             <p className="mt-3 text-white/85">
               SuperGold cardholders are welcome here.{" "}
-              <Link href="/contact/" className="text-teal hover:text-white">
+              <Link href="/contact/" className="text-accent-on-dark hover:text-white">
                 Contact us
               </Link>{" "}
               or mention your card when you{" "}
-              <Link href="/book/" className="text-teal hover:text-white">
+              <Link href="/book/" className="text-accent-on-dark hover:text-white">
                 book online
               </Link>{" "}
               so we can explain what applies to your denture treatment.
@@ -115,7 +115,7 @@ export default function DentureServicesPage() {
                 href="https://www.supergold.govt.nz/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-teal hover:text-white"
+                className="text-accent-on-dark hover:text-white"
               >
                 More about the SuperGold card
                 <span className="sr-only"> (opens in new tab)</span>

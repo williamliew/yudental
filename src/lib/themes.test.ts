@@ -1,37 +1,49 @@
-import { THEME_OPTIONS, WHITE, contrastRatio, meetsWcagAaNormalText } from "@/lib/themes";
+import { STEEL_PALETTE, WHITE, contrastRatio, meetsWcagAaNormalText } from "@/lib/themes";
 
-describe("theme palettes", () => {
-  for (const theme of THEME_OPTIONS) {
-    describe(theme.label, () => {
-      it("meets WCAG AA for body text on white", () => {
-        expect(meetsWcagAaNormalText(theme.palette.greyDark, WHITE)).toBe(true);
-      });
+describe("Steel Professional palette", () => {
+  const palette = STEEL_PALETTE;
 
-      it("meets WCAG AA for secondary text on white", () => {
-        expect(meetsWcagAaNormalText(theme.palette.greyMid, WHITE)).toBe(true);
-      });
+  it("meets WCAG AA for body text on white", () => {
+    expect(meetsWcagAaNormalText(palette.greyDark, WHITE)).toBe(true);
+  });
 
-      it("meets WCAG AA for white text on navy header", () => {
-        expect(meetsWcagAaNormalText(WHITE, theme.palette.navy)).toBe(true);
-      });
+  it("meets WCAG AA for secondary text on white", () => {
+    expect(meetsWcagAaNormalText(palette.greyMid, WHITE)).toBe(true);
+  });
 
-      it("meets WCAG AA for white text on navy-deep overlays", () => {
-        expect(meetsWcagAaNormalText(WHITE, theme.palette.navyDeep)).toBe(true);
-      });
+  it("meets WCAG AA for white text on navy header", () => {
+    expect(meetsWcagAaNormalText(WHITE, palette.navy)).toBe(true);
+  });
 
-      it("meets WCAG AA for white text on primary buttons", () => {
-        expect(meetsWcagAaNormalText(WHITE, theme.palette.teal)).toBe(true);
-      });
+  it("meets WCAG AA for white text on navy-deep overlays", () => {
+    expect(meetsWcagAaNormalText(WHITE, palette.navyDeep)).toBe(true);
+  });
 
-      it("meets WCAG AA for link colour on white", () => {
-        expect(meetsWcagAaNormalText(theme.palette.teal, WHITE)).toBe(true);
-      });
+  it("meets WCAG AA for white text on primary buttons", () => {
+    expect(meetsWcagAaNormalText(WHITE, palette.teal)).toBe(true);
+  });
 
-      it("documents contrast ratios for debugging", () => {
-        expect(contrastRatio(theme.palette.greyDark, WHITE)).toBeGreaterThanOrEqual(4.5);
-        expect(contrastRatio(theme.palette.teal, WHITE)).toBeGreaterThanOrEqual(4.5);
-        expect(contrastRatio(WHITE, theme.palette.teal)).toBeGreaterThanOrEqual(4.5);
-      });
-    });
-  }
+  it("meets WCAG AA for link colour on white", () => {
+    expect(meetsWcagAaNormalText(palette.teal, WHITE)).toBe(true);
+  });
+
+  it("meets WCAG AA for accent-on-dark on navy", () => {
+    expect(meetsWcagAaNormalText(palette.accentOnDark, palette.navy)).toBe(true);
+  });
+
+  it("meets WCAG AA for accent-on-dark on navy-deep", () => {
+    expect(meetsWcagAaNormalText(palette.accentOnDark, palette.navyDeep)).toBe(true);
+  });
+
+  it("meets WCAG AA for white link hover on navy", () => {
+    expect(meetsWcagAaNormalText(WHITE, palette.navy)).toBe(true);
+  });
+
+  it("documents contrast ratios for debugging", () => {
+    expect(contrastRatio(palette.greyDark, WHITE)).toBeGreaterThanOrEqual(4.5);
+    expect(contrastRatio(palette.teal, WHITE)).toBeGreaterThanOrEqual(4.5);
+    expect(contrastRatio(WHITE, palette.teal)).toBeGreaterThanOrEqual(4.5);
+    expect(contrastRatio(palette.accentOnDark, palette.navy)).toBeGreaterThanOrEqual(4.5);
+    expect(contrastRatio(palette.accentOnDark, palette.navyDeep)).toBeGreaterThanOrEqual(4.5);
+  });
 });

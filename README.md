@@ -47,20 +47,6 @@ The notification inbox is configured in the Web3Forms dashboard only; it is not 
 
 Halaxy online booking iframe (external).
 
-## Theme preview (temporary)
+## Colour palette
 
-A fixed **Theme preview** dropdown (bottom-right) lets the client compare four colour palettes:
-
-- Clinical Blue (current default)
-- Sage & Stone
-- Steel Professional
-- Warm Ivory
-
-Choice is saved in `localStorage` (`yu-dental-theme-preview`). Palettes are defined in [`src/lib/themes.ts`](src/lib/themes.ts) and [`src/app/globals.css`](src/app/globals.css) via `data-theme` on `<html>`.
-
-**After the client picks a palette**, remove the preview UI and collapse to a single theme:
-
-1. Delete [`src/components/theme/ThemePreviewSwitcher.tsx`](src/components/theme/ThemePreviewSwitcher.tsx) and its import from [`src/app/layout.tsx`](src/app/layout.tsx).
-2. Delete [`src/components/theme/ThemeInitScript.tsx`](src/components/theme/ThemeInitScript.tsx) if no longer needed.
-3. Keep only the chosen palette values in `:root` in `globals.css`; remove other `[data-theme="…"]` blocks.
-4. Remove `src/lib/themes.ts` preview exports if unused, or keep palette constants only.
+The site uses the **Steel Professional** palette (cool navy header, steel-teal accents on light surfaces, light cyan accents on dark bands). Tokens live in [`src/app/globals.css`](src/app/globals.css) (`:root` CSS variables). Contrast pairs are checked in [`src/lib/themes.test.ts`](src/lib/themes.test.ts).
