@@ -70,14 +70,16 @@ export default function FaqPage() {
             ))}
             <AccordionItem title="9. Do you offer SuperGold card discounts?">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-                <Image
-                  src="/images/supergold-logo.png"
-                  alt="SuperGold; Te kāri kōura"
-                  width={180}
-                  height={151}
-                  className="h-auto w-32 shrink-0"
-                  loading="lazy"
-                />
+                <div className="mx-auto shrink-0 rounded-md bg-white p-3 ring-1 ring-navy/10 sm:mx-0">
+                  <Image
+                    src="/images/supergold-logo.png"
+                    alt="SuperGold; Te kāri kōura"
+                    width={552}
+                    height={264}
+                    className="h-auto w-32"
+                    loading="lazy"
+                  />
+                </div>
                 <div className="space-y-3">
                   <p>
                     SuperGold cardholders are welcome. When you book or visit, tell us you hold a

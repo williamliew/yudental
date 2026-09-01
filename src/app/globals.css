@@ -51,11 +51,11 @@
   }
 
   :where(.surface-dark) a:not([class*="bg-"]) {
-    @apply text-accent-on-dark;
+    @apply font-semibold text-white underline underline-offset-2;
   }
 
   :where(.surface-dark) a:not([class*="bg-"]):hover {
-    @apply text-white;
+    @apply decoration-2;
   }
 }
 

@@ -77,10 +77,10 @@ export function Header() {
                 key={item.key}
                 href={item.href}
                 onClick={closeNav}
-                className={`rounded px-2 py-2 text-sm font-medium no-underline transition-colors md:py-1 ${
+                className={`rounded px-2 py-2 text-sm transition-colors md:py-1 ${
                   isActive(item.href)
-                    ? "text-accent-on-dark"
-                    : "text-white/90 hover:text-accent-on-dark"
+                    ? "font-semibold text-white underline underline-offset-4 decoration-2"
+                    : "font-medium text-white/90 no-underline hover:text-white hover:underline"
                 }`}
               >
                 {item.label}
@@ -90,7 +90,7 @@ export function Header() {
           <div className="mt-6 flex flex-col gap-3 border-t border-white/10 pt-6 md:mt-0 md:flex-row md:items-center md:border-0 md:pt-0">
             <a
               href={`tel:${SITE.phoneTel}`}
-              className="inline-flex items-center gap-2 text-sm font-semibold text-white no-underline hover:text-accent-on-dark"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white underline-offset-2 hover:underline"
               aria-label="Call Yu Dental Laboratory"
             >
               <IconPhone size={18} />

@@ -77,58 +77,52 @@ export default function DentureServicesPage() {
         title="Denture services"
         tagline="Patient information on dentures, appliances and ongoing care."
       />
-      <aside
-        className="surface-dark bg-navy px-4 py-8 text-white md:px-6"
-        aria-labelledby="supergold-denture-heading"
-      >
-        <div className="mx-auto flex max-w-[var(--max-width-content)] flex-col gap-6 md:flex-row md:items-start">
-          <Image
-            src="/images/supergold-logo.png"
-            alt="SuperGold; Te kāri kōura"
-            width={200}
-            height={168}
-            className="h-auto w-40 shrink-0"
-            loading="lazy"
-          />
-          <div>
-            <h2 id="supergold-denture-heading" className="font-display text-xl font-bold">
-              SuperGold card
-            </h2>
-            <p className="mt-3 text-white/85 leading-relaxed">
-              The New Zealand SuperGold card is government-issued for residents aged 65 and over and
-              eligible veterans. It can include discounts on goods and services from participating
-              businesses, and other benefits such as free off-peak public transport.
-            </p>
-            <p className="mt-3 text-white/85">
-              SuperGold cardholders are welcome here.{" "}
-              <Link href="/contact/" className="text-accent-on-dark hover:text-white">
-                Contact us
-              </Link>{" "}
-              or mention your card when you{" "}
-              <Link href="/book/" className="text-accent-on-dark hover:text-white">
-                book online
-              </Link>{" "}
-              so we can explain what applies to your denture treatment.
-            </p>
-            <p className="mt-3">
-              <a
-                href="https://www.supergold.govt.nz/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent-on-dark hover:text-white"
-              >
-                More about the SuperGold card
-                <span className="sr-only"> (opens in new tab)</span>
-              </a>
-            </p>
-          </div>
-        </div>
-      </aside>
       <div className="mx-auto max-w-[var(--max-width-content)] px-4 py-8 md:px-6">
-        <p className="text-grey-mid">
+        <aside
+          className="rounded-lg bg-white p-4 md:p-6"
+          aria-labelledby="supergold-denture-heading"
+        >
+          <div className="flex flex-col gap-6 md:flex-row md:items-start">
+            <div className="mx-auto shrink-0 rounded-md bg-white p-3 md:mx-0">
+              <Image
+                src="/images/supergold-logo.png"
+                alt="SuperGold; Te kāri kōura"
+                width={552}
+                height={264}
+                className="h-auto w-36 md:w-44"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <h2
+                id="supergold-denture-heading"
+                className="font-display text-xl font-bold text-navy"
+              >
+                SuperGold card
+              </h2>
+              <p className="mt-3 leading-relaxed text-grey-dark">
+                The New Zealand SuperGold card is government-issued for residents aged 65 and over
+                and eligible veterans. It can include discounts on goods and services from
+                participating businesses, and other benefits such as free off-peak public transport.
+              </p>
+              <p className="mt-3 font-semibold text-grey-dark">
+                SuperGold cardholders are welcome here. <Link href="/contact/">Contact us</Link> or
+                mention your card when you <Link href="/book/">book online</Link> so we can explain
+                what applies to your denture treatment.
+              </p>
+              <p className="mt-3 text-sm">
+                <a href="https://www.supergold.govt.nz/" target="_blank" rel="noopener noreferrer">
+                  More about the SuperGold card
+                  <span className="sr-only"> (opens in new tab)</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </aside>
+        <p className="my-8 text-grey-mid">
           Open any heading below for a short overview of that service.
         </p>
-        <div className="mt-6 rounded-lg border border-surface-muted bg-white px-4 shadow-sm md:px-6">
+        <div className="rounded-lg border border-surface-muted bg-white px-4 shadow-sm md:px-6">
           {TREATMENTS.map((treatment) => (
             <AccordionItem key={treatment.title} title={treatment.title}>
               <div className="flex gap-4">
