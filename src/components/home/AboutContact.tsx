@@ -24,7 +24,7 @@ export function AboutTeaser() {
             Established in 2000, Yu Dental Laboratory started as a small family business working
             from the basement of their home in the eastern suburbs of Wellington. Along with 50
             years of industry experience, our aim is to provide our clients and patients with
-            quality New Zealand made dental appliances and comprehensive professional service.
+            quality locally made dental appliances and comprehensive professional service.
           </p>
           <p className="mt-4 text-white/85 leading-relaxed">
             As a team, we are passionate about the art and skill of providing quality aesthetics,
@@ -44,10 +44,11 @@ export function TeamTeaser() {
       <h2 id="team-heading" className="font-display text-2xl font-bold text-navy md:text-3xl">
         Our team
       </h2>
-      <p className="mt-4 max-w-3xl text-grey-mid">
-        We are a close-knit laboratory family. Meet the team on the dedicated page; we focus on how
-        we work together rather than long individual bios.
-      </p>
+      <div className="mt-4 max-w-3xl space-y-3 text-grey-mid">
+        <p>We are a family laboratory that values teamwork.</p>
+        <p>Visit our page to meet our great team and see how we support each other.</p>
+        <p>Our strength comes from working together.</p>
+      </div>
       <p className="mt-6">
         <Link
           href="/team/"

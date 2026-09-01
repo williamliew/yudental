@@ -1,6 +1,5 @@
 import { PageBanner } from "@/components/layout/PageBanner";
 import { createPageMetadata } from "@/lib/metadata";
-import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = createPageMetadata({
@@ -14,23 +13,25 @@ const LAB_SERVICES = [
   "Full/full and partial denture (Treatment/ Dental Services)",
   "Implant retained overdenture",
   "Implant bar retained overdenture",
+  "Precision attachment dentures",
+  "Gold Onlay for dentures",
+  "Surgical Guides/Stents",
+  "Radiographic Guide",
+  "Essex Retainer / With Pontic",
   "Cobalt chrome framework",
   "Welding retention",
   "Repairs, relines, additions",
   "Bruxism splints (hard and soft / NTI)",
   "Mouth guards",
   "Orthodontic retainers",
-  "Essex retainers",
   "Bleaching trays",
-  "MSD sleep apnoea devices",
+  "MDSA Sleep apnoea device",
   "Gold veneer for denture tooth",
 ] as const;
 
-const SCAN_LOGOS = [
-  { src: "/images/digital-scans/3shape.png", alt: "3Shape" },
-  { src: "/images/digital-scans/dentsply-sirona.png", alt: "Dentsply Sirona" },
-  { src: "/images/digital-scans/itero.png", alt: "iTero" },
-] as const;
+const ACCEPTED_SCANNERS = ["3Shape", "Dentsply Sirona", "iTero"] as const;
+
+const LAB_PARTNER_EMAIL = "yudlab@gmail.com";
 
 export default function DentalLabServicesPage() {
   return (
@@ -73,31 +74,18 @@ export default function DentalLabServicesPage() {
           </div>
           <div
             className="mt-10 rounded-lg bg-surface-muted p-6"
-            aria-labelledby="digital-scans-heading"
+            aria-labelledby="accepted-scanners-heading"
           >
-            <h3 id="digital-scans-heading" className="font-display text-xl font-bold text-navy">
-              Digital scans accepted
+            <h3 id="accepted-scanners-heading" className="font-display text-xl font-bold text-navy">
+              Accepted scanners
             </h3>
-            <p className="mt-2 text-sm text-grey-mid">
-              Logos are shown for layout only; obtain written consent from each brand before going
-              live.
+            <p className="mt-4 text-grey-mid">{ACCEPTED_SCANNERS.join(" · ")}</p>
+            <p className="mt-4 text-grey-mid leading-relaxed">
+              If you would like to partner with us, you can add us via our email,{" "}
+              <a href={`mailto:${LAB_PARTNER_EMAIL}`}>{LAB_PARTNER_EMAIL}</a>, through your
+              acquisition software. Once added, it will be as simple as a few clicks for the case to
+              be sent.
             </p>
-            <ul className="mt-6 grid gap-4 sm:grid-cols-3">
-              {SCAN_LOGOS.map((logo) => (
-                <li key={logo.alt}>
-                  <div className="flex h-20 items-center justify-center rounded bg-white p-4 shadow-sm">
-                    <Image
-                      src={logo.src}
-                      alt={logo.alt}
-                      width={200}
-                      height={56}
-                      className="max-h-12 w-auto object-contain"
-                      loading="lazy"
-                    />
-                  </div>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </section>
@@ -111,16 +99,11 @@ export default function DentalLabServicesPage() {
               <h2 id="lab-promise-heading" className="font-display text-xl font-bold text-navy">
                 Our promise
               </h2>
-              <ul className="mt-4 space-y-2 text-grey-mid">
-                <li>
-                  We only use top-quality products and materials from reputable manufacturers.
-                </li>
-                <li>100% New Zealand owned and operated; appliances made on site.</li>
-                <li>
-                  We stand behind our workmanship and are upfront about timelines, materials and
-                  what each case requires.
-                </li>
-              </ul>
+              <p className="mt-4 text-grey-mid leading-relaxed">
+                We combine skilled workmanship with modern materials to create appliances that look
+                natural, feel stable, and help you communicate clearly. Whether you are a patient or
+                a referring clinician, you can count on our high technical standards.
+              </p>
             </div>
             <div
               className="min-h-48 rounded-lg bg-cover bg-center"

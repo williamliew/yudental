@@ -13,11 +13,11 @@ export function DepartmentCards() {
       <div className="mt-4 max-w-3xl space-y-3 text-grey-mid">
         <p>
           Patients choose us for expert denture relines, repairs, and comprehensive care, while
-          referring practices trust our quality dental laboratory services.
+          referring dental practices trust us for quality dental laboratory services.
         </p>
         <p>
-          Everything is meticulously planned and crafted right here in Wellington, ensuring the
-          highest standards for our patients &amp; clients.
+          Every case is carefully planned and crafted right here in Wellington, ensuring the highest
+          standards for our patients &amp; clients.
         </p>
       </div>
       <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -26,12 +26,11 @@ export function DepartmentCards() {
           className="group rounded-lg border border-surface-muted bg-white p-6 no-underline shadow-sm transition-shadow hover:shadow-md md:p-8"
         >
           <h3 className="font-display text-xl font-bold text-navy group-hover:text-teal">
-            For patients
+            For Patients
           </h3>
           <p className="mt-3 text-grey-mid leading-relaxed">
-            New dentures, relines, repairs and same-day fixes where possible. No referral needed —
-            book online or call. SuperGold cardholders welcome; ask us about fees and WINZ quotes at
-            your first visit.
+            New dentures, relines, repairs and same-day fixes where possible. Book online or call.
+            SuperGold cardholders welcome; ask us about fees and WINZ quotes at your first visit.
           </p>
           <span className="mt-4 inline-block text-sm font-semibold text-teal">
             View denture services →
@@ -42,12 +41,11 @@ export function DepartmentCards() {
           className="group rounded-lg border border-surface-muted bg-white p-6 no-underline shadow-sm transition-shadow hover:shadow-md md:p-8"
         >
           <h3 className="font-display text-xl font-bold text-navy group-hover:text-teal">
-            For dentists
+            For Dentist
           </h3>
           <p className="mt-3 text-grey-mid leading-relaxed">
-            NZ-made prosthetics, digital scan acceptance (iTero, 3Shape, Sirona), nationwide
-            courier, and direct communication on every case. Refer online or download our referral
-            form.
+            Locally made Dental Prosthetics, all digital scans accepted, nationwide courier, and
+            direct communication on every case. Refer online or download our referral form.
           </p>
           <span className="mt-4 inline-block text-sm font-semibold text-teal">
             View lab services →

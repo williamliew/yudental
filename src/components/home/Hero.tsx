@@ -19,7 +19,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-navy-deep/80" aria-hidden="true" />
       <div className="surface-dark relative mx-auto max-w-[var(--max-width-content)] px-4 py-16 md:px-6 md:py-24">
         <p className="text-sm font-semibold uppercase tracking-widest text-accent-on-dark">
-          Quality · craftsmanship · New Zealand made
+          Quality · craftsmanship · Locally made
         </p>
         <h1
           id="hero-heading"
@@ -28,9 +28,11 @@ export function Hero() {
           Dentures, relines &amp; repairs in Wellington
         </h1>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/90 md:text-xl">
-          Family-run dental laboratory and denture clinic in Te Aro. We make NZ-made dentures,
-          relines and repairs on site, and provide lab services for referring dentists across
-          Wellington and New Zealand. Book a consultation online or call us during clinic hours.
+          Family-run dental laboratory and denture clinic in Te Aro, Wellington. We provide locally
+          made dentures, relines and repairs, all completed on site for quality and faster
+          turnaround. We also provide professional dental laboratory services for referring dentists
+          throughout Wellington and across New Zealand. Book a consultation online or call us during
+          clinic hours.
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <ButtonLink href="/book/" variant="primary">

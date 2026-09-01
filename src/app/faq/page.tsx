@@ -2,6 +2,7 @@ import { AccordionItem, PageBanner } from "@/components/layout/PageBanner";
 import { createPageMetadata } from "@/lib/metadata";
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 
 export const metadata = createPageMetadata({
   title: "Frequently asked questions",
@@ -10,48 +11,88 @@ export const metadata = createPageMetadata({
   path: "/faq/",
 });
 
-const FAQS = [
+type FaqItem = {
+  question: string;
+  answer: ReactNode;
+};
+
+const FAQS: FaqItem[] = [
   {
     question: "1. What types of dentures do you offer?",
-    answer:
-      "We provide full dentures, partial dentures, implant-retained overdentures, and All-on-4 solutions. Our team will guide you to the best option for your needs.",
+    answer: (
+      <p>
+        We provide full dentures, partial dentures, and implant-retained overdentures. Our team will
+        guide you to the best option for your needs. See our{" "}
+        <Link href="/denture-services/">Denture services</Link> page for more detail.
+      </p>
+    ),
   },
   {
     question: "2. How long does it take to get new dentures?",
-    answer:
-      "Most patients can expect their new dentures within 2–4 weeks, depending on the type of denture and individual requirements.",
+    answer: (
+      <p>
+        Most patients can expect their new dentures within 2–4 weeks, depending on the type of
+        denture and individual requirements.
+      </p>
+    ),
   },
   {
     question: "3. Can you repair or adjust my existing dentures?",
-    answer:
-      "Yes. We offer relines and same-day repairs in most cases to restore comfort and function quickly.",
+    answer: (
+      <p>
+        Yes. We offer relines and same-day repairs in most cases to restore comfort and function
+        quickly.
+      </p>
+    ),
   },
   {
     question: "4. Do I need a referral to book a consultation?",
-    answer:
-      "No referral is needed. You can book directly with us whether you are a new patient or replacing an existing appliance.",
+    answer: (
+      <p>
+        A referral is necessary if you have any remaining teeth. You can schedule an appointment
+        with us directly, whether you are a new patient or need to replace an existing appliance.
+      </p>
+    ),
   },
   {
     question: "5. How much do dentures cost?",
-    answer:
-      "Fees depend on the type of denture and materials. We explain costs at your consultation. SuperGold cardholders and WINZ quotes welcome — mention your card when you book.",
+    answer: (
+      <p>
+        Fees depend on the type of denture and materials. We explain costs at your consultation.
+        SuperGold cardholders and WINZ quotes welcome — mention your card when you book.
+      </p>
+    ),
   },
   {
     question: "6. Can you repair my denture today?",
-    answer:
-      "Many repairs and adjustments can be done same day if we have capacity. Call us in the morning with your situation; we will tell you if we can fit you in.",
+    answer: (
+      <p>
+        Many repairs and adjustments can be done same day if we have capacity. Call us in the
+        morning with your situation; we will tell you if we can fit you in.
+      </p>
+    ),
   },
   {
     question: "7. Do you accept digital scans from my dentist?",
-    answer:
-      "Yes. We accept files from iTero, 3Shape, and Dentsply Sirona workflows. Dentists: see our For dentists page for how to send a case.",
+    answer: (
+      <p>
+        Yes. We accept files from iTero, 3Shape, and Dentsply Sirona workflows. Dentists: see our{" "}
+        <Link href="/dental-lab-services/">For dentists</Link> page and our{" "}
+        <Link href="/dental-lab-services/#accepted-scanners-heading">accepted scanners</Link>{" "}
+        section for how to send a case.
+      </p>
+    ),
   },
   {
     question: "8. Do you see patients from outside Wellington?",
-    answer:
-      "Yes. Patients travel from across the Wellington region; we can discuss appointment spacing if you are coming from further away.",
+    answer: (
+      <p>
+        Yes. Patients travel from across the Wellington region; we can discuss appointment spacing
+        if you are coming from further away.
+      </p>
+    ),
   },
-] as const;
+];
 
 export default function FaqPage() {
   return (
@@ -65,7 +106,7 @@ export default function FaqPage() {
           <div className="rounded-lg border border-surface-muted bg-white px-4 shadow-sm md:px-6">
             {FAQS.map((faq) => (
               <AccordionItem key={faq.question} title={faq.question}>
-                <p>{faq.answer}</p>
+                {faq.answer}
               </AccordionItem>
             ))}
             <AccordionItem title="9. Do you offer SuperGold card discounts?">
@@ -86,9 +127,9 @@ export default function FaqPage() {
                     card and we will explain how our fees relate to your treatment plan.
                   </p>
                   <p>
-                    The SuperGold card is a government-issued card for New Zealand residents aged 65
-                    and over and eligible veterans. Participating businesses may offer discounts on
-                    goods and services; programme information is on{" "}
+                    The New Zealand SuperGold card is a government-issued card for New Zealand
+                    residents aged 65 and over and eligible veterans. Participating businesses may
+                    offer discounts on goods and services; programme information is on{" "}
                     <a
                       href="https://www.supergold.govt.nz/"
                       target="_blank"

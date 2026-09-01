@@ -23,7 +23,15 @@ export function Header() {
     <header className="surface-dark sticky top-0 z-50 bg-navy text-white shadow-md">
       <div className="h-1 bg-teal" aria-hidden="true" />
       <div className="border-b border-white/10 bg-navy-deep/50 px-4 py-1.5 text-center text-sm text-white/90">
-        <p>Quality craftsmanship · NZ-made dentures · Wellington since 2000</p>
+        <p>
+          Quality craftsmanship ·{" "}
+          <span className="inline-block leading-tight">
+            Locally Made
+            <br />
+            Dentures
+          </span>{" "}
+          · Wellington since 2000
+        </p>
       </div>
       <div className="mx-auto flex max-w-[var(--max-width-content)] items-center gap-4 px-4 py-3 md:px-6">
         <Link

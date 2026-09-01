@@ -2,7 +2,7 @@ export const SITE = {
   name: "Yu Dental Laboratory",
   shortName: "Yu Dental",
   description:
-    "Wellington family dental laboratory since 2000. Quality New Zealand made dentures, lab services for clinicians, and patient denture care in Te Aro.",
+    "Wellington family dental laboratory since 2000. Quality locally made dentures, lab services for clinicians, and patient denture care in Te Aro.",
   url: "https://yudental.co.nz",
   phone: "04-388 7491",
   phoneTel: "+6443887491",

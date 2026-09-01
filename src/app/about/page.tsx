@@ -69,7 +69,7 @@ const ARCHIVE_IMAGES = [
   "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&h=400&fit=crop",
   "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=400&fit=crop",
   "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=400&fit=crop",
+  "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=400&h=400&fit=crop",
 ] as const;
 
 export default function AboutPage() {
@@ -94,32 +94,33 @@ export default function AboutPage() {
       </div>
       <div className="mx-auto max-w-[var(--max-width-content)] space-y-4 px-4 pb-12 text-grey-mid leading-relaxed md:px-6">
         <p>
-          Our father&apos;s route into dental technology began with formal training and long years
-          at the bench: learning how materials behave, how a case should feel in the mouth, and how
-          to work honestly with dentists who were trusting you with their patients. That foundation
-          still sets the tone when we plan shade, function and delivery today.
+          Our journey into dental technology began with formal training and many years of hands-on
+          experience. We learned how materials behave, how dental appliances should feel in the
+          mouth, and the importance of working honestly with dentists who trusted us with their
+          patients. This foundational knowledge continues to guide our planning, fabrication, and
+          delivery processes today.
         </p>
         <p>
-          In 2000 the family opened Yu Dental Laboratory from the basement of our home in
-          Wellington&apos;s eastern suburbs. It was a modest workshop in the truest sense; work
-          travelled between bench and courier, and referrers soon learned they could reach someone
-          who actually knew the case. From that beginning we grew into the Wellington site patients
-          and practices rely on now, without losing the habit of making appliances on site and
-          talking plainly about timelines and materials.
+          In 2000, our family opened Yu Dental Laboratory from the basement of our home in
+          Wellington&apos;s eastern suburbs. It was a modest workshop in every sense; work moved
+          between the bench and the courier, and our referrers soon discovered they could connect
+          with someone who genuinely understood the case. From that humble beginning, we grew into
+          the trusted Wellington site that patients and practices rely on today, all while
+          maintaining our commitment to crafting dental appliances on-site and communicating clearly
+          about timelines and materials.
         </p>
         <p>
-          Along the way we have stayed focused on the craft itself: aesthetics, function and
-          phonetics, using products and materials from reputable manufacturers and keeping
-          documentation aligned with New Zealand and European expectations. We still take on a wide
-          range of complexity, and we still care most about relationships with clients and patients
-          who want confidence in both the appliance and the people behind it.
+          Throughout the years, we have remained focused on the art of dental technology:
+          aesthetics, function, and phonetics. We use products and materials from reputable
+          manufacturers and ensure our documentation aligns with New Zealand and European standards.
+          We continue to take on a wide range of complexities, prioritising our relationships with
+          clients and patients who seek confidence in both the appliances and the people behind
+          them.
         </p>
         <p>
-          The story above stays as our overview. Below is a simple timeline from past to present,
-          and a little room for each of us in our own words once you have gathered dates and
-          memories with mum and dad. Many laboratories never put faces to the work; we hope this
-          adds warmth for patients and for dentists who value working with people, not only with
-          case numbers.
+          This story serves as our overview. Below, you&apos;ll find a simple timeline from our past
+          to the present. We hope this initiative adds warmth for both patients and dentists who
+          appreciate collaborating with real people, not just case numbers.
         </p>
       </div>
       <section
@@ -190,9 +191,9 @@ export default function AboutPage() {
             current clinic.
           </p>
           <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 md:gap-4">
-            {ARCHIVE_IMAGES.map((src) => (
+            {ARCHIVE_IMAGES.map((src, index) => (
               <div
-                key={src}
+                key={`archive-${index}`}
                 className="aspect-square rounded-lg bg-cover bg-center grayscale"
                 style={{ backgroundImage: `url(${src})` }}
               />

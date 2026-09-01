@@ -3,20 +3,6 @@ import Image from "next/image";
 
 const AFFILIATIONS = [
   {
-    href: "https://www.workandincome.govt.nz/",
-    src: "/images/affiliations/work-income.png",
-    alt: "Work and Income, Te Hiranga Tangata",
-    width: 280,
-    height: 90,
-  },
-  {
-    href: "https://dcnz.org.nz/",
-    src: "/images/affiliations/dental-council.png",
-    alt: "Dental Council of New Zealand, Te Kaunihera Tiaki Niho",
-    width: 260,
-    height: 72,
-  },
-  {
     href: "https://www.nzidt.org.nz/",
     src: "/images/affiliations/nzidt.png",
     alt: "New Zealand Institute of Dental Technologists (NZIDT)",
@@ -44,9 +30,9 @@ export function Affiliations() {
       <p className="mt-3 text-grey-mid">
         Organisations and frameworks connected with our laboratory practice.
       </p>
-      <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <ul className="mt-8 flex flex-wrap justify-start gap-4">
         {AFFILIATIONS.map((item) => (
-          <li key={item.href}>
+          <li key={item.href} className="w-full max-w-[14rem] sm:w-56">
             <a
               href={item.href}
               target="_blank"

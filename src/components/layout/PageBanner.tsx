@@ -49,7 +49,9 @@ export function AccordionItem({ title, children }: AccordionItemProps) {
           ▾
         </span>
       </summary>
-      <div className="pb-5 text-grey-mid leading-relaxed">{children}</div>
+      <div className="pb-5 text-grey-mid leading-relaxed [&_a]:font-semibold [&_a]:text-teal [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-teal-hover">
+        {children}
+      </div>
     </details>
   );
 }

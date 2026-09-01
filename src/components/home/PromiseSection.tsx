@@ -5,8 +5,13 @@ const SERVICES = [
   "Cobalt chrome framework",
   "Relines, repairs and additions",
   "Implant overdenture / implant bar-retained prosthetics",
+  "Precision attachment dentures",
+  "Gold Onlay for dentures",
+  "Surgical Guides/Stents",
+  "Radiographic Guide",
+  "Essex Retainer / With Pontic",
   "Sports mouthguards",
-  "MSD sleep apnoea devices",
+  "MDSA Sleep apnoea device",
   "Bruxism / TMJ splints",
   "Whitening trays",
   "Denture cleaning",
@@ -25,9 +30,9 @@ export function PromiseSection() {
             Our promise
           </h2>
           <p className="mt-4 text-grey-mid leading-relaxed">
-            We combine craftsmanship with modern materials so every appliance looks natural, feels
-            stable and supports clear speech. Whether you are a patient or a referring clinician,
-            you get the same careful technical standards.
+            We combine skilled workmanship with modern materials to create appliances that look
+            natural, feel stable, and help you communicate clearly. Whether you are a patient or a
+            referring clinician, you can count on our high technical standards.
           </p>
         </div>
         <div
