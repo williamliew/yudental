@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy: #003b5c;
-  --color-navy-deep: #002a45;
-  --color-teal: #00b5ad;
-  --color-teal-hover: #009a94;
-  --color-teal-dark: #238276;
-  --color-grey-dark: #2d3748;
-  --color-grey-mid: #718096;
-  --color-surface-muted: #f0f2f4;
+  --color-navy: var(--theme-navy);
+  --color-navy-deep: var(--theme-navy-deep);
+  --color-teal: var(--theme-teal);
+  --color-teal-hover: var(--theme-teal-hover);
+  --color-teal-dark: var(--theme-teal-dark);
+  --color-grey-dark: var(--theme-grey-dark);
+  --color-grey-mid: var(--theme-grey-mid);
+  --color-surface-muted: var(--theme-surface-muted);
   --color-accent-lime: #86bc25;
   --color-peach: #f5e6dc;
   --color-lavender: #e8e4ef;
@@ -17,6 +17,55 @@
   --font-display: var(--font-playfair), Georgia, serif;
 
   --max-width-content: 75rem;
+}
+
+:root,
+[data-theme="clinical"] {
+  color-scheme: light;
+  --theme-navy: #003b5c;
+  --theme-navy-deep: #002a45;
+  --theme-teal: #007a73;
+  --theme-teal-hover: #006860;
+  --theme-teal-dark: #00564f;
+  --theme-grey-dark: #2d3748;
+  --theme-grey-mid: #4a5568;
+  --theme-surface-muted: #f0f2f4;
+}
+
+[data-theme="sage"] {
+  color-scheme: light;
+  --theme-navy: #2f4f4f;
+  --theme-navy-deep: #1e3636;
+  --theme-teal: #3d7a62;
+  --theme-teal-hover: #326654;
+  --theme-teal-dark: #285242;
+  --theme-grey-dark: #1f2937;
+  --theme-grey-mid: #4b5c55;
+  --theme-surface-muted: #f4f6f3;
+}
+
+[data-theme="steel"] {
+  color-scheme: light;
+  --theme-navy: #1a2f44;
+  --theme-navy-deep: #0f1c2a;
+  --theme-teal: #2d6a7a;
+  --theme-teal-hover: #255a68;
+  --theme-teal-dark: #1d4a56;
+  --theme-grey-dark: #1e2a36;
+  --theme-grey-mid: #4a5c6b;
+  --theme-surface-muted: #f1f4f7;
+}
+
+[data-theme="ivory"] {
+  color-scheme: light;
+  --theme-navy: #3d4f5f;
+  --theme-navy-deep: #2a3640;
+  --theme-teal: #4a6859;
+  --theme-teal-hover: #3f5a4c;
+  --theme-teal-dark: #354c42;
+  --theme-grey-dark: #2c3338;
+  --theme-grey-mid: #5c656d;
+  --theme-surface-muted: #faf8f5;
 }
 
 @layer base {

@@ -1,7 +1,10 @@
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { ThemeInitScript } from "@/components/theme/ThemeInitScript";
+import { ThemePreviewSwitcher } from "@/components/theme/ThemePreviewSwitcher";
 import { getLocalBusinessJsonLd } from "@/lib/jsonld";
 import { rootMetadata } from "@/lib/metadata";
+import { DEFAULT_THEME_ID } from "@/lib/themes";
 import { DM_Sans, Playfair_Display } from "next/font/google";
 import type { ReactNode } from "react";
 import "./globals.css";
@@ -25,8 +28,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   const jsonLd = getLocalBusinessJsonLd();
 
   return (
-    <html lang="en-NZ" className={`${dmSans.variable} ${playfair.variable}`}>
+    <html
+      lang="en-NZ"
+      className={`${dmSans.variable} ${playfair.variable}`}
+      data-theme={DEFAULT_THEME_ID}
+      suppressHydrationWarning
+    >
       <head>
+        <ThemeInitScript />
         <script
           type="application/ld+json"
           // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON-LD for SEO
@@ -43,6 +52,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
+        <ThemePreviewSwitcher />
       </body>
     </html>
   );
