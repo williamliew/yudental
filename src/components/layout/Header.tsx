@@ -22,7 +22,7 @@ export function Header() {
   const navLinkClass = (href: string) =>
     `rounded px-2 py-2 text-sm font-semibold uppercase tracking-wide transition-colors md:px-2.5 md:py-1 md:text-[0.9375rem] ${
       isActive(href)
-        ? "text-teal"
+        ? "text-navy underline decoration-2 underline-offset-4 decoration-teal"
         : "text-grey-mid no-underline hover:text-navy"
     }`;
 

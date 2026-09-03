@@ -1,51 +1,7 @@
-import {
-  IconBite,
-  IconConsultation,
-  IconFitting,
-  IconWaxTryIn,
-} from "@/components/icons/ServiceIcons";
 import { Section } from "@/components/ui/Section";
+import { HOME_PROCESS_TILES } from "@/lib/tile-images";
+import Image from "next/image";
 import Link from "next/link";
-import type { ReactNode } from "react";
-
-type ProcessStep = {
-  id: string;
-  label: string;
-  icon: ReactNode;
-};
-
-const STEPS: ProcessStep[] = [
-  {
-    id: "consultation-primary-impressions",
-    label: "Consultation and Primary Impressions",
-    icon: <IconConsultation size={36} />,
-  },
-  {
-    id: "secondary-impression",
-    label: "Secondary Impression",
-    icon: <IconConsultation size={36} />,
-  },
-  {
-    id: "bite-registration",
-    label: "Bite Registration",
-    icon: <IconBite size={36} />,
-  },
-  {
-    id: "wax-teeth-try-in",
-    label: "Wax Teeth Try-in",
-    icon: <IconWaxTryIn size={36} />,
-  },
-  {
-    id: "denture-insert",
-    label: "Denture Insert",
-    icon: <IconFitting size={36} />,
-  },
-  {
-    id: "post-insert-visit",
-    label: "Post Insert Visit",
-    icon: <IconFitting size={36} />,
-  },
-];
 
 export function ProcessSteps() {
   return (
@@ -59,10 +15,17 @@ export function ProcessSteps() {
         </p>
       </header>
       <ol className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {STEPS.map((step, index) => (
+        {HOME_PROCESS_TILES.map((step, index) => (
           <li key={step.id} className="flex flex-col items-center text-center">
-            <div className="flex h-20 w-20 items-center justify-center rounded-full border border-teal/20 bg-white text-navy shadow-sm">
-              {step.icon}
+            <div className="flex h-20 w-20 items-center justify-center rounded-full border border-teal/20 bg-white p-2 shadow-sm">
+              <Image
+                src={step.src}
+                alt=""
+                width={step.width}
+                height={step.height}
+                className="h-full w-full object-contain"
+                loading="lazy"
+              />
             </div>
             <span className="mt-4 text-sm font-semibold text-navy">
               <span className="text-teal">{index + 1}.</span> {step.label}

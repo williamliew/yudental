@@ -36,13 +36,14 @@ export function PageBanner({ title, tagline, lead }: PageBannerProps) {
 }
 
 type AccordionItemProps = {
+  id?: string;
   title: string;
   children: ReactNode;
 };
 
-export function AccordionItem({ title, children }: AccordionItemProps) {
+export function AccordionItem({ id, title, children }: AccordionItemProps) {
   return (
-    <details className="group border-b border-surface-muted last:border-b-0">
+    <details id={id} className="group scroll-mt-28 border-b border-surface-muted last:border-b-0">
       <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 font-semibold text-navy marker:content-none [&::-webkit-details-marker]:hidden">
         <span>{title}</span>
         <span className="text-teal transition-transform group-open:rotate-180" aria-hidden="true">

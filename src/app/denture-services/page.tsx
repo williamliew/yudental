@@ -1,15 +1,8 @@
-import {
-  IconBruxism,
-  IconCobaltChrome,
-  IconFullDenture,
-  IconMouthguard,
-  IconPartialDenture,
-  IconReline,
-  IconSleepApnoea,
-  IconWhitening,
-} from "@/components/icons/ServiceIcons";
+import { ServiceSpriteIcon } from "@/components/icons/ServiceSpriteIcon";
+import { AccordionHashSync } from "@/components/layout/AccordionHashSync";
 import { AccordionItem, PageBanner } from "@/components/layout/PageBanner";
 import { createPageMetadata } from "@/lib/metadata";
+import type { ServiceSpriteId } from "@/lib/service-sprites";
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
@@ -23,23 +16,21 @@ export const metadata = createPageMetadata({
 
 type Treatment = {
   title: string;
-  icon: ReactNode;
+  spriteId: ServiceSpriteId;
   body: ReactNode;
 };
 
 const TREATMENTS: Treatment[] = [
   {
     title: "Full Dentures",
-    icon: <IconFullDenture size={36} />,
+    spriteId: "full-dentures",
     body: (
       <div className="space-y-3">
         <p>
           Full dentures are used to replace all of the teeth in either the upper or lower jaw, and
           sometimes both.
         </p>
-        <p>
-          The process begins with taking impressions of your mouth to ensure a perfect fit.
-        </p>
+        <p>The process begins with taking impressions of your mouth to ensure a perfect fit.</p>
         <p>
           We also work with you to choose the colour and mould of the teeth so they look natural.
         </p>
@@ -56,37 +47,82 @@ const TREATMENTS: Treatment[] = [
   },
   {
     title: "Partial Dentures",
-    icon: <IconPartialDenture size={36} />,
+    spriteId: "partial-denture",
     body: "Partial dentures serve as a removable solution for patients who are missing some teeth but still have remaining natural teeth. These dentures are crafted to fill in the gaps, restoring function to the bite and enhancing the smile. They consist of a gum-coloured base with artificial teeth attached and can be secured in place using clasps that attach to the remaining natural teeth. Proper care and maintenance are key to ensuring their longevity.",
   },
   {
     title: "Cobalt Chrome Frameworks",
-    icon: <IconCobaltChrome size={36} />,
+    spriteId: "cobalt-chrome-framework",
     body: "Cobalt chrome frameworks are often used in conjunction with partial dentures. This type of framework provides a sturdy and lightweight base that offers superior strength compared to traditional acrylic bases. The metal alloy is biocompatible, ensuring that it is safe for use in the mouth, and allows for a more precise fit. Cobalt chrome frameworks are known for their durability and resistance to wear, which enhances the functionality of partial dentures.",
   },
   {
+    title: "Implant Overdentures",
+    spriteId: "implant-over-denture",
+    body: (
+      <div className="space-y-3">
+        <p>
+          Implant overdentures are removable dentures that are supported and retained by dental
+          implants, providing{" "}
+          <strong>greater stability and comfort than conventional dentures.</strong> The denture
+          securely attaches to the implants, helping to reduce unwanted movement during eating,
+          speaking and everyday activities.
+        </p>
+        <p>
+          Implant overdentures can provide{" "}
+          <strong>improved chewing ability, increased confidence and a more secure fit,</strong>{" "}
+          particularly for patients who struggle with loose or unstable dentures. They are also
+          removable, making them easy to clean and maintain.
+        </p>
+        <p>
+          For suitable patients, implant overdentures can offer an excellent balance between{" "}
+          <strong>comfort, function, stability and ease of care.</strong>
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: "Implant Bar-Retained Overdentures",
+    spriteId: "implant-bar-retained-over-denture",
+    body: (
+      <div className="space-y-3">
+        <p>
+          Implant bar-retained overdentures are removable dentures that{" "}
+          <strong>clip securely onto a custom-made bar supported by dental implants.</strong> The
+          bar helps distribute support across the implants, providing excellent stability and
+          reducing unwanted movement during eating and speaking.
+        </p>
+        <p>
+          For suitable patients, a bar-retained overdenture can provide{" "}
+          <strong>improved chewing ability, comfort and confidence,</strong> while offering a secure
+          and natural-feeling fit. The denture remains removable, allowing for{" "}
+          <strong>easy cleaning and ongoing maintenance.</strong>
+        </p>
+      </div>
+    ),
+  },
+  {
     title: "Relines and Repairs",
-    icon: <IconReline size={36} />,
+    spriteId: "relines-and-repairs",
     body: "Over time, dentures may require relining or repairs due to changes in the mouth or wear and tear. Relining involves adding new material to the base of the denture to improve the fit, ensuring that it sits securely against the gums. Repairs can involve fixing cracks or broken parts of the denture, allowing the patient to regain full function without the need for a complete replacement. Regular evaluations by a dental professional can help identify when these services are necessary.",
   },
   {
     title: "Sports Mouth Guards",
-    icon: <IconMouthguard size={36} />,
+    spriteId: "sports-mouth-guard",
     body: "Sports mouth guards are protective devices worn during athletic activities to shield the teeth, gums, and jaw from injury. They are custom-made to ensure a snug and comfortable fit, promoting both safety and performance. Mouth guards can significantly reduce the risk of dental injuries and can be worn during contact sports such as football, basketball, or wrestling. Investing in a high-quality mouth guard helps to protect one's smile and avoid costly dental repairs.",
   },
   {
     title: "Sleep Apnoea Device (MDSA)",
-    icon: <IconSleepApnoea size={36} />,
+    spriteId: "sleep-apnoea-mdsa",
     body: "A sleep apnoea device, often referred to as a mandibular advancement device (MAD), is designed to treat obstructive sleep apnoea. This custom-fitted oral appliance works by repositioning the jaw and tongue to keep the airway open during sleep, reducing snoring and improving overall sleep quality. These devices are a comfortable alternative to CPAP machines for many patients and can be tailored to fit the individual's mouth and specific needs.",
   },
   {
     title: "Whitening Trays",
-    icon: <IconWhitening size={36} />,
+    spriteId: "whitening-trays",
     body: "Whitening trays are custom-made dental trays designed to hold a bleaching agent against the teeth to achieve a brighter smile. These trays provide even distribution of the whitening solution, allowing for effective stain removal while minimising contact with the gums. The process can be done at home under the guidance of a dental professional, allowing for convenience and flexibility in achieving desired whitening results.",
   },
   {
     title: "Bruxism / TMJ Splints",
-    icon: <IconBruxism size={36} />,
+    spriteId: "bruxism-splints",
     body: "Bruxism and TMJ splints are oral appliances developed to relieve the strain on the jaw caused by teeth grinding (bruxism) and temporomandibular joint disorders (TMJ). These splints help to realign the jaw and reduce muscle tension, providing relief from associated pain and discomfort. They can prevent further wear on teeth and are often recommended for use during sleep to protect tooth surfaces and promote jaw relaxation. Regular consultations can help in adjusting the splint for optimal results.",
   },
 ];
@@ -94,6 +130,7 @@ const TREATMENTS: Treatment[] = [
 export default function DentureServicesPage() {
   return (
     <>
+      <AccordionHashSync />
       <PageBanner
         title="Denture Services"
         tagline="Patient information on dentures, appliances and ongoing care."
@@ -145,9 +182,9 @@ export default function DentureServicesPage() {
         </p>
         <div className="rounded-lg border border-surface-muted bg-white px-4 shadow-sm md:px-6">
           {TREATMENTS.map((treatment) => (
-            <AccordionItem key={treatment.title} title={treatment.title}>
+            <AccordionItem key={treatment.title} id={treatment.spriteId} title={treatment.title}>
               <div className="flex gap-4">
-                <div className="shrink-0 text-teal">{treatment.icon}</div>
+                <ServiceSpriteIcon spriteId={treatment.spriteId} size={64} />
                 <div className="min-w-0 flex-1">
                   {typeof treatment.body === "string" ? <p>{treatment.body}</p> : treatment.body}
                 </div>

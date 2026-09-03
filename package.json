@@ -10,6 +10,7 @@
     "format": "biome format --write .",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:images": "vitest run src/lib/tile-images.test.ts",
     "test:e2e": "playwright test"
   },
   "dependencies": {

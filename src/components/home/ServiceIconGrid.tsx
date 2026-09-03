@@ -1,27 +1,15 @@
-import {
-  IconBruxism,
-  IconDentures,
-  IconMouthguard,
-  IconRepairs,
-  IconSleepApnoea,
-  IconWhitening,
-} from "@/components/icons/ServiceIcons";
 import { Section } from "@/components/ui/Section";
-import type { ReactNode } from "react";
+import { HOME_SERVICE_TILES } from "@/lib/tile-images";
+import Image from "next/image";
+import Link from "next/link";
 
-type ServiceItem = {
-  label: string;
-  icon: ReactNode;
-};
+function getServiceLinkLabel(label: string): string {
+  if (label === "Dentures & Partials") {
+    return "Dentures and partials: view full and partial denture information on the denture services page";
+  }
 
-const SERVICES: ServiceItem[] = [
-  { label: "Dentures & Partials", icon: <IconDentures size={40} /> },
-  { label: "Repairs & Relines", icon: <IconRepairs size={40} /> },
-  { label: "Mouthguards", icon: <IconMouthguard size={40} /> },
-  { label: "Whitening Trays", icon: <IconWhitening size={40} /> },
-  { label: "Sleep Apnoea Devices", icon: <IconSleepApnoea size={40} /> },
-  { label: "Bruxism Splints", icon: <IconBruxism size={40} /> },
-];
+  return `${label}: view service details on the denture services page`;
+}
 
 export function ServiceIconGrid() {
   return (
@@ -32,17 +20,27 @@ export function ServiceIconGrid() {
       >
         Denture Services
       </h2>
-      <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-        {SERVICES.map((service) => (
-          <div
-            key={service.label}
-            className="group flex flex-col items-center gap-3 rounded-lg border border-surface-muted bg-white p-4 text-center transition-colors hover:border-teal/40 hover:bg-teal/5"
-          >
-            <div className="text-navy transition-colors group-hover:text-teal">{service.icon}</div>
-            <span className="text-sm font-semibold text-navy">{service.label}</span>
-          </div>
+      <ul className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
+        {HOME_SERVICE_TILES.map((service) => (
+          <li key={service.id}>
+            <Link
+              href={`/denture-services/#${service.accordionId}`}
+              aria-label={getServiceLinkLabel(service.label)}
+              className="block rounded-lg transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
+            >
+              <Image
+                src={service.src}
+                alt=""
+                width={service.width}
+                height={service.height}
+                className="h-auto w-full"
+                loading="lazy"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
+            </Link>
+          </li>
         ))}
-      </div>
+      </ul>
     </Section>
   );
 }

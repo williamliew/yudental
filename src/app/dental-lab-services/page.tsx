@@ -1,6 +1,7 @@
 import { PromiseSection } from "@/components/dental-lab/PromiseSection";
 import { PageBanner } from "@/components/layout/PageBanner";
 import { createPageMetadata } from "@/lib/metadata";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = createPageMetadata({
@@ -74,19 +75,36 @@ export default function DentalLabServicesPage() {
             </p>
           </div>
           <div
-            className="mt-10 rounded-lg bg-surface-muted p-6"
+            className="mt-10 overflow-hidden rounded-lg border border-surface-muted bg-white"
             aria-labelledby="accepted-scanners-heading"
           >
-            <h3 id="accepted-scanners-heading" className="font-display text-xl font-bold text-navy">
-              Accepted Scanners
-            </h3>
-            <p className="mt-4 text-grey-mid">{ACCEPTED_SCANNERS.join(" · ")}</p>
-            <p className="mt-4 text-grey-mid leading-relaxed">
-              If you would like to partner with us, you can add us via our email,{" "}
-              <a href={`mailto:${LAB_PARTNER_EMAIL}`}>{LAB_PARTNER_EMAIL}</a>, through your
-              acquisition software. Once added, it will be as simple as a few clicks for the case to
-              be sent.
-            </p>
+            <div className="flex flex-col md:flex-row">
+              <div className="shrink-0 border-b border-surface-muted bg-white p-4 md:w-72 md:border-r md:border-b-0 lg:w-80 lg:p-6">
+                <Image
+                  src="/images/digital-scans/digitally-accepted-scans-workflow.jpg"
+                  alt="Digitally accepted scans from dentist to lab via email: dentist workstation, STL file transfer, and dental lab workstation"
+                  width={1024}
+                  height={1024}
+                  className="h-auto w-full"
+                  loading="lazy"
+                />
+              </div>
+              <div className="flex min-w-0 flex-1 flex-col justify-center p-6 md:p-8">
+                <h3
+                  id="accepted-scanners-heading"
+                  className="font-display text-xl font-bold text-navy md:text-2xl"
+                >
+                  Accepted Scanners
+                </h3>
+                <p className="mt-4 text-grey-mid">{ACCEPTED_SCANNERS.join(" · ")}</p>
+                <p className="mt-4 text-grey-mid leading-relaxed">
+                  If you would like to partner with us, you can add us via our email,{" "}
+                  <a href={`mailto:${LAB_PARTNER_EMAIL}`}>{LAB_PARTNER_EMAIL}</a>, through your
+                  acquisition software. Once added, it will be as simple as a few clicks for the
+                  case to be sent.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
