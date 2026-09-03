@@ -24,47 +24,68 @@ export const metadata = createPageMetadata({
 type Treatment = {
   title: string;
   icon: ReactNode;
-  body: string;
+  body: ReactNode;
 };
 
 const TREATMENTS: Treatment[] = [
   {
-    title: "Full dentures",
+    title: "Full Dentures",
     icon: <IconFullDenture size={36} />,
-    body: "Full dentures replace all teeth in the upper or lower jaw (or both). We take impressions, plan shade and shape with you, and fit the finished denture at our Te Aro clinic. Typical timeline: about four appointments over two weeks (Ivobase cases may need extra visits). We recommend annual checks so fit and comfort stay right as your mouth changes.",
+    body: (
+      <div className="space-y-3">
+        <p>
+          Full dentures are used to replace all of the teeth in either the upper or lower jaw, and
+          sometimes both.
+        </p>
+        <p>
+          The process begins with taking impressions of your mouth to ensure a perfect fit.
+        </p>
+        <p>
+          We also work with you to choose the colour and mould of the teeth so they look natural.
+        </p>
+        <p>
+          You&apos;ll visit our Te Aro clinic for a total of about six appointments spread over two
+          weeks to complete the process.
+        </p>
+        <p>After getting your dentures, we recommend coming in for annual check-ups.</p>
+        <p>
+          This helps ensure they remain comfortable and fit well as your mouth changes over time.
+        </p>
+      </div>
+    ),
   },
   {
-    title: "Partial dentures",
+    title: "Partial Dentures",
     icon: <IconPartialDenture size={36} />,
     body: "Partial dentures serve as a removable solution for patients who are missing some teeth but still have remaining natural teeth. These dentures are crafted to fill in the gaps, restoring function to the bite and enhancing the smile. They consist of a gum-coloured base with artificial teeth attached and can be secured in place using clasps that attach to the remaining natural teeth. Proper care and maintenance are key to ensuring their longevity.",
   },
   {
-    title: "Cobalt chrome frameworks",
+    title: "Cobalt Chrome Frameworks",
     icon: <IconCobaltChrome size={36} />,
     body: "Cobalt chrome frameworks are often used in conjunction with partial dentures. This type of framework provides a sturdy and lightweight base that offers superior strength compared to traditional acrylic bases. The metal alloy is biocompatible, ensuring that it is safe for use in the mouth, and allows for a more precise fit. Cobalt chrome frameworks are known for their durability and resistance to wear, which enhances the functionality of partial dentures.",
   },
   {
-    title: "Relines and repairs",
+    title: "Relines and Repairs",
     icon: <IconReline size={36} />,
     body: "Over time, dentures may require relining or repairs due to changes in the mouth or wear and tear. Relining involves adding new material to the base of the denture to improve the fit, ensuring that it sits securely against the gums. Repairs can involve fixing cracks or broken parts of the denture, allowing the patient to regain full function without the need for a complete replacement. Regular evaluations by a dental professional can help identify when these services are necessary.",
   },
   {
-    title: "Sports mouth guards",
+    title: "Sports Mouth Guards",
     icon: <IconMouthguard size={36} />,
     body: "Sports mouth guards are protective devices worn during athletic activities to shield the teeth, gums, and jaw from injury. They are custom-made to ensure a snug and comfortable fit, promoting both safety and performance. Mouth guards can significantly reduce the risk of dental injuries and can be worn during contact sports such as football, basketball, or wrestling. Investing in a high-quality mouth guard helps to protect one's smile and avoid costly dental repairs.",
   },
   {
-    title: "Sleep apnoea device (MDSA)",
+    title: "Sleep Apnoea Device (MDSA)",
     icon: <IconSleepApnoea size={36} />,
     body: "A sleep apnoea device, often referred to as a mandibular advancement device (MAD), is designed to treat obstructive sleep apnoea. This custom-fitted oral appliance works by repositioning the jaw and tongue to keep the airway open during sleep, reducing snoring and improving overall sleep quality. These devices are a comfortable alternative to CPAP machines for many patients and can be tailored to fit the individual's mouth and specific needs.",
   },
   {
-    title: "Whitening trays",
+    title: "Whitening Trays",
     icon: <IconWhitening size={36} />,
     body: "Whitening trays are custom-made dental trays designed to hold a bleaching agent against the teeth to achieve a brighter smile. These trays provide even distribution of the whitening solution, allowing for effective stain removal while minimising contact with the gums. The process can be done at home under the guidance of a dental professional, allowing for convenience and flexibility in achieving desired whitening results.",
   },
   {
-    title: "Bruxism / TMJ splints",
+    title: "Bruxism / TMJ Splints",
     icon: <IconBruxism size={36} />,
     body: "Bruxism and TMJ splints are oral appliances developed to relieve the strain on the jaw caused by teeth grinding (bruxism) and temporomandibular joint disorders (TMJ). These splints help to realign the jaw and reduce muscle tension, providing relief from associated pain and discomfort. They can prevent further wear on teeth and are often recommended for use during sleep to protect tooth surfaces and promote jaw relaxation. Regular consultations can help in adjusting the splint for optimal results.",
   },
@@ -74,7 +95,7 @@ export default function DentureServicesPage() {
   return (
     <>
       <PageBanner
-        title="Denture services"
+        title="Denture Services"
         tagline="Patient information on dentures, appliances and ongoing care."
       />
       <div className="mx-auto max-w-[var(--max-width-content)] px-4 py-8 md:px-6">
@@ -98,7 +119,7 @@ export default function DentureServicesPage() {
                 id="supergold-denture-heading"
                 className="font-display text-xl font-bold text-navy"
               >
-                SuperGold card
+                SuperGold Card
               </h2>
               <p className="mt-3 leading-relaxed text-grey-dark">
                 The New Zealand SuperGold card is government-issued for residents aged 65 and over
@@ -127,7 +148,9 @@ export default function DentureServicesPage() {
             <AccordionItem key={treatment.title} title={treatment.title}>
               <div className="flex gap-4">
                 <div className="shrink-0 text-teal">{treatment.icon}</div>
-                <p>{treatment.body}</p>
+                <div className="min-w-0 flex-1">
+                  {typeof treatment.body === "string" ? <p>{treatment.body}</p> : treatment.body}
+                </div>
               </div>
             </AccordionItem>
           ))}

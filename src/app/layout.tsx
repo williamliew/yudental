@@ -1,3 +1,4 @@
+import { FixedContactTab } from "@/components/layout/FixedContactTab";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { getLocalBusinessJsonLd } from "@/lib/jsonld";
@@ -43,6 +44,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
+        <FixedContactTab />
       </body>
     </html>
   );

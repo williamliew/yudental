@@ -1,3 +1,4 @@
+import { DigitalScansSection } from "@/components/dental-lab/DigitalScansSection";
 import { AccordionItem, PageBanner } from "@/components/layout/PageBanner";
 import { createPageMetadata } from "@/lib/metadata";
 import Image from "next/image";
@@ -23,7 +24,7 @@ const FAQS: FaqItem[] = [
       <p>
         We provide full dentures, partial dentures, and implant-retained overdentures. Our team will
         guide you to the best option for your needs. See our{" "}
-        <Link href="/denture-services/">Denture services</Link> page for more detail.
+        <Link href="/denture-services/">Denture Services</Link> page for more detail.
       </p>
     ),
   },
@@ -77,9 +78,8 @@ const FAQS: FaqItem[] = [
     answer: (
       <p>
         Yes. We accept files from iTero, 3Shape, and Dentsply Sirona workflows. Dentists: see our{" "}
-        <Link href="/dental-lab-services/">For dentists</Link> page and our{" "}
-        <Link href="/dental-lab-services/#accepted-scanners-heading">accepted scanners</Link>{" "}
-        section for how to send a case.
+        <Link href="/dental-lab-services/">For Dentists</Link> page and our{" "}
+        <Link href="#digital-scans-heading">digital scans</Link> section for how to send a case.
       </p>
     ),
   },
@@ -98,7 +98,7 @@ export default function FaqPage() {
   return (
     <>
       <PageBanner
-        title="Frequently asked questions"
+        title="Frequently Asked Questions"
         tagline="Straight answers about dentures, timing and bookings."
       />
       <section className="px-4 py-12 md:px-6 md:py-16" aria-label="Question and answer list">
@@ -142,12 +142,13 @@ export default function FaqPage() {
                   </p>
                   <p>
                     You can also read more on our{" "}
-                    <Link href="/denture-services/">Denture services</Link> page.
+                    <Link href="/denture-services/">Denture Services</Link> page.
                   </p>
                 </div>
               </div>
             </AccordionItem>
           </div>
+          <DigitalScansSection className="mt-8" />
           <p className="mt-8 text-grey-mid">
             Still have questions? <Link href="/contact/">Contact us</Link> or{" "}
             <Link href="/book/">book online</Link>.

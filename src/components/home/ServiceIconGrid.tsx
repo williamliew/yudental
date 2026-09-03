@@ -15,22 +15,22 @@ type ServiceItem = {
 };
 
 const SERVICES: ServiceItem[] = [
-  { label: "Dentures & partials", icon: <IconDentures size={40} /> },
-  { label: "Repairs & relines", icon: <IconRepairs size={40} /> },
+  { label: "Dentures & Partials", icon: <IconDentures size={40} /> },
+  { label: "Repairs & Relines", icon: <IconRepairs size={40} /> },
   { label: "Mouthguards", icon: <IconMouthguard size={40} /> },
-  { label: "Whitening trays", icon: <IconWhitening size={40} /> },
-  { label: "Sleep apnoea devices", icon: <IconSleepApnoea size={40} /> },
-  { label: "Bruxism splints", icon: <IconBruxism size={40} /> },
+  { label: "Whitening Trays", icon: <IconWhitening size={40} /> },
+  { label: "Sleep Apnoea Devices", icon: <IconSleepApnoea size={40} /> },
+  { label: "Bruxism Splints", icon: <IconBruxism size={40} /> },
 ];
 
 export function ServiceIconGrid() {
   return (
-    <Section ariaLabelledBy="denture-services-heading">
+    <Section className="text-center" ariaLabelledBy="denture-services-heading">
       <h2
         id="denture-services-heading"
         className="font-display text-2xl font-bold text-navy md:text-3xl"
       >
-        Denture services
+        Denture Services
       </h2>
       <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
         {SERVICES.map((service) => (

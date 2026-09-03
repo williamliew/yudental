@@ -35,7 +35,7 @@ const TEAM: TeamMember[] = [
       },
     ],
     bio: [
-      "Steven (Lap Wai) Yu trained in dental technology in China and Hong Kong before moving to New Zealand in 1983. He worked in Wellington laboratories for 13 years, then completed his Diploma of Dental Technology at C.I.T Wellington in 1999 at age 50. He founded Yu Dental Laboratory with Leanne and continues as Director, overseeing case quality and the standards every appliance must meet before it leaves the bench.",
+      "Steven Yu trained in dental technology in China and Hong Kong before moving to New Zealand in 1983. He worked in Wellington laboratories for 13 years, then completed his Diploma of Dental Technology at C.I.T Wellington in 1999 at age 50. He founded Yu Dental Laboratory with Leanne and continues as Director, overseeing case quality and the standards every appliance must meet before it leaves the bench.",
     ],
   },
   {
@@ -44,7 +44,7 @@ const TEAM: TeamMember[] = [
     role: "Co-Owner / Dental Manufacturer / Co-Ordinator",
     quals: [],
     bio: [
-      "Leanne (Shik Jing) Yu, Co-owner and co-ordinator. She joined the business when Steven started the laboratory, learned dental manufacturing on the bench, and now coordinates cases, appointments, and day-to-day clinic operations. Patients and referring dentists often speak with Leanne first — she keeps timelines clear and communication straightforward.",
+      "Leanne Yu is the co-owner and coordinator of Yu Dental Laboratory. She started when Steven launched the business, gained hands-on experience in dental manufacturing, and now manages case coordination and daily operations, ensuring timelines are met and cases are delivered on time.",
     ],
   },
   {
@@ -73,7 +73,7 @@ const TEAM: TeamMember[] = [
       },
     ],
     bio: [
-      "Allan Yu, Dental Prosthetist and Technician. BCA (Victoria University), diplomas from RMIT Melbourne, and MSc Dental Technology with Distinction from Cardiff Metropolitan University. He sees patients for assessments, impressions, and fittings, and leads technical work on complex cases. Allan works with dentists across New Zealand and Australia on prosthetic planning and digital workflows.",
+      "Allan Yu is a Dental Prosthetist and Technician with a Bachelor of Commerce from Victoria University, diplomas from RMIT Melbourne, and an MSc in Dental Technology from Cardiff Metropolitan University. He trained at the Royal Melbourne Dental Hospital and has worked with various laboratories in Melbourne. Allan assesses patients and provides denture treatments, while handling complex cases as well. He collaborates with dentists across New Zealand on prosthetic planning and digital workflows.",
     ],
   },
 ];
@@ -81,7 +81,7 @@ const TEAM: TeamMember[] = [
 export default function TeamPage() {
   return (
     <>
-      <PageBanner title="Our team" tagline="Qualifications and experience you can see." />
+      <PageBanner title="Our Team" tagline="Qualifications and experience you can see." />
       <section className="px-4 py-12 md:px-6 md:py-16" aria-label="Our team">
         <div className="mx-auto max-w-[var(--max-width-content)]">
           <p className="max-w-3xl text-grey-mid leading-relaxed">

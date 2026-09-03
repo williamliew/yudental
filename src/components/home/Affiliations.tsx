@@ -20,17 +20,17 @@ const AFFILIATIONS = [
 
 export function Affiliations() {
   return (
-    <Section className="bg-surface-muted" ariaLabelledBy="affiliations-heading">
+    <Section className="bg-surface-muted text-center" ariaLabelledBy="affiliations-heading">
       <h2
         id="affiliations-heading"
         className="font-display text-2xl font-bold text-navy md:text-3xl"
       >
-        Affiliations &amp; regulatory bodies
+        Affiliations &amp; Regulatory Bodies
       </h2>
-      <p className="mt-3 text-grey-mid">
+      <p className="mx-auto mt-3 max-w-2xl text-grey-mid">
         Organisations and frameworks connected with our laboratory practice.
       </p>
-      <ul className="mt-8 flex flex-wrap justify-start gap-4">
+      <ul className="mt-8 flex flex-wrap justify-center gap-4">
         {AFFILIATIONS.map((item) => (
           <li key={item.href} className="w-full max-w-[14rem] sm:w-56">
             <a

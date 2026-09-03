@@ -19,65 +19,78 @@ export function Header() {
 
   const closeNav = () => setNavOpen(false);
 
+  const navLinkClass = (href: string) =>
+    `rounded px-2 py-2 text-sm font-semibold uppercase tracking-wide transition-colors md:px-2.5 md:py-1 md:text-[0.9375rem] ${
+      isActive(href)
+        ? "text-teal"
+        : "text-grey-mid no-underline hover:text-navy"
+    }`;
+
   return (
-    <header className="surface-dark sticky top-0 z-50 bg-navy text-white shadow-md">
+    <header className="sticky top-0 z-50 border-b border-surface-muted bg-white text-grey-dark shadow-sm">
       <div className="h-1 bg-teal" aria-hidden="true" />
-      <div className="border-b border-white/10 bg-navy-deep/50 px-4 py-1.5 text-center text-sm text-white/90">
+      <div className="border-b border-surface-muted bg-surface-muted/60 px-4 py-2 text-center text-sm text-grey-mid">
         <p>
           Quality craftsmanship ·{" "}
           <span className="inline-block leading-tight">
             Locally Made
-            <br />
+            <br className="sm:hidden" />
+            <span className="hidden sm:inline"> </span>
             Dentures
           </span>{" "}
           · Wellington since 2000
         </p>
       </div>
-      <div className="mx-auto flex max-w-[var(--max-width-content)] items-center gap-4 px-4 py-3 md:px-6">
+      <div className="mx-auto flex max-w-[var(--max-width-content)] items-center gap-4 px-4 py-3 md:px-6 md:py-4">
         <Link
           href="/"
-          className="inline-flex shrink-0 overflow-hidden rounded-lg bg-white leading-none no-underline"
+          className="inline-flex shrink-0 items-center gap-3 no-underline"
           aria-label="Yu Dental Laboratory home"
         >
           <Image
             src="/yu-dental.png"
-            alt="Yu Dental Laboratory"
+            alt=""
             width={200}
             height={67}
-            className="block h-12 w-auto md:h-14"
+            className="block h-14 w-auto md:h-[4.5rem]"
             priority
           />
+          <span className="hidden font-display text-lg font-bold leading-tight text-navy sm:block md:text-xl">
+            Yu Dental
+            <br />
+            Laboratory
+          </span>
         </Link>
 
         <button
           type="button"
-          className="ml-auto flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded border border-white/20 md:hidden"
+          className="ml-auto flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded border border-surface-muted md:hidden"
           aria-label="Toggle menu"
           aria-expanded={navOpen}
           aria-controls="main-nav"
           onClick={() => setNavOpen((open) => !open)}
         >
           <span
-            className={`block h-0.5 w-5 bg-white transition-transform ${navOpen ? "translate-y-2 rotate-45" : ""}`}
+            className={`block h-0.5 w-5 bg-navy transition-transform ${navOpen ? "translate-y-2 rotate-45" : ""}`}
           />
           <span
-            className={`block h-0.5 w-5 bg-white transition-opacity ${navOpen ? "opacity-0" : ""}`}
+            className={`block h-0.5 w-5 bg-navy transition-opacity ${navOpen ? "opacity-0" : ""}`}
           />
           <span
-            className={`block h-0.5 w-5 bg-white transition-transform ${navOpen ? "-translate-y-2 -rotate-45" : ""}`}
+            className={`block h-0.5 w-5 bg-navy transition-transform ${navOpen ? "-translate-y-2 -rotate-45" : ""}`}
           />
         </button>
 
         <div
           className={`${
             navOpen
-              ? "fixed inset-x-0 top-[7.5rem] bottom-0 z-40 flex flex-col bg-navy p-6 md:static md:inset-auto md:top-auto md:bottom-auto md:z-auto md:flex md:flex-1 md:flex-row md:items-center md:justify-end md:gap-6 md:bg-transparent md:p-0"
-              : "hidden md:flex md:flex-1 md:flex-row md:items-center md:justify-end md:gap-6"
+              ? "fixed inset-x-0 top-[8.75rem] bottom-0 z-40 flex flex-col overflow-y-auto bg-white p-6 md:static md:inset-auto md:top-auto md:bottom-auto md:z-auto md:flex md:flex-1 md:flex-row md:items-center md:overflow-visible md:bg-transparent md:p-0"
+              : "hidden md:flex md:flex-1 md:flex-row md:items-center"
           }`}
         >
           <nav
             id="main-nav"
-            className="flex flex-col gap-1 md:flex-row md:flex-wrap md:items-center md:gap-x-4 md:gap-y-2"
+            className="flex flex-col gap-1 md:flex-1 md:flex-row md:flex-wrap md:items-center md:justify-center md:gap-x-3 md:gap-y-2 lg:gap-x-4"
             aria-label="Main navigation"
           >
             {NAV_ITEMS.map((item) => (
@@ -85,20 +98,17 @@ export function Header() {
                 key={item.key}
                 href={item.href}
                 onClick={closeNav}
-                className={`rounded px-2 py-2 text-sm transition-colors md:py-1 ${
-                  isActive(item.href)
-                    ? "font-semibold text-white underline underline-offset-4 decoration-2"
-                    : "font-medium text-white/90 no-underline hover:text-white hover:underline"
-                }`}
+                className={navLinkClass(item.href)}
+                aria-current={isActive(item.href) ? "page" : undefined}
               >
                 {item.label}
               </Link>
             ))}
           </nav>
-          <div className="mt-6 flex flex-col gap-3 border-t border-white/10 pt-6 md:mt-0 md:flex-row md:items-center md:border-0 md:pt-0">
+          <div className="mt-6 flex flex-col gap-3 border-t border-surface-muted pt-6 md:mt-0 md:shrink-0 md:flex-row md:items-center md:gap-4 md:border-0 md:pt-0">
             <a
               href={`tel:${SITE.phoneTel}`}
-              className="inline-flex items-center gap-2 text-sm font-semibold text-white underline-offset-2 hover:underline"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-navy no-underline underline-offset-2 hover:text-teal hover:underline"
               aria-label="Call Yu Dental Laboratory"
             >
               <IconPhone size={18} />
@@ -113,8 +123,8 @@ export function Header() {
               <IconCalendar size={18} />
               <span className="leading-tight">
                 Book online
-                <br className="hidden sm:inline" />
-                <span className="sm:hidden"> </span>
+                <br className="hidden xl:inline" />
+                <span className="xl:hidden"> </span>
                 now
               </span>
             </Link>

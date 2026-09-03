@@ -17,7 +17,7 @@ export function Hero() {
         aria-hidden="true"
       />
       <div className="absolute inset-0 bg-navy-deep/80" aria-hidden="true" />
-      <div className="surface-dark relative mx-auto max-w-[var(--max-width-content)] px-4 py-16 md:px-6 md:py-24">
+      <div className="surface-dark relative mx-auto max-w-[var(--max-width-content)] px-4 py-16 text-center md:px-6 md:py-24">
         <p className="text-sm font-semibold uppercase tracking-widest text-accent-on-dark">
           Quality · craftsmanship · Locally made
         </p>
@@ -25,16 +25,16 @@ export function Hero() {
           id="hero-heading"
           className="mt-4 font-display text-4xl font-bold tracking-tight text-balance md:text-5xl lg:text-6xl"
         >
-          Dentures, relines &amp; repairs in Wellington
+          Dentures, Relines &amp; Repairs in Wellington
         </h1>
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/90 md:text-xl">
+        <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-white/90 md:text-xl">
           Family-run dental laboratory and denture clinic in Te Aro, Wellington. We provide locally
           made dentures, relines and repairs, all completed on site for quality and faster
           turnaround. We also provide professional dental laboratory services for referring dentists
           throughout Wellington and across New Zealand. Book a consultation online or call us during
           clinic hours.
         </p>
-        <div className="mt-8 flex flex-wrap gap-4">
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
           <ButtonLink href="/book/" variant="primary">
             Book online
           </ButtonLink>

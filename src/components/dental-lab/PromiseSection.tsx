@@ -1,24 +1,15 @@
 import { Section } from "@/components/ui/Section";
+import type { ReactNode } from "react";
 
-const SERVICES = [
-  "Full and partial dentures",
-  "Cobalt chrome framework",
-  "Relines, repairs and additions",
-  "Implant overdenture / implant bar-retained prosthetics",
-  "Precision attachment dentures",
-  "Gold Onlay for dentures",
-  "Surgical Guides/Stents",
-  "Radiographic Guide",
-  "Essex Retainer / With Pontic",
-  "Sports mouthguards",
-  "MDSA Sleep apnoea device",
-  "Bruxism / TMJ splints",
-  "Whitening trays",
-  "Denture cleaning",
-  "Rest home services",
-] as const;
+type PromiseSectionProps = {
+  servicesTitle?: string;
+  services: ReadonlyArray<string | ReactNode>;
+};
 
-export function PromiseSection() {
+export function PromiseSection({
+  servicesTitle = "Services",
+  services,
+}: PromiseSectionProps) {
   return (
     <Section ariaLabelledBy="promise-heading">
       <div className="grid gap-8 lg:grid-cols-3 lg:gap-10">
@@ -27,7 +18,7 @@ export function PromiseSection() {
             id="promise-heading"
             className="font-display text-2xl font-bold text-navy md:text-3xl"
           >
-            Our promise
+            Our Promise
           </h2>
           <p className="mt-4 text-grey-mid leading-relaxed">
             We combine skilled workmanship with modern materials to create appliances that look
@@ -45,10 +36,10 @@ export function PromiseSection() {
           aria-label="Modern dental laboratory environment"
         />
         <div>
-          <h3 className="font-display text-xl font-bold text-navy">Services</h3>
+          <h3 className="font-display text-xl font-bold text-navy">{servicesTitle}</h3>
           <ul className="mt-4 space-y-2 text-grey-mid">
-            {SERVICES.map((item) => (
-              <li key={item} className="flex gap-2">
+            {services.map((item, index) => (
+              <li key={typeof item === "string" ? item : `service-${index}`} className="flex gap-2">
                 <span className="text-teal" aria-hidden="true">
                   •
                 </span>

@@ -22,7 +22,7 @@ const STEPS: ProcessStep[] = [
   },
   {
     id: "secondary-impression",
-    label: "Secondary impression",
+    label: "Secondary Impression",
     icon: <IconConsultation size={36} />,
   },
   {
@@ -37,7 +37,7 @@ const STEPS: ProcessStep[] = [
   },
   {
     id: "denture-insert",
-    label: "Denture insert",
+    label: "Denture Insert",
     icon: <IconFitting size={36} />,
   },
   {
@@ -49,18 +49,18 @@ const STEPS: ProcessStep[] = [
 
 export function ProcessSteps() {
   return (
-    <Section className="bg-surface-muted" ariaLabelledBy="process-heading">
+    <Section className="bg-surface-muted text-center" ariaLabelledBy="process-heading">
       <header>
         <h2 id="process-heading" className="font-display text-2xl font-bold text-navy md:text-3xl">
-          Our process
+          Our Process
         </h2>
-        <p className="mt-3 text-lg text-grey-dark">
+        <p className="mx-auto mt-3 max-w-2xl text-lg text-grey-dark">
           Generally needs 6 appointments and your dentures will be ready in 2 weeks!
         </p>
       </header>
       <ol className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {STEPS.map((step, index) => (
-          <li key={step.id} className="flex flex-col items-start text-left">
+          <li key={step.id} className="flex flex-col items-center text-center">
             <div className="flex h-20 w-20 items-center justify-center rounded-full border border-teal/20 bg-white text-navy shadow-sm">
               {step.icon}
             </div>
@@ -70,7 +70,7 @@ export function ProcessSteps() {
           </li>
         ))}
       </ol>
-      <p className="mt-10 text-sm text-grey-mid">
+      <p className="mt-10 text-sm text-grey-mid text-balance">
         Lab work for practices: <Link href="/dental-lab-services/">For dentists</Link>. Full
         treatment detail: <Link href="/denture-services/">Denture services</Link>.
       </p>

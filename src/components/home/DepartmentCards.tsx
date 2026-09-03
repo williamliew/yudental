@@ -3,14 +3,14 @@ import Link from "next/link";
 
 export function DepartmentCards() {
   return (
-    <Section ariaLabelledBy="dept-heading">
+    <Section className="text-center" ariaLabelledBy="dept-heading">
       <h2
         id="dept-heading"
         className="font-display text-2xl font-bold text-navy md:text-3xl text-balance"
       >
-        Patients and referring Dental professionals
+        Patients and Referring Dental Professionals
       </h2>
-      <div className="mt-4 max-w-3xl space-y-3 text-grey-mid">
+      <div className="mx-auto mt-4 max-w-3xl space-y-3 text-grey-mid">
         <p>
           Patients choose us for expert denture relines, repairs, and comprehensive care, while
           referring dental practices trust us for quality dental laboratory services.
@@ -23,7 +23,7 @@ export function DepartmentCards() {
       <div className="mt-10 grid gap-6 md:grid-cols-2">
         <Link
           href="/denture-services/"
-          className="group rounded-lg border border-surface-muted bg-white p-6 no-underline shadow-sm transition-shadow hover:shadow-md md:p-8"
+          className="group rounded-lg border border-surface-muted bg-white p-6 text-left no-underline shadow-sm transition-shadow hover:shadow-md md:p-8"
         >
           <h3 className="font-display text-xl font-bold text-navy group-hover:text-teal">
             For Patients
@@ -38,7 +38,7 @@ export function DepartmentCards() {
         </Link>
         <Link
           href="/dental-lab-services/"
-          className="group rounded-lg border border-surface-muted bg-white p-6 no-underline shadow-sm transition-shadow hover:shadow-md md:p-8"
+          className="group rounded-lg border border-surface-muted bg-white p-6 text-left no-underline shadow-sm transition-shadow hover:shadow-md md:p-8"
         >
           <h3 className="font-display text-xl font-bold text-navy group-hover:text-teal">
             For Dentist

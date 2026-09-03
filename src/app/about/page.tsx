@@ -11,32 +11,32 @@ export const metadata = createPageMetadata({
 
 const TIMELINE = [
   {
-    title: "The beginning of a dream",
+    title: "The Beginning of a Dream",
     era: "1998",
     copy: "In a small family home, Yu Dental Laboratory was founded with a vision to provide quality dental services. Driven by passion, the family worked tirelessly to turn their dream into reality.",
   },
   {
-    title: "Officially a family endeavour",
+    title: "Officially a Family Endeavour",
     era: "2000",
     copy: "The laboratory was officially registered as a Limited Liability Company, marking a commitment to serve their community and support local families.",
   },
   {
-    title: "The home workshop years",
+    title: "The Home Workshop Years",
     era: "2000–2006",
     copy: "Operating from their garage, the family spent nearly a decade perfecting their craft. Those years were filled with hard work, laughter, and deepening family bonds.",
   },
   {
-    title: "A foundation in the basement",
+    title: "A Foundation in the Basement",
     era: "2006–2021",
     copy: "As demand grew, they moved their operations to the basement of a new home. This shift represented their resilience, allowing them to serve their community even better.",
   },
   {
-    title: "A new chapter unfolds",
+    title: "A New Chapter Unfolds",
     era: "2021",
     copy: "The family's dedication led to a new facility that combined a denture clinic and lab, symbolising their growth and commitment to quality service.",
   },
   {
-    title: "Clinic and lab, Te Aro",
+    title: "Clinic and Lab, Te Aro",
     era: "Today",
     copy: "We welcome patients for denture care at 12 College Street and continue to serve referring dentists nationwide. Same family, same bench — now with a purpose-built space for consultations and manufacturing.",
   },
@@ -45,38 +45,29 @@ const TIMELINE = [
 const PEOPLE = [
   {
     name: "Steven Yu",
-    role: "Director, owner operator",
+    role: "Director",
     ariaLabel: "Portrait placeholder for Steven Yu",
-    copy: "Steven Yu, Director. Founded the laboratory in 2000 after decades at the bench in New Zealand. Diploma in Dental Technology (C.I.T Wellington, 1999). Still involved in case planning and quality on every appliance we make.",
+    copy: "Steven Yu, Director, founded the laboratory in 2000 after decades of experience in New Zealand. He holds a Diploma in Dental Technology (C.I.T Wellington, 1999) and is actively involved in case planning and quality assurance for all appliances produced.",
   },
   {
     name: "Leanne Yu",
-    role: "Dental manufacturer, co-ordinator, co-founder",
+    role: "Co-owner and coordinator",
     ariaLabel: "Portrait placeholder for Leanne Yu",
-    copy: "Leanne Yu, Co-owner and co-ordinator. She joined the business when Steven started the laboratory, learned dental manufacturing on the bench, and now coordinates cases, appointments, and day-to-day clinic operations.",
+    copy: "Leanne Yu is the Co-owner and Coordinator. She started with Steven when the lab opened, learned how to make dental products, and now handles case coordination and daily clinic operations.",
   },
   {
     name: "Allan Yu",
-    role: "Dental prosthetist, technician, second in charge",
+    role: "Dental prosthetist and technician",
     ariaLabel: "Portrait placeholder for Allan Yu",
-    copy: "Allan Yu, Dental Prosthetist and Technician. BCA (Victoria University), diplomas from RMIT Melbourne, and MSc Dental Technology with Distinction from Cardiff Metropolitan University. He sees patients for assessments, impressions, and fittings, and leads technical work on complex cases.",
+    copy: "Allan Yu is a Dental Prosthetist and Technician with a BCA from Victoria University, diplomas from RMIT Melbourne, and a Master's in Dental Technology from Cardiff Metropolitan University. He handles patient assessments, impressions, fittings, and complex technical cases.",
   },
-] as const;
-
-const ARCHIVE_IMAGES = [
-  "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=400&h=400&fit=crop",
 ] as const;
 
 export default function AboutPage() {
   return (
     <>
       <PageBanner
-        title="Our story"
+        title="Our Story"
         lead="From a home workshop in Wellington to a combined denture clinic and laboratory in Te Aro."
       />
       <div
@@ -132,7 +123,7 @@ export default function AboutPage() {
             id="journey-heading"
             className="font-display text-2xl font-bold text-navy md:text-3xl"
           >
-            Our journey
+            Our Journey
           </h2>
           <p className="mt-2 text-grey-mid">Key dates in our history</p>
           <ol className="mt-8 space-y-8">
@@ -149,7 +140,7 @@ export default function AboutPage() {
       <section className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="people-heading">
         <div className="mx-auto max-w-[var(--max-width-content)]">
           <h2 id="people-heading" className="font-display text-2xl font-bold text-navy md:text-3xl">
-            The family behind the bench
+            The Family Behind the Bench
           </h2>
           <p className="mt-3 text-grey-mid">
             A few heartfelt lines each beats a long CV on this page. Formal qualifications sit on{" "}
@@ -174,29 +165,6 @@ export default function AboutPage() {
                 <p className="mt-1 text-sm font-semibold text-teal">{person.role}</p>
                 <p className="mt-3 text-sm text-grey-mid leading-relaxed">{person.copy}</p>
               </article>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section
-        className="bg-surface-muted px-4 py-12 md:px-6 md:py-16"
-        aria-label="Historical laboratory photographs"
-      >
-        <div className="mx-auto max-w-[var(--max-width-content)]">
-          <h2 className="font-display text-2xl font-bold text-navy md:text-3xl">
-            From the family archive
-          </h2>
-          <p className="mt-3 max-w-3xl text-grey-mid">
-            Photographs from our early workshop years — garage, basement bench, and the move to our
-            current clinic.
-          </p>
-          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 md:gap-4">
-            {ARCHIVE_IMAGES.map((src, index) => (
-              <div
-                key={`archive-${index}`}
-                className="aspect-square rounded-lg bg-cover bg-center grayscale"
-                style={{ backgroundImage: `url(${src})` }}
-              />
             ))}
           </div>
         </div>

@@ -6,7 +6,7 @@ test.describe("navigation", () => {
 
     await page.goto("/");
     await expect(
-      page.getByRole("heading", { name: "Dentures, relines & repairs in Wellington", level: 1 }),
+      page.getByRole("heading", { name: "Dentures, Relines & Repairs in Wellington", level: 1 }),
     ).toBeVisible();
     await expect(page.getByRole("link", { name: "About" })).toBeVisible();
     await expect(page.getByRole("link", { name: "Contact" })).toBeVisible();

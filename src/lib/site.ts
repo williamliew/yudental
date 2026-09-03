@@ -23,11 +23,19 @@ export const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
 
 export const WEB3FORMS_SUBMIT_URL = "https://api.web3forms.com/submit";
 
+const MAP_QUERY = encodeURIComponent(
+  `${SITE.address.street}, ${SITE.address.suburb}, ${SITE.address.city}, ${SITE.address.country}`,
+);
+
+/** Google Maps iframe embed. Override with NEXT_PUBLIC_GOOGLE_MAPS_EMBED_URL (paste from Google Maps → Share → Embed). */
 export const MAP_EMBED_URL =
-  "https://www.openstreetmap.org/export/embed.html?bbox=174.7710%2C-41.2956%2C174.7770%2C-41.2926&layer=hot&marker=-41.2941%2C174.7740";
+  process.env.NEXT_PUBLIC_GOOGLE_MAPS_EMBED_URL ??
+  (process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+    ? `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=${MAP_QUERY}`
+    : `https://maps.google.com/maps?q=${MAP_QUERY}&z=15&output=embed`);
 
 export const MAP_GOOGLE_URL =
-  "https://www.google.com/maps/search/?api=1&query=12+College+Street+Te+Aro+Wellington";
+  `https://www.google.com/maps/search/?api=1&query=${MAP_QUERY}`;
 
 export const MAP_GOOGLE_DIRECTIONS_URL =
-  "https://www.google.com/maps/dir/?api=1&destination=12+College+Street+Te+Aro+Wellington";
+  `https://www.google.com/maps/dir/?api=1&destination=${MAP_QUERY}`;

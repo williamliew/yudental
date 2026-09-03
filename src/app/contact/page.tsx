@@ -13,13 +13,13 @@ export default function ContactPage() {
   return (
     <>
       <PageBanner
-        title="Contact us"
+        title="Contact Us"
         tagline="Find us on the map, check opening hours and parking notes."
       />
       <div className="mx-auto max-w-[var(--max-width-content)] space-y-8 px-4 py-12 md:px-6 md:py-16">
         <div className="grid gap-6 md:grid-cols-2">
           <div className="rounded-lg border border-surface-muted bg-white p-6 shadow-sm md:p-8">
-            <h2 className="font-display text-xl font-bold text-navy">Our address</h2>
+            <h2 className="font-display text-xl font-bold text-navy">Our Address</h2>
             <p className="mt-3 text-grey-mid">
               {SITE.address.street}
               <br />
@@ -31,7 +31,7 @@ export default function ContactPage() {
                 {SITE.phone}
               </a>
             </p>
-            <h3 className="mt-8 font-display text-xl font-bold text-navy">Opening hours</h3>
+            <h3 className="mt-8 font-display text-xl font-bold text-navy">Opening Hours</h3>
             <p className="mt-3 text-grey-mid">
               {SITE.hours}
               <br />
@@ -39,7 +39,7 @@ export default function ContactPage() {
             </p>
           </div>
           <div className="rounded-lg border border-surface-muted bg-white p-6 shadow-sm md:p-8">
-            <h2 className="font-display text-xl font-bold text-navy">Parking &amp; access</h2>
+            <h2 className="font-display text-xl font-bold text-navy">Parking &amp; Access</h2>
             <ul className="mt-3 space-y-2 text-grey-mid">
               <li>
                 Street parking on College Street and surrounding streets (check signs for time
@@ -61,7 +61,7 @@ export default function ContactPage() {
           </div>
         </div>
         <div className="rounded-lg border border-surface-muted bg-white p-4 shadow-sm md:p-6">
-          <h2 className="mb-4 font-display text-xl font-bold text-navy">Find us</h2>
+          <h2 className="mb-4 font-display text-xl font-bold text-navy">Find Us</h2>
           <MapEmbed />
         </div>
       </div>

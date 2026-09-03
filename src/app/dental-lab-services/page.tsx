@@ -1,3 +1,4 @@
+import { PromiseSection } from "@/components/dental-lab/PromiseSection";
 import { PageBanner } from "@/components/layout/PageBanner";
 import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
@@ -10,23 +11,23 @@ export const metadata = createPageMetadata({
 });
 
 const LAB_SERVICES = [
-  "Full/full and partial denture (Treatment/ Dental Services)",
-  "Implant retained overdenture",
-  "Implant bar retained overdenture",
-  "Precision attachment dentures",
-  "Gold Onlay for dentures",
+  "Full/Full and Partial Denture",
+  "Implant Retained Overdenture",
+  "Implant Bar Retained Overdenture",
+  "Precision Attachment Dentures",
+  "Gold Onlay For Dentures",
   "Surgical Guides/Stents",
   "Radiographic Guide",
   "Essex Retainer / With Pontic",
-  "Cobalt chrome framework",
-  "Welding retention",
-  "Repairs, relines, additions",
-  "Bruxism splints (hard and soft / NTI)",
-  "Mouth guards",
-  "Orthodontic retainers",
-  "Bleaching trays",
-  "MDSA Sleep apnoea device",
-  "Gold veneer for denture tooth",
+  "Cobalt Chrome Framework",
+  "Welding Retention",
+  "Repairs, Relines, Additions",
+  "Bruxism Splints (Hard and Soft / NTI)",
+  "Mouth Guards",
+  "Orthodontic Retainers",
+  "Bleaching Trays",
+  "MDSA Sleep Apnoea Device",
+  "Gold Veneer For Denture Tooth",
 ] as const;
 
 const ACCEPTED_SCANNERS = ["3Shape", "Dentsply Sirona", "iTero"] as const;
@@ -37,16 +38,16 @@ export default function DentalLabServicesPage() {
   return (
     <>
       <PageBanner
-        title="For dentists"
+        title="For Dentists"
         tagline="Crown, bridge & implant work for referring practices."
       />
       <section className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="lab-welcome-title">
         <div className="mx-auto max-w-[var(--max-width-content)]">
           <h2
             id="lab-welcome-title"
-            className="font-display text-2xl font-bold text-navy md:text-3xl"
+            className="text-center font-display text-2xl font-bold text-navy md:text-3xl"
           >
-            Welcome to the dental lab!
+            Welcome to the Dental Laboratory
           </h2>
           <p className="mt-4 text-lg text-grey-mid leading-relaxed">
             At Yu Dental Laboratory, we focus on creating high-quality aesthetic dental appliances
@@ -77,7 +78,7 @@ export default function DentalLabServicesPage() {
             aria-labelledby="accepted-scanners-heading"
           >
             <h3 id="accepted-scanners-heading" className="font-display text-xl font-bold text-navy">
-              Accepted scanners
+              Accepted Scanners
             </h3>
             <p className="mt-4 text-grey-mid">{ACCEPTED_SCANNERS.join(" · ")}</p>
             <p className="mt-4 text-grey-mid leading-relaxed">
@@ -89,68 +90,14 @@ export default function DentalLabServicesPage() {
           </div>
         </div>
       </section>
-      <section
-        className="bg-surface-muted px-4 py-12 md:px-6 md:py-16"
-        aria-labelledby="lab-promise-heading"
-      >
-        <div className="mx-auto grid max-w-[var(--max-width-content)] gap-8 lg:grid-cols-2">
-          <div className="space-y-6">
-            <div className="rounded-lg bg-white p-6 shadow-sm">
-              <h2 id="lab-promise-heading" className="font-display text-xl font-bold text-navy">
-                Our promise
-              </h2>
-              <p className="mt-4 text-grey-mid leading-relaxed">
-                We combine skilled workmanship with modern materials to create appliances that look
-                natural, feel stable, and help you communicate clearly. Whether you are a patient or
-                a referring clinician, you can count on our high technical standards.
-              </p>
-            </div>
-            <div
-              className="min-h-48 rounded-lg bg-cover bg-center"
-              role="img"
-              aria-label="Modern dental laboratory interior"
-              style={{
-                backgroundImage:
-                  "url(https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop)",
-              }}
-            />
-          </div>
-          <div className="rounded-lg bg-white p-6 shadow-sm">
-            <h2
-              id="lab-denture-services-heading"
-              className="font-display text-xl font-bold text-navy"
-            >
-              Denture services
-            </h2>
-            <ul className="mt-4 space-y-2 text-grey-mid">
-              {LAB_SERVICES.map((item) => (
-                <li key={item} className="flex gap-2">
-                  <span className="text-teal" aria-hidden="true">
-                    •
-                  </span>
-                  <span>
-                    {item.includes("Treatment") ? (
-                      <>
-                        Full/full and partial denture (
-                        <Link href="/denture-services/">Treatment/ Dental Services</Link>)
-                      </>
-                    ) : (
-                      item
-                    )}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
+      <PromiseSection servicesTitle="Dental Laboratory Services" services={LAB_SERVICES} />
       <section className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="process-heading">
         <div className="mx-auto max-w-[var(--max-width-content)]">
           <h2
             id="process-heading"
             className="font-display text-2xl font-bold text-navy md:text-3xl"
           >
-            The process
+            The Process
           </h2>
           <p className="mt-3 text-grey-mid">
             We offer a nationwide delivery service to and from your practice.
@@ -165,7 +112,7 @@ export default function DentalLabServicesPage() {
                 }}
               />
               <div className="p-6">
-                <h3 className="font-display text-lg font-bold text-navy">Lab prescription form</h3>
+                <h3 className="font-display text-lg font-bold text-navy">Lab Prescription Form</h3>
                 <p className="mt-3 text-sm text-grey-mid">
                   Download our lab prescription form (PDF) and include it with your case.
                 </p>
@@ -183,7 +130,7 @@ export default function DentalLabServicesPage() {
                 }}
               />
               <div className="p-6">
-                <h3 className="font-display text-lg font-bold text-navy">Turnaround time</h3>
+                <h3 className="font-display text-lg font-bold text-navy">Turnaround Time</h3>
                 <p className="mt-3 text-sm text-grey-mid">
                   Indicative timings from start to finish (confirm at handover):
                 </p>
