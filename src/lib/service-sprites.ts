@@ -21,7 +21,7 @@ export type ServiceSprite = {
 };
 
 export const SERVICE_SPRITE_SHEET = {
-  src: "/images/sprites/dental-service-sprites-dark-bg.jpg",
+  src: "/images/sprites/dental-service-sprites-dark-bg.png",
   width: 1024,
   height: 682,
   rowCols: [6, 4],

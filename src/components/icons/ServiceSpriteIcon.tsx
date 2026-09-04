@@ -12,7 +12,7 @@ export function ServiceSpriteIcon({ spriteId, size = 64, className = "" }: Servi
 
   return (
     <span
-      className={`inline-flex shrink-0 items-center justify-center overflow-visible ${className}`.trim()}
+      className={`inline-flex shrink-0 items-center justify-center overflow-hidden rounded-md bg-white ${className}`.trim()}
       style={{ width: size, height: size }}
     >
       <Image

@@ -8,7 +8,7 @@ const projectRoot = path.resolve(__dirname, "..");
 const outputDir = path.join(projectRoot, "public/images/sprites/icons");
 
 const DARK_SHEET = {
-  path: path.join(projectRoot, "public/images/sprites/dental-service-sprites-dark-bg.jpg"),
+  path: path.join(projectRoot, "public/images/sprites/dental-service-sprites-dark-bg.png"),
   width: 1024,
   height: 682,
   rowCols: [6, 4],
@@ -16,7 +16,7 @@ const DARK_SHEET = {
 };
 
 const WHITE_SHEET = {
-  path: path.join(projectRoot, "public/images/sprites/dental-service-sprites-white-bg.jpg"),
+  path: path.join(projectRoot, "public/images/sprites/dental-service-sprites-white-bg.png"),
   width: 1024,
   height: 560,
   rowCols: [4, 3],
@@ -46,6 +46,7 @@ const PADDING = 16;
 const OUTPUT_SIZE = 256;
 const BLACK_THRESHOLD = 40;
 const WHITE_THRESHOLD = 245;
+const WHITE_BACKGROUND = { r: 255, g: 255, b: 255 };
 
 function removeBackground({ data, info, mode }) {
   const { width, height, channels } = info;
@@ -95,14 +96,18 @@ async function sliceSprite({ id, row, col, sheet = DARK_SHEET }) {
     raw: { width: info.width, height: info.height, channels: 4 },
   })
     .trim()
-    .resize(innerSize, innerSize, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
+    .resize(innerSize, innerSize, {
+      fit: "contain",
+      background: { ...WHITE_BACKGROUND, alpha: 1 },
+    })
     .extend({
       top: PADDING,
       bottom: PADDING,
       left: PADDING,
       right: PADDING,
-      background: { r: 0, g: 0, b: 0, alpha: 0 },
+      background: { ...WHITE_BACKGROUND, alpha: 1 },
     })
+    .flatten({ background: WHITE_BACKGROUND })
     .png()
     .toFile(path.join(outputDir, `${id}.png`));
 }

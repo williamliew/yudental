@@ -82,7 +82,7 @@ export default function DentalLabServicesPage() {
             <div className="flex flex-col md:flex-row">
               <div className="shrink-0 border-b border-surface-muted bg-white p-4 md:w-72 md:border-r md:border-b-0 lg:w-80 lg:p-6">
                 <Image
-                  src="/images/digital-scans/digitally-accepted-scans-workflow.jpg"
+                  src="/images/digital-scans/digitally-accepted-scans-workflow.png"
                   alt="Digitally accepted scans from dentist to lab via email: dentist workstation, STL file transfer, and dental lab workstation"
                   width={1024}
                   height={1024}
