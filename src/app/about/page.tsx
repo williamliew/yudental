@@ -1,3 +1,4 @@
+import { FamilyArchiveGallery } from "@/components/about/FamilyArchiveGallery";
 import { PageBanner } from "@/components/layout/PageBanner";
 import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
@@ -172,6 +173,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      <FamilyArchiveGallery />
     </>
   );
 }

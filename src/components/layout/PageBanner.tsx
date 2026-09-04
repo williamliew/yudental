@@ -1,22 +1,31 @@
 import type { ReactNode } from "react";
 
+const DEFAULT_BANNER_BACKGROUND =
+  "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1600&h=600&fit=crop";
+
 type PageBannerProps = {
   title: string;
   tagline?: string;
   lead?: string;
+  /** Path or URL for banner background; defaults to stock dental imagery. */
+  backgroundImage?: string;
 };
 
-export function PageBanner({ title, tagline, lead }: PageBannerProps) {
+export function PageBanner({ title, tagline, lead, backgroundImage }: PageBannerProps) {
+  const backgroundUrl = backgroundImage ?? DEFAULT_BANNER_BACKGROUND;
+  const usesCustomBackground = Boolean(backgroundImage);
+
   return (
     <section
       className="relative overflow-hidden bg-navy-deep text-white"
       aria-labelledby="page-banner-heading"
     >
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-35 grayscale"
+        className={`absolute inset-0 bg-cover bg-center ${
+          usesCustomBackground ? "opacity-45" : "opacity-35 grayscale"
+        }`}
         style={{
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1600&h=600&fit=crop)",
+          backgroundImage: `url(${backgroundUrl})`,
         }}
         aria-hidden="true"
       />

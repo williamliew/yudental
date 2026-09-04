@@ -41,6 +41,7 @@ export default function DentalLabServicesPage() {
       <PageBanner
         title="For Dentists"
         tagline="Dental appliances and services for referring practices."
+        backgroundImage="/images/for-dentists.jpg"
       />
       <section className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="lab-welcome-title">
         <div className="mx-auto max-w-[var(--max-width-content)]">
@@ -119,13 +120,15 @@ export default function DentalLabServicesPage() {
           </h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             <article className="relative overflow-hidden rounded-lg bg-white shadow-sm">
-              <div
-                className="h-32 bg-cover bg-center opacity-30"
-                style={{
-                  backgroundImage:
-                    "url(https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&h=400&fit=crop)",
-                }}
-              />
+              <div className="relative h-40 overflow-hidden bg-surface-muted md:h-44">
+                <Image
+                  src="/images/lab-prescription-form.png"
+                  alt="Yu Dental Laboratory lab prescription form"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, 400px"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="font-sans text-lg font-bold text-navy">Lab Prescription Form</h3>
                 <p className="mt-3 text-sm text-grey-mid">
@@ -145,13 +148,15 @@ export default function DentalLabServicesPage() {
               </div>
             </article>
             <article className="relative overflow-hidden rounded-lg bg-white shadow-sm">
-              <div
-                className="h-32 bg-cover bg-center opacity-30"
-                style={{
-                  backgroundImage:
-                    "url(https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=400&fit=crop)",
-                }}
-              />
+              <div className="relative h-40 overflow-hidden bg-surface-muted md:h-44">
+                <Image
+                  src="/images/turnaround-time.png"
+                  alt="Turnaround time for dental laboratory cases"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 400px"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="font-sans text-lg font-bold text-navy">Turnaround Time</h3>
                 <p className="mt-3 text-sm text-grey-mid">

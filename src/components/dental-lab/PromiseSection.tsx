@@ -29,8 +29,7 @@ export function PromiseSection({
         <div
           className="min-h-48 rounded-lg bg-cover bg-center lg:min-h-64"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop)",
+            backgroundImage: "url(/images/dental-laboratory-service.png)",
           }}
           role="img"
           aria-label="Modern dental laboratory environment"

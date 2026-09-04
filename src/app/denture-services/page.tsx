@@ -134,6 +134,7 @@ export default function DentureServicesPage() {
       <PageBanner
         title="Denture Services"
         tagline="Patient information on dentures, appliances and ongoing care."
+        backgroundImage="/images/denture-services-banner.png"
       />
       <div className="mx-auto max-w-[var(--max-width-content)] px-4 py-8 md:px-6">
         <aside

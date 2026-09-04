@@ -100,7 +100,10 @@ export function Footer() {
 
       <div className="border-t border-white/10 px-4 py-6 text-center text-sm text-white/70">
         <p>
-          &copy; {new Date().getFullYear()} {SITE.name}. All rights reserved.
+          &copy; {new Date().getFullYear()} {SITE.name}. All rights reserved.{" "}
+          <Link href="/privacy/" className="text-white/85 no-underline hover:text-white hover:underline">
+            Privacy policy
+          </Link>
         </p>
       </div>
     </footer>

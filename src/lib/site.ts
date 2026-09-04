@@ -1,5 +1,6 @@
 export const SITE = {
   name: "Yu Dental Laboratory",
+  legalName: "Yu Dental Laboratory Ltd",
   shortName: "Yu Dental",
   description:
     "Wellington family dental laboratory since 2000. Quality locally made dentures, lab services for clinicians, and patient denture care in Te Aro.",
@@ -10,6 +11,7 @@ export const SITE = {
     street: "12 College Street",
     suburb: "Te Aro",
     city: "Wellington",
+    postcode: "6011",
     country: "New Zealand",
   },
   hours: "Monday – Friday 8.30am – 5pm",
