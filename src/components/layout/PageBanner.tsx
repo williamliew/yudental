@@ -21,15 +21,19 @@ export function PageBanner({ title, tagline, lead }: PageBannerProps) {
         aria-hidden="true"
       />
       <div className="absolute inset-0 bg-navy-deep/75" aria-hidden="true" />
-      <div className="relative mx-auto max-w-[var(--max-width-content)] px-4 py-14 md:px-6 md:py-20">
+      <div className="relative mx-auto max-w-[var(--max-width-content)] px-4 py-14 text-center md:px-6 md:py-20">
         <h1
           id="page-banner-heading"
-          className="font-display text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl"
+          className="font-sans text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl"
         >
           {title}
         </h1>
-        {tagline && <p className="mt-3 max-w-2xl text-lg text-white/90 md:text-xl">{tagline}</p>}
-        {lead && <p className="mt-4 max-w-3xl text-base text-white/80">{lead}</p>}
+        {tagline && (
+          <p className="mx-auto mt-3 max-w-2xl text-lg text-white/90 md:text-xl">{tagline}</p>
+        )}
+        {lead && (
+          <p className="mx-auto mt-4 max-w-3xl text-base text-white/80">{lead}</p>
+        )}
       </div>
     </section>
   );

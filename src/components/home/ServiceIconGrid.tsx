@@ -16,7 +16,7 @@ export function ServiceIconGrid() {
     <Section className="text-center" ariaLabelledBy="denture-services-heading">
       <h2
         id="denture-services-heading"
-        className="font-display text-2xl font-bold text-navy md:text-3xl"
+        className="font-sans text-2xl font-bold text-navy md:text-3xl"
       >
         Denture Services
       </h2>

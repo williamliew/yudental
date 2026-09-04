@@ -23,7 +23,7 @@ export function Affiliations() {
     <Section className="bg-surface-muted text-center" ariaLabelledBy="affiliations-heading">
       <h2
         id="affiliations-heading"
-        className="font-display text-2xl font-bold text-navy md:text-3xl"
+        className="font-sans text-2xl font-bold text-navy md:text-3xl"
       >
         Affiliations &amp; Regulatory Bodies
       </h2>

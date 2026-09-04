@@ -8,7 +8,7 @@ export function AboutTeaser() {
     <Section id="about" className="bg-navy text-white" ariaLabelledBy="about-heading">
       <div className="grid gap-8 md:grid-cols-2 md:gap-12">
         <div>
-          <h2 id="about-heading" className="font-display text-2xl font-bold md:text-3xl">
+          <h2 id="about-heading" className="font-sans text-2xl font-bold md:text-3xl">
             About us
           </h2>
           <Link
@@ -19,7 +19,7 @@ export function AboutTeaser() {
           </Link>
         </div>
         <div>
-          <h3 className="font-display text-xl font-bold">Get to know us</h3>
+          <h3 className="font-sans text-xl font-bold">Get to know us</h3>
           <p className="mt-4 text-white/85 leading-relaxed">
             Established in 2000, Yu Dental Laboratory started as a small family business working
             from the basement of their home in the eastern suburbs of Wellington. Along with 50
@@ -41,7 +41,7 @@ export function AboutTeaser() {
 export function TeamTeaser() {
   return (
     <Section id="team" ariaLabelledBy="team-heading">
-      <h2 id="team-heading" className="font-display text-2xl font-bold text-navy md:text-3xl">
+      <h2 id="team-heading" className="font-sans text-2xl font-bold text-navy md:text-3xl">
         Our team
       </h2>
       <div className="mt-4 max-w-3xl space-y-3 text-grey-mid">
@@ -64,7 +64,7 @@ export function TeamTeaser() {
 export function ContactSection() {
   return (
     <Section id="contact" className="bg-surface-muted" ariaLabelledBy="contact-heading">
-      <h2 id="contact-heading" className="font-display text-2xl font-bold text-navy md:text-3xl">
+      <h2 id="contact-heading" className="font-sans text-2xl font-bold text-navy md:text-3xl">
         Contact us
       </h2>
       <div className="mt-8 grid gap-8 md:grid-cols-2">

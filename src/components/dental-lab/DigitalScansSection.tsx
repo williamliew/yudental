@@ -32,7 +32,7 @@ export function DigitalScansSection({ className = "" }: DigitalScansSectionProps
       className={`rounded-lg border border-surface-muted bg-surface-muted p-6 md:p-8 ${className}`}
       aria-labelledby="digital-scans-title"
     >
-      <h2 id="digital-scans-title" className="font-display text-xl font-bold text-navy md:text-2xl">
+      <h2 id="digital-scans-title" className="font-sans text-xl font-bold text-navy md:text-2xl">
         Digital Scans Accepted
       </h2>
       <ul className="mt-6 grid gap-4 sm:grid-cols-3">

@@ -143,7 +143,7 @@ export function Web3Form({
         {children}
 
         <fieldset className="mb-6">
-          <legend className="mb-3 font-display text-lg font-bold text-navy">Security check</legend>
+          <legend className="mb-3 font-sans text-lg font-bold text-navy">Security check</legend>
           <div className="h-captcha" data-captcha="true" />
         </fieldset>
 

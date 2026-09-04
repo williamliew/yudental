@@ -13,6 +13,7 @@ export const SITE = {
     country: "New Zealand",
   },
   hours: "Monday – Friday 8.30am – 5pm",
+  email: "yudlab@gmail.com",
   /** Set true when a public domain referrals inbox is ready to display on the site. */
   showReferralsEmailOnSite: false,
   /** Public referrals address; only shown when showReferralsEmailOnSite is true. */

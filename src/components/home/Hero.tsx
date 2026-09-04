@@ -23,7 +23,7 @@ export function Hero() {
         </p>
         <h1
           id="hero-heading"
-          className="mt-4 font-display text-4xl font-bold tracking-tight text-balance md:text-5xl lg:text-6xl"
+          className="mt-4 font-sans text-4xl font-bold tracking-tight text-balance md:text-5xl lg:text-6xl"
         >
           Dentures, Relines &amp; Repairs in Wellington
         </h1>

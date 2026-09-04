@@ -2,12 +2,18 @@ import { MAP_EMBED_URL, MAP_GOOGLE_DIRECTIONS_URL, MAP_GOOGLE_URL } from "@/lib/
 
 type MapEmbedProps = {
   className?: string;
+  /** Styling for use on dark backgrounds (e.g. footer) */
+  onDark?: boolean;
 };
 
-export function MapEmbed({ className = "" }: MapEmbedProps) {
+export function MapEmbed({ className = "", onDark = false }: MapEmbedProps) {
+  const frameClass = onDark
+    ? "overflow-hidden rounded-lg border border-white/20 bg-navy shadow-sm"
+    : "overflow-hidden rounded-lg border border-surface-muted bg-surface-muted shadow-sm";
+
   return (
     <div className={className}>
-      <div className="overflow-hidden rounded-lg border border-surface-muted bg-surface-muted shadow-sm">
+      <div className={frameClass}>
         <iframe
           title="Map: Yu Dental Laboratory, Wellington"
           src={MAP_EMBED_URL}

@@ -93,7 +93,7 @@ export function ReferralForm() {
           submitLabel="Submit referral"
         >
           <fieldset className="mb-6 space-y-4">
-            <legend className="mb-3 font-display text-lg font-bold text-navy">
+            <legend className="mb-3 font-sans text-lg font-bold text-navy">
               Referring dentist information
             </legend>
             <div>
@@ -131,7 +131,7 @@ export function ReferralForm() {
           </fieldset>
 
           <fieldset className="mb-6 space-y-4">
-            <legend className="mb-3 font-display text-lg font-bold text-navy">
+            <legend className="mb-3 font-sans text-lg font-bold text-navy">
               Patient&apos;s information
             </legend>
             <div>
@@ -258,7 +258,7 @@ export function ReferralForm() {
           </fieldset>
 
           <fieldset className="mb-6 space-y-4">
-            <legend className="mb-3 font-display text-lg font-bold text-navy">
+            <legend className="mb-3 font-sans text-lg font-bold text-navy">
               Referral details
             </legend>
             <div>

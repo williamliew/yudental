@@ -12,15 +12,15 @@ export function PromiseSection({
 }: PromiseSectionProps) {
   return (
     <Section ariaLabelledBy="promise-heading">
-      <div className="grid gap-8 lg:grid-cols-3 lg:gap-10">
+      <h2
+        id="promise-heading"
+        className="text-center font-sans text-2xl font-bold text-navy md:text-3xl"
+      >
+        Our Promise
+      </h2>
+      <div className="mt-10 grid gap-8 lg:grid-cols-3 lg:gap-10">
         <div>
-          <h2
-            id="promise-heading"
-            className="font-display text-2xl font-bold text-navy md:text-3xl"
-          >
-            Our Promise
-          </h2>
-          <p className="mt-4 text-grey-mid leading-relaxed">
+          <p className="text-grey-mid leading-relaxed">
             We combine skilled workmanship with modern materials to create appliances that look
             natural, feel stable, and help you communicate clearly. Whether you are a patient or a
             referring clinician, you can count on our high technical standards.
@@ -36,7 +36,7 @@ export function PromiseSection({
           aria-label="Modern dental laboratory environment"
         />
         <div>
-          <h3 className="font-display text-xl font-bold text-navy">{servicesTitle}</h3>
+          <h3 className="font-sans text-xl font-bold text-navy">{servicesTitle}</h3>
           <ul className="mt-4 space-y-2 text-grey-mid">
             {services.map((item, index) => (
               <li key={typeof item === "string" ? item : `service-${index}`} className="flex gap-2">

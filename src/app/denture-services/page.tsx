@@ -154,7 +154,7 @@ export default function DentureServicesPage() {
             <div>
               <h2
                 id="supergold-denture-heading"
-                className="font-display text-xl font-bold text-navy"
+                className="font-sans text-xl font-bold text-navy"
               >
                 SuperGold Card
               </h2>

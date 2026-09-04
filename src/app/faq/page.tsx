@@ -1,4 +1,3 @@
-import { DigitalScansSection } from "@/components/dental-lab/DigitalScansSection";
 import { AccordionItem, PageBanner } from "@/components/layout/PageBanner";
 import { createPageMetadata } from "@/lib/metadata";
 import Image from "next/image";
@@ -77,9 +76,12 @@ const FAQS: FaqItem[] = [
     question: "7. Do you accept digital scans from my dentist?",
     answer: (
       <p>
-        Yes. We accept files from iTero, 3Shape, and Dentsply Sirona workflows. Dentists: see our{" "}
-        <Link href="/dental-lab-services/">For Dentists</Link> page and our{" "}
-        <Link href="#digital-scans-heading">digital scans</Link> section for how to send a case.
+        Yes. We accept digital scans from{" "}
+        <strong>iTero, 3Shape, and Dentsply Sirona workflows.</strong> Dentists can visit our{" "}
+        <Link href="/dental-lab-services/" className="font-semibold">
+          For Dentists
+        </Link>{" "}
+        page for information on our laboratory services and how to send a digital case.
       </p>
     ),
   },
@@ -90,6 +92,43 @@ const FAQS: FaqItem[] = [
         Yes. Patients travel from across the Wellington region; we can discuss appointment spacing
         if you are coming from further away.
       </p>
+    ),
+  },
+  {
+    question: "9. Do you offer SuperGold card discounts?",
+    answer: (
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
+        <div className="mx-auto shrink-0 rounded-md bg-white p-3 ring-1 ring-navy/10 sm:mx-0">
+          <Image
+            src="/images/supergold-logo.png"
+            alt="SuperGold; Te kāri kōura"
+            width={552}
+            height={264}
+            className="h-auto w-32"
+            loading="lazy"
+          />
+        </div>
+        <div className="space-y-3">
+          <p>
+            SuperGold cardholders are welcome. When you book or visit, tell us you hold a card and we
+            will explain how our fees relate to your treatment plan.
+          </p>
+          <p>
+            The New Zealand SuperGold card is a government-issued card for New Zealand residents
+            aged 65 and over and eligible veterans. Participating businesses may offer discounts on
+            goods and services; programme information is on{" "}
+            <a href="https://www.supergold.govt.nz/" target="_blank" rel="noopener noreferrer">
+              supergold.govt.nz
+              <span className="sr-only"> (opens in new tab)</span>
+            </a>
+            .
+          </p>
+          <p>
+            You can also read more on our{" "}
+            <Link href="/denture-services/">Denture Services</Link> page.
+          </p>
+        </div>
+      </div>
     ),
   },
 ];
@@ -109,46 +148,7 @@ export default function FaqPage() {
                 {faq.answer}
               </AccordionItem>
             ))}
-            <AccordionItem title="9. Do you offer SuperGold card discounts?">
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-                <div className="mx-auto shrink-0 rounded-md bg-white p-3 ring-1 ring-navy/10 sm:mx-0">
-                  <Image
-                    src="/images/supergold-logo.png"
-                    alt="SuperGold; Te kāri kōura"
-                    width={552}
-                    height={264}
-                    className="h-auto w-32"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="space-y-3">
-                  <p>
-                    SuperGold cardholders are welcome. When you book or visit, tell us you hold a
-                    card and we will explain how our fees relate to your treatment plan.
-                  </p>
-                  <p>
-                    The New Zealand SuperGold card is a government-issued card for New Zealand
-                    residents aged 65 and over and eligible veterans. Participating businesses may
-                    offer discounts on goods and services; programme information is on{" "}
-                    <a
-                      href="https://www.supergold.govt.nz/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      supergold.govt.nz
-                      <span className="sr-only"> (opens in new tab)</span>
-                    </a>
-                    .
-                  </p>
-                  <p>
-                    You can also read more on our{" "}
-                    <Link href="/denture-services/">Denture Services</Link> page.
-                  </p>
-                </div>
-              </div>
-            </AccordionItem>
           </div>
-          <DigitalScansSection className="mt-8" />
           <p className="mt-8 text-grey-mid">
             Still have questions? <Link href="/contact/">Contact us</Link> or{" "}
             <Link href="/book/">book online</Link>.

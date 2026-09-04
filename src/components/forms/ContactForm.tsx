@@ -6,7 +6,7 @@ const inputClass =
 export function ContactForm() {
   return (
     <div className="rounded-lg border border-surface-muted bg-white p-6 shadow-sm md:p-8">
-      <h2 className="font-display text-2xl font-bold text-navy">Send us a message</h2>
+      <h2 className="font-sans text-2xl font-bold text-navy">Send us a message</h2>
       <p className="mt-2 text-sm text-grey-mid">
         Dental lab enquiries and patient questions both welcome. This demo form does not send email
         from the server; submit shows a confirmation note so you can wire up a backend later.

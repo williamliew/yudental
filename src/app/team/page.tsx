@@ -114,7 +114,7 @@ export default function TeamPage() {
                   }}
                 />
                 <div>
-                  <h2 className="font-display text-2xl font-bold text-navy">{member.name}</h2>
+                  <h2 className="font-sans text-2xl font-bold text-navy">{member.name}</h2>
                   <p className="mt-1 text-sm font-semibold text-teal">{member.role}</p>
                   {member.quals.length > 0 && (
                     <>

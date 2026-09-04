@@ -40,13 +40,13 @@ export default function DentalLabServicesPage() {
     <>
       <PageBanner
         title="For Dentists"
-        tagline="Crown, bridge & implant work for referring practices."
+        tagline="Dental appliances and services for referring practices."
       />
       <section className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="lab-welcome-title">
         <div className="mx-auto max-w-[var(--max-width-content)]">
           <h2
             id="lab-welcome-title"
-            className="text-center font-display text-2xl font-bold text-navy md:text-3xl"
+            className="text-center font-sans text-2xl font-bold text-navy md:text-3xl"
           >
             Welcome to the Dental Laboratory
           </h2>
@@ -92,7 +92,7 @@ export default function DentalLabServicesPage() {
               <div className="flex min-w-0 flex-1 flex-col justify-center p-6 md:p-8">
                 <h3
                   id="accepted-scanners-heading"
-                  className="font-display text-xl font-bold text-navy md:text-2xl"
+                  className="font-sans text-xl font-bold text-navy md:text-2xl"
                 >
                   Accepted Scanners
                 </h3>
@@ -113,13 +113,10 @@ export default function DentalLabServicesPage() {
         <div className="mx-auto max-w-[var(--max-width-content)]">
           <h2
             id="process-heading"
-            className="font-display text-2xl font-bold text-navy md:text-3xl"
+            className="text-center font-sans text-2xl font-bold text-navy md:text-3xl"
           >
             The Process
           </h2>
-          <p className="mt-3 text-grey-mid">
-            We offer a nationwide delivery service to and from your practice.
-          </p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             <article className="relative overflow-hidden rounded-lg bg-white shadow-sm">
               <div
@@ -130,9 +127,17 @@ export default function DentalLabServicesPage() {
                 }}
               />
               <div className="p-6">
-                <h3 className="font-display text-lg font-bold text-navy">Lab Prescription Form</h3>
+                <h3 className="font-sans text-lg font-bold text-navy">Lab Prescription Form</h3>
                 <p className="mt-3 text-sm text-grey-mid">
                   Download our lab prescription form (PDF) and include it with your case.
+                </p>
+                <p className="mt-2 text-sm">
+                  <a
+                    href="/downloads/lab-prescription-form.pdf"
+                    download="Yu-Dental-Lab-Prescription-Form.pdf"
+                  >
+                    Download lab prescription form (PDF)
+                  </a>
                 </p>
                 <p className="mt-2 text-sm">
                   <Link href="/contact/">Request a form / contact us</Link>
@@ -148,7 +153,7 @@ export default function DentalLabServicesPage() {
                 }}
               />
               <div className="p-6">
-                <h3 className="font-display text-lg font-bold text-navy">Turnaround Time</h3>
+                <h3 className="font-sans text-lg font-bold text-navy">Turnaround Time</h3>
                 <p className="mt-3 text-sm text-grey-mid">
                   Indicative timings from start to finish (confirm at handover):
                 </p>
@@ -159,6 +164,9 @@ export default function DentalLabServicesPage() {
                   <li>Bite blocks / special trays: 3 working days</li>
                   <li>Bruxism splints: 5 working days</li>
                 </ul>
+                <p className="mt-4 text-sm text-grey-mid">
+                  The turnaround time is subject to change and serves as a general guideline only.
+                </p>
               </div>
             </article>
             <article className="relative overflow-hidden rounded-lg bg-white shadow-sm">
@@ -170,7 +178,7 @@ export default function DentalLabServicesPage() {
                 }}
               />
               <div className="p-6">
-                <h3 className="font-display text-lg font-bold text-navy">Delivery</h3>
+                <h3 className="font-sans text-lg font-bold text-navy">Delivery</h3>
                 <p className="mt-3 text-sm text-grey-mid">
                   Please allow an extra day for our overnight courier service to avoid delivery
                   delays.

@@ -6,7 +6,7 @@ export function DepartmentCards() {
     <Section className="text-center" ariaLabelledBy="dept-heading">
       <h2
         id="dept-heading"
-        className="font-display text-2xl font-bold text-navy md:text-3xl text-balance"
+        className="font-sans text-2xl font-bold text-navy md:text-3xl text-balance"
       >
         Patients and Referring Dental Professionals
       </h2>
@@ -25,7 +25,7 @@ export function DepartmentCards() {
           href="/denture-services/"
           className="group rounded-lg border border-surface-muted bg-white p-6 text-left no-underline shadow-sm transition-shadow hover:shadow-md md:p-8"
         >
-          <h3 className="font-display text-xl font-bold text-navy group-hover:text-teal">
+          <h3 className="font-sans text-xl font-bold text-navy group-hover:text-teal">
             For Patients
           </h3>
           <p className="mt-3 text-grey-mid leading-relaxed">
@@ -40,7 +40,7 @@ export function DepartmentCards() {
           href="/dental-lab-services/"
           className="group rounded-lg border border-surface-muted bg-white p-6 text-left no-underline shadow-sm transition-shadow hover:shadow-md md:p-8"
         >
-          <h3 className="font-display text-xl font-bold text-navy group-hover:text-teal">
+          <h3 className="font-sans text-xl font-bold text-navy group-hover:text-teal">
             For Dentist
           </h3>
           <p className="mt-3 text-grey-mid leading-relaxed">

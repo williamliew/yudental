@@ -121,15 +121,15 @@ export default function AboutPage() {
         <div className="mx-auto max-w-[var(--max-width-content)]">
           <h2
             id="journey-heading"
-            className="font-display text-2xl font-bold text-navy md:text-3xl"
+            className="text-center font-sans text-2xl font-bold text-navy md:text-3xl"
           >
             Our Journey
           </h2>
-          <p className="mt-2 text-grey-mid">Key dates in our history</p>
+          <p className="mt-2 text-center text-grey-mid">Key dates in our history</p>
           <ol className="mt-8 space-y-8">
             {TIMELINE.map((item) => (
               <li key={item.title} className="border-l-2 border-teal pl-6">
-                <h3 className="font-display text-lg font-bold text-navy">{item.title}</h3>
+                <h3 className="font-sans text-lg font-bold text-navy">{item.title}</h3>
                 <p className="mt-1 text-sm font-semibold text-teal">{item.era}</p>
                 <p className="mt-2 text-grey-mid">{item.copy}</p>
               </li>
@@ -139,10 +139,13 @@ export default function AboutPage() {
       </section>
       <section className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="people-heading">
         <div className="mx-auto max-w-[var(--max-width-content)]">
-          <h2 id="people-heading" className="font-display text-2xl font-bold text-navy md:text-3xl">
+          <h2
+            id="people-heading"
+            className="text-center font-sans text-2xl font-bold text-navy md:text-3xl"
+          >
             The Family Behind the Bench
           </h2>
-          <p className="mt-3 text-grey-mid">
+          <p className="mt-3 text-center text-grey-mid">
             A few heartfelt lines each beats a long CV on this page. Formal qualifications sit on{" "}
             <Link href="/team/">our team</Link> page.
           </p>
@@ -161,7 +164,7 @@ export default function AboutPage() {
                       "url(https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&h=400&fit=crop)",
                   }}
                 />
-                <h3 className="font-display text-lg font-bold text-navy">{person.name}</h3>
+                <h3 className="font-sans text-lg font-bold text-navy">{person.name}</h3>
                 <p className="mt-1 text-sm font-semibold text-teal">{person.role}</p>
                 <p className="mt-3 text-sm text-grey-mid leading-relaxed">{person.copy}</p>
               </article>
