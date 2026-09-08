@@ -20,6 +20,7 @@ type TeamMember = {
   name: string;
   role: string;
   quals: Qualification[];
+  accreditations?: string[];
   bio: string[];
 };
 
@@ -71,6 +72,11 @@ const TEAM: TeamMember[] = [
         title: "Bachelor of Commerce and Administration (BCA)",
         institution: "Victoria University of Wellington, New Zealand",
       },
+    ],
+    accreditations: [
+      "Dental Council Registered Clinical Dental Technician",
+      "Dental Council Registered Dental Technician",
+      "Formerly Registered Dental Prosthetist (Australia) – Australian Health Practitioner Regulation Agency (AHPRA)",
     ],
     bio: [
       "Allan Yu is a Dental Prosthetist and Technician with a Bachelor of Commerce from Victoria University, diplomas from RMIT Melbourne, and an MSc in Dental Technology from Cardiff Metropolitan University. He trained at the Royal Melbourne Dental Hospital and has worked with various laboratories in Melbourne. Allan assesses patients and provides denture treatments, while handling complex cases as well. He collaborates with dentists across New Zealand on prosthetic planning and digital workflows.",
@@ -128,6 +134,16 @@ export default function TeamPage() {
                             )}
                             {qual.note && <span className="mt-0.5 block">{qual.note}</span>}
                           </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                  {member.accreditations && member.accreditations.length > 0 && (
+                    <>
+                      <h3 className="mt-4 text-sm font-bold text-navy">Accreditations</h3>
+                      <ul className="mt-2 space-y-2 text-sm text-grey-mid">
+                        {member.accreditations.map((item) => (
+                          <li key={item}>{item}</li>
                         ))}
                       </ul>
                     </>

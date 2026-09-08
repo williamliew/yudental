@@ -33,7 +33,7 @@ export function FamilyArchiveGallery() {
           From the family archive
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-grey-mid">
-          Photographs from our workshop, laboratory, and clinic over the years.
+          Photographs from our workshop and laboratory over the years.
         </p>
         <ul className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-2 md:gap-4 lg:grid-cols-4">
           {ARCHIVE_PHOTOS.map((photo) => (

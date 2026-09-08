@@ -24,26 +24,8 @@ const TREATMENTS: Treatment[] = [
   {
     title: "Full Dentures",
     spriteId: "full-dentures",
-    body: (
-      <div className="space-y-3">
-        <p>
-          Full dentures are used to replace all of the teeth in either the upper or lower jaw, and
-          sometimes both.
-        </p>
-        <p>The process begins with taking impressions of your mouth to ensure a perfect fit.</p>
-        <p>
-          We also work with you to choose the colour and mould of the teeth so they look natural.
-        </p>
-        <p>
-          You&apos;ll visit our Te Aro clinic for a total of about six appointments spread over two
-          weeks to complete the process.
-        </p>
-        <p>After getting your dentures, we recommend coming in for annual check-ups.</p>
-        <p>
-          This helps ensure they remain comfortable and fit well as your mouth changes over time.
-        </p>
-      </div>
-    ),
+    body:
+      "Full dentures are used to replace all of the teeth in either the upper or lower jaw, and sometimes both. The process begins with taking impressions of your mouth to ensure a perfect fit. We also work with you to choose the colour and mould of the teeth so they look natural. You'll visit our Te Aro clinic for a total of about six appointments spread over two weeks to complete the process. After getting your dentures, we recommend coming in for annual check-ups. This helps ensure they remain comfortable and fit well as your mouth changes over time.",
   },
   {
     title: "Partial Dentures",
@@ -133,7 +115,7 @@ export default function DentureServicesPage() {
       <AccordionHashSync />
       <PageBanner
         title="Denture Services"
-        tagline="Patient information on dentures, appliances and ongoing care."
+        tagline="Transform Your Smile with Our Public Denture Services: Comprehensive Information on Denture Appliances and More"
         backgroundImage="/images/denture-services-banner.png"
       />
       <div className="mx-auto max-w-[var(--max-width-content)] px-4 py-8 md:px-6">

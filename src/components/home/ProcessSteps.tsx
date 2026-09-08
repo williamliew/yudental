@@ -34,8 +34,8 @@ export function ProcessSteps() {
         ))}
       </ol>
       <p className="mt-10 text-sm text-grey-mid text-balance">
-        Lab work for practices: <Link href="/dental-lab-services/">For dentists</Link>. Full
-        treatment detail: <Link href="/denture-services/">Denture services</Link>.
+        Lab work for practices: <Link href="/dental-lab-services/">For Dentists</Link>. Full
+        treatment detail: <Link href="/denture-services/">Denture Services</Link>.
       </p>
     </Section>
   );

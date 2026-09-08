@@ -33,7 +33,7 @@ export function DepartmentCards() {
             SuperGold cardholders welcome; ask us about fees and WINZ quotes at your first visit.
           </p>
           <span className="mt-4 inline-block text-sm font-semibold text-teal">
-            View denture services →
+            View Denture Services →
           </span>
         </Link>
         <Link
@@ -48,7 +48,7 @@ export function DepartmentCards() {
             direct communication on every case. Refer online or download our referral form.
           </p>
           <span className="mt-4 inline-block text-sm font-semibold text-teal">
-            View lab services →
+            View Dental Laboratory Services →
           </span>
         </Link>
       </div>

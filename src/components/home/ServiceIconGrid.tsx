@@ -20,6 +20,7 @@ export function ServiceIconGrid() {
       >
         Denture Services
       </h2>
+      <p className="mt-3 text-lg text-grey-mid">For the Public</p>
       <ul className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
         {HOME_SERVICE_TILES.map((service) => (
           <li key={service.id}>
