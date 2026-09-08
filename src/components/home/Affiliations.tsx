@@ -27,7 +27,7 @@ const AFFILIATIONS = [
 
 export function Affiliations() {
   return (
-    <Section className="bg-surface-muted text-center" ariaLabelledBy="affiliations-heading">
+    <Section className="text-center" ariaLabelledBy="affiliations-heading">
       <h2
         id="affiliations-heading"
         className="font-sans text-2xl font-bold text-navy md:text-3xl"

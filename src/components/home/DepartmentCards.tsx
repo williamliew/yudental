@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function DepartmentCards() {
   return (
-    <Section className="text-center" ariaLabelledBy="dept-heading">
+    <Section className="bg-surface-muted text-center" ariaLabelledBy="dept-heading">
       <h2
         id="dept-heading"
         className="font-sans text-2xl font-bold text-navy md:text-3xl text-balance"

@@ -13,7 +13,7 @@ function getServiceLinkLabel(label: string): string {
 
 export function ServiceIconGrid() {
   return (
-    <Section className="bg-surface-muted text-center" ariaLabelledBy="denture-services-heading">
+    <Section className="text-center" ariaLabelledBy="denture-services-heading">
       <h2
         id="denture-services-heading"
         className="font-sans text-2xl font-bold text-navy md:text-3xl"
