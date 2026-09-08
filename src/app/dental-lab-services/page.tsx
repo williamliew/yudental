@@ -136,8 +136,8 @@ export default function DentalLabServicesPage() {
                 </p>
                 <p className="mt-2 text-sm">
                   <a
-                    href="/downloads/lab-prescription-form.pdf"
-                    download="Yu-Dental-Lab-Prescription-Form.pdf"
+                    href="/downloads/Yu_Dental_Laboratory_Job_Sheet.pdf"
+                    download="Yu_Dental_Laboratory_Job_Sheet.pdf"
                   >
                     Download lab prescription form (PDF)
                   </a>
