@@ -35,7 +35,7 @@ export function Footer() {
                 className="h-16 w-auto md:h-[4.5rem]"
               />
               <span className="font-display text-lg font-bold leading-tight text-white md:text-xl">
-                Yu Dental Laboratory
+                Yu Dental Laboratory Ltd
               </span>
             </Link>
             <p className="mt-4 text-sm text-white/75">
