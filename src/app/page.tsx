@@ -17,9 +17,9 @@ export default function HomePage() {
     <>
       <Hero />
       <DepartmentCards />
-      <Affiliations />
       <ServiceIconGrid />
       <ProcessSteps />
+      <Affiliations />
     </>
   );
 }

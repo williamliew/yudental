@@ -16,6 +16,13 @@ const AFFILIATIONS = [
     width: 120,
     height: 120,
   },
+  {
+    href: "https://www.supergold.govt.nz/",
+    src: "/images/supergold-logo.png",
+    alt: "SuperGold; Te kāri kōura",
+    width: 180,
+    height: 151,
+  },
 ] as const;
 
 export function Affiliations() {

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function ProcessSteps() {
   return (
-    <Section className="bg-surface-muted text-center" ariaLabelledBy="process-heading">
+    <Section className="text-center" ariaLabelledBy="process-heading">
       <header>
         <h2 id="process-heading" className="font-sans text-2xl font-bold text-navy md:text-3xl">
           Our Process
