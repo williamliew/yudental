@@ -5,13 +5,17 @@ import Link from "next/link";
 
 export function ProcessSteps() {
   return (
-    <Section className="bg-surface-muted text-center" ariaLabelledBy="process-heading">
+    <Section className="text-center" ariaLabelledBy="process-heading">
       <header>
         <h2 id="process-heading" className="font-sans text-2xl font-bold text-navy md:text-3xl">
           Our Process
         </h2>
+        <h3 className="mt-3 text-lg font-semibold text-navy md:text-xl">
+          Your New Denture Journey
+        </h3>
         <p className="mx-auto mt-3 max-w-2xl text-lg text-grey-dark">
-          Generally needs 6 appointments and your dentures will be ready in 2 weeks!
+          New dentures generally require around six appointments and can often be completed within
+          approximately two weeks, depending on your individual treatment needs.
         </p>
       </header>
       <ol className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">

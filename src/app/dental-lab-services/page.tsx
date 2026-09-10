@@ -11,25 +11,43 @@ export const metadata = createPageMetadata({
   path: "/dental-lab-services/",
 });
 
-const LAB_SERVICES = [
-  "Full/Full and Partial Denture",
-  "Implant Retained Overdenture",
-  "Implant Bar Retained Overdenture",
-  "Precision Attachment Dentures",
-  "Gold Onlay For Dentures",
-  "Surgical Guides/Stents",
-  "Radiographic Guide",
-  "Essex Retainer / With Pontic",
-  "Cobalt Chrome Framework",
-  "Welding Retention",
-  "Repairs, Relines, Additions",
-  "Bruxism Splints (Hard and Soft / NTI)",
-  "Mouth Guards",
-  "Orthodontic Retainers",
-  "Bleaching Trays",
-  "MDSA Sleep Apnoea Device",
-  "Gold Veneer For Denture Tooth",
+const LAB_SERVICE_CATEGORIES = [
+  {
+    title: "Dentures & Removable Prosthetics",
+    items: [
+      "Full & Partial Dentures",
+      "Precision Attachment Dentures",
+      "Cobalt Chrome Frameworks",
+      "Repairs, Relines & Additions",
+    ],
+  },
+  {
+    title: "Implant Prosthetics",
+    items: ["Implant-Retained Overdentures", "Implant Bar-Retained Overdentures"],
+  },
+  {
+    title: "Splints, Trays & Retainers",
+    items: [
+      "Bruxism Splints",
+      "Sports Mouthguards",
+      "Orthodontic Retainers",
+      "Bleaching Trays",
+      "Essix Retainers / Pontics",
+      "MDSA Sleep Apnoea Devices",
+    ],
+  },
+  {
+    title: "Specialised Laboratory Services",
+    items: [
+      "Surgical Guides / Stents",
+      "Radiographic Guides",
+      "Gold Onlays / veneers for denture teeth",
+      "Welding / Retention",
+    ],
+  },
 ] as const;
+
+const LAB_PRESCRIPTION_PDF = "/downloads/Yu_Dental_Laboratory_Job_Sheet.pdf";
 
 const ACCEPTED_SCANNERS = ["3Shape", "Dentsply Sirona", "iTero"] as const;
 
@@ -109,7 +127,12 @@ export default function DentalLabServicesPage() {
           </div>
         </div>
       </section>
-      <PromiseSection servicesTitle="Dental Laboratory Services" services={LAB_SERVICES} />
+      <PromiseSection
+        heading="Our Commitment to Your Practice"
+        promiseCopy="We combine skilled workmanship, modern materials and direct communication to support predictable clinical outcomes. From straightforward cases to more complex removable prosthodontic work, we work closely with you throughout the case."
+        servicesTitle="Dental Laboratory Services"
+        serviceCategories={LAB_SERVICE_CATEGORIES}
+      />
       <section className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="process-heading">
         <div className="mx-auto max-w-[var(--max-width-content)]">
           <h2
@@ -135,10 +158,7 @@ export default function DentalLabServicesPage() {
                   Download our lab prescription form (PDF) and include it with your case.
                 </p>
                 <p className="mt-2 text-sm">
-                  <a
-                    href="/downloads/Yu_Dental_Laboratory_Job_Sheet.pdf"
-                    download="Yu_Dental_Laboratory_Job_Sheet.pdf"
-                  >
+                  <a href={LAB_PRESCRIPTION_PDF} download="Yu_Dental_Laboratory_Job_Sheet.pdf">
                     Download lab prescription form (PDF)
                   </a>
                 </p>
@@ -160,18 +180,23 @@ export default function DentalLabServicesPage() {
               <div className="p-6">
                 <h3 className="font-sans text-lg font-bold text-navy">Turnaround Time</h3>
                 <p className="mt-3 text-sm text-grey-mid">
-                  Indicative timings from start to finish (confirm at handover):
+                  The turnaround time is subject to change and serves as a general guideline only.
                 </p>
-                <ul className="mt-2 space-y-1 text-sm text-grey-mid">
+                <h4 className="mt-4 font-sans text-base font-bold text-navy">
+                  Typical laboratory turnaround times
+                </h4>
+                <p className="mt-2 text-sm text-grey-mid">
+                  The following timeframes are provided as a general guide. Turnaround may vary
+                  depending on case complexity, materials and laboratory workload. We&apos;ll confirm
+                  timing when your case is received.
+                </p>
+                <ul className="mt-3 space-y-1 text-sm text-grey-mid">
                   <li>Full / full: 10–12 working days</li>
                   <li>Simple partial: 5 working days</li>
                   <li>Cobalt chromium framework: 12 working days</li>
                   <li>Bite blocks / special trays: 3 working days</li>
                   <li>Bruxism splints: 5 working days</li>
                 </ul>
-                <p className="mt-4 text-sm text-grey-mid">
-                  The turnaround time is subject to change and serves as a general guideline only.
-                </p>
               </div>
             </article>
             <article className="relative overflow-hidden rounded-lg bg-white shadow-sm">
@@ -183,13 +208,31 @@ export default function DentalLabServicesPage() {
                 }}
               />
               <div className="p-6">
-                <h3 className="font-sans text-lg font-bold text-navy">Delivery</h3>
+                <h3 className="font-sans text-lg font-bold text-navy">Nationwide Delivery</h3>
                 <p className="mt-3 text-sm text-grey-mid">
-                  Please allow an extra day for our overnight courier service to avoid delivery
-                  delays.
+                  We provide overnight courier service for practices throughout New Zealand. Please
+                  allow an additional working day for courier delivery when planning patient
+                  appointments.
                 </p>
               </div>
             </article>
+          </div>
+          <div className="mt-12 rounded-lg border border-surface-muted bg-white p-6 text-center shadow-sm md:p-8">
+            <h3 className="font-sans text-xl font-bold text-navy md:text-2xl">
+              Looking for a Dental Laboratory Partner?
+            </h3>
+            <p className="mx-auto mt-4 max-w-2xl text-grey-mid leading-relaxed">
+              Whether you&apos;re sending us your first case or looking for ongoing laboratory
+              support, we&apos;d be happy to discuss your requirements. We work with dental practices
+              throughout Wellington and across New Zealand.
+            </p>
+            <p className="mt-4 text-sm font-semibold text-navy">
+              <a href={LAB_PRESCRIPTION_PDF} download="Yu_Dental_Laboratory_Job_Sheet.pdf">
+                Send a Case
+              </a>
+              <span aria-hidden="true"> | </span>
+              <Link href="/contact/">Contact Our Lab</Link>
+            </p>
           </div>
         </div>
       </section>

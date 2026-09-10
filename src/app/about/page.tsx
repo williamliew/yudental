@@ -1,7 +1,6 @@
 import { FamilyArchiveGallery } from "@/components/about/FamilyArchiveGallery";
 import { PageBanner } from "@/components/layout/PageBanner";
 import { createPageMetadata } from "@/lib/metadata";
-import Link from "next/link";
 
 export const metadata = createPageMetadata({
   title: "Our story",
@@ -12,9 +11,10 @@ export const metadata = createPageMetadata({
 
 const TIMELINE = [
   {
-    title: "The Beginning of a Dream",
+    title: "Where It All Began",
     era: "1998",
-    copy: "In a small family home, Yu Dental Laboratory was founded with a vision to provide quality dental services. Driven by passion, the family worked tirelessly to turn their dream into reality.",
+    copy:
+      "The idea for Yu Dental began at our family home in Wellington, with a vision of building an independent dental laboratory focused on quality craftsmanship and personal service.",
   },
   {
     title: "Officially a Family Endeavour",
@@ -58,9 +58,10 @@ const PEOPLE = [
   },
   {
     name: "Allan Yu",
-    role: "Dental prosthetist and technician",
+    role: "Dental Prosthetist & Dental Technologist",
     ariaLabel: "Portrait placeholder for Allan Yu",
-    copy: "Allan Yu is a Dental Prosthetist and Technician with a BCA from Victoria University, diplomas from RMIT Melbourne, and a Master's in Dental Technology from Cardiff Metropolitan University. He handles patient assessments, impressions, fittings, and complex technical cases.",
+    copy:
+      "Allan joined the family business after training in dental technology and dental prosthetics in Australia and completing his Master's in Dental Technology in the UK. He provides clinical denture care alongside complex technical and laboratory work, bringing the clinical and laboratory sides of Yu Dental together.",
   },
 ] as const;
 
@@ -86,33 +87,22 @@ export default function AboutPage() {
       </div>
       <div className="mx-auto max-w-[var(--max-width-content)] space-y-4 px-4 pb-12 text-grey-mid leading-relaxed md:px-6">
         <p>
-          Our journey into dental technology began with formal training and many years of hands-on
-          experience. We learned how materials behave, how dental appliances should feel in the
-          mouth, and the importance of working honestly with dentists who trusted us with their
-          patients. This foundational knowledge continues to guide our planning, fabrication, and
-          delivery processes today.
+          Yu Dental began as a small family-run dental laboratory in Wellington in 2000. What
+          started from our home has grown into the combined denture clinic and dental laboratory we
+          operate today in Te Aro.
         </p>
         <p>
-          In 2000, our family opened Yu Dental Laboratory from the basement of our home in
-          Wellington&apos;s eastern suburbs. It was a modest workshop in every sense; work moved
-          between the bench and the courier, and our referrers soon discovered they could connect
-          with someone who genuinely understood the case. From that humble beginning, we grew into
-          the trusted Wellington site that patients and practices rely on today, all while
-          maintaining our commitment to crafting dental appliances on-site and communicating clearly
-          about timelines and materials.
+          Although our surroundings have changed, the way we work has not. We remain family-run,
+          our dental appliances are made locally in our own laboratory, and we continue to value
+          personal relationships with the patients and dentists who place their trust in us.
         </p>
         <p>
-          Throughout the years, we have remained focused on the art of dental technology:
-          aesthetics, function, and phonetics. We use products and materials from reputable
-          manufacturers and ensure our documentation aligns with New Zealand and European standards.
-          We continue to take on a wide range of complexities, prioritising our relationships with
-          clients and patients who seek confidence in both the appliances and the people behind
-          them.
+          Today, two generations of the Yu family work together at 12 College Street, combining
+          decades of dental laboratory experience with modern clinical and digital techniques.
         </p>
         <p>
-          This story serves as our overview. Below, you&apos;ll find a simple timeline from our past
-          to the present. We hope this initiative adds warmth for both patients and dentists who
-          appreciate collaborating with real people, not just case numbers.
+          Through every stage of our growth, one thing has remained the same: we&apos;re a family
+          business that believes good dental work starts with craftsmanship, communication and care.
         </p>
       </div>
       <section
@@ -147,8 +137,8 @@ export default function AboutPage() {
             The Family Behind the Bench
           </h2>
           <p className="mt-3 text-center text-grey-mid">
-            A few heartfelt lines each beats a long CV on this page. Formal qualifications sit on{" "}
-            <Link href="/team/">our team</Link> page.
+            Yu Dental Laboratory remains a family-run business, with each member of our family
+            bringing different experience and skills to the clinic and laboratory.
           </p>
           <div className="mt-10 grid gap-8 md:grid-cols-3">
             {PEOPLE.map((person) => (

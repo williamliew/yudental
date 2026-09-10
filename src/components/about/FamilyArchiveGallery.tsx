@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const ARCHIVE_PHOTOS = [
   {
@@ -50,6 +51,24 @@ export function FamilyArchiveGallery() {
             </li>
           ))}
         </ul>
+        <div className="mt-10 text-center">
+          <h3 className="font-sans text-xl font-bold text-navy md:text-2xl">
+            From our family to yours
+          </h3>
+          <p className="mx-auto mt-4 max-w-2xl italic text-grey-mid leading-relaxed">
+            Whether you&apos;re looking for denture care or a dental practice looking for a
+            laboratory partner, you&apos;re welcome to get in touch with our family team.
+          </p>
+          <p className="mt-4 text-sm font-semibold text-navy">
+            <Link href="/book/" className="no-underline hover:underline">
+              Book a Consultation
+            </Link>
+            <span aria-hidden="true"> | </span>
+            <Link href="/dental-lab-services/" className="no-underline hover:underline">
+              For Dentists
+            </Link>
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -38,18 +38,18 @@ export function Header() {
           <Link
             href="/"
             className="inline-flex min-w-0 shrink items-center gap-3 no-underline"
-            aria-label="Yu Dental Laboratory home"
+            aria-label={`${SITE.legalName} home`}
           >
             <Image
               src="/yu-dental.png"
               alt=""
               width={200}
               height={67}
-              className="block h-16 w-auto md:h-20"
+              className="block h-16 w-auto shrink-0 md:h-20"
               priority
             />
-            <span className="hidden font-display text-xl font-bold leading-tight text-navy sm:block md:text-2xl">
-              Yu Dental Laboratory
+            <span className="hidden min-w-0 font-display text-lg font-bold leading-tight text-navy sm:block md:text-xl lg:text-2xl">
+              {SITE.legalName}
             </span>
           </Link>
 

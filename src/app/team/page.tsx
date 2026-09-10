@@ -1,6 +1,6 @@
 import { PageBanner } from "@/components/layout/PageBanner";
+import { ButtonLink } from "@/components/ui/ButtonLink";
 import { createPageMetadata } from "@/lib/metadata";
-import Link from "next/link";
 
 export const metadata = createPageMetadata({
   title: "Our team",
@@ -20,7 +20,12 @@ type TeamMember = {
   name: string;
   role: string;
   quals: Qualification[];
+  accreditationsLabel?: string;
   accreditations?: string[];
+  award?: {
+    title: string;
+    copy: string;
+  };
   bio: string[];
 };
 
@@ -28,7 +33,7 @@ const TEAM: TeamMember[] = [
   {
     id: "steven-yu",
     name: "Steven Yu",
-    role: "Director/Owner Operator",
+    role: "Founder & Director | Dental Technician",
     quals: [
       {
         title: "Diploma of Dental Technology",
@@ -42,10 +47,10 @@ const TEAM: TeamMember[] = [
   {
     id: "leanne-yu",
     name: "Leanne Yu",
-    role: "Co-Owner / Dental Manufacturer / Co-Ordinator",
+    role: "Co-Owner | Laboratory Coordinator",
     quals: [],
     bio: [
-      "Leanne Yu is the co-owner and coordinator of Yu Dental Laboratory. She started when Steven launched the business, gained hands-on experience in dental manufacturing, and now manages case coordination and daily operations, ensuring timelines are met and cases are delivered on time.",
+      "Leanne has been part of Yu Dental since the laboratory was established, working alongside Steven as the business grew from the family home into today's Wellington clinic and laboratory. With extensive hands-on experience in dental manufacturing, she now coordinates cases, manages laboratory workflows and helps ensure each case progresses smoothly from arrival through to delivery.",
     ],
   },
   {
@@ -56,7 +61,6 @@ const TEAM: TeamMember[] = [
       {
         title: "Master of Science (MSc) in Dental Technology — Distinction",
         institution: "Cardiff Metropolitan University, Cardiff, Wales, UK",
-        note: "Programme Award — Highest Postgraduate Academic Performance in the MSc Dental Technology programme",
       },
       {
         title: "Advanced Diploma of Dental Prosthetics",
@@ -73,13 +77,18 @@ const TEAM: TeamMember[] = [
         institution: "Victoria University of Wellington, New Zealand",
       },
     ],
+    accreditationsLabel: "Professional Registration",
     accreditations: [
-      "Dental Council Registered Clinical Dental Technician",
-      "Dental Council Registered Dental Technician",
-      "Formerly Registered Dental Prosthetist (Australia) – Australian Health Practitioner Regulation Agency (AHPRA)",
+      "Registered Clinical Dental Technician – Dental Council of New Zealand",
+      "Registered Dental Technician – Dental Council of New Zealand",
+      "Formerly registered Dental Prosthetist (Australia) – AHPRA",
     ],
+    award: {
+      title: "Programme Award",
+      copy: "Highest Postgraduate Academic Performance – MSc Dental Technology",
+    },
     bio: [
-      "Allan Yu is a Dental Prosthetist and Technician with a Bachelor of Commerce from Victoria University, diplomas from RMIT Melbourne, and an MSc in Dental Technology from Cardiff Metropolitan University. He trained at the Royal Melbourne Dental Hospital and has worked with various laboratories in Melbourne. Allan assesses patients and provides denture treatments, while handling complex cases as well. He collaborates with dentists across New Zealand on prosthetic planning and digital workflows.",
+      "Allan combines clinical denture care with dental laboratory expertise, working directly with patients while also collaborating with dentists on complex prosthetic cases. After training in dental technology and dental prosthetics at RMIT University in Melbourne, he completed an MSc in Dental Technology with Distinction at Cardiff Metropolitan University, receiving the Programme Award for the highest postgraduate academic performance in the programme. At Yu Dental, Allan works across both the clinic and laboratory, with particular interests in removable prosthodontics, complex denture treatment, implant-retained prostheses and digital dental workflows.",
     ],
   },
 ];
@@ -87,12 +96,16 @@ const TEAM: TeamMember[] = [
 export default function TeamPage() {
   return (
     <>
-      <PageBanner title="Our Team" tagline="Qualifications and experience you can see." />
+      <PageBanner
+        title="Our Team"
+        tagline="Meet the Yu Dental Team. Two generations. One family. Decades of dental laboratory experience."
+      />
       <section className="px-4 py-12 md:px-6 md:py-16" aria-label="Our team">
         <div className="mx-auto max-w-[var(--max-width-content)]">
           <p className="max-w-3xl text-grey-mid leading-relaxed">
-            Registered dental prosthetists and technicians. Qualifications, roles, and how we work
-            together at the Wellington clinic and laboratory.
+            Our family works together at our Wellington denture clinic and dental laboratory,
+            combining traditional craftsmanship with clinical experience and modern digital
+            techniques.
           </p>
           <div
             className="mt-8 h-56 rounded-lg bg-cover bg-center md:h-72"
@@ -140,13 +153,21 @@ export default function TeamPage() {
                   )}
                   {member.accreditations && member.accreditations.length > 0 && (
                     <>
-                      <h3 className="mt-4 text-sm font-bold text-navy">Accreditations</h3>
+                      <h3 className="mt-4 text-sm font-bold text-navy">
+                        {member.accreditationsLabel ?? "Accreditations"}
+                      </h3>
                       <ul className="mt-2 space-y-2 text-sm text-grey-mid">
                         {member.accreditations.map((item) => (
                           <li key={item}>{item}</li>
                         ))}
                       </ul>
                     </>
+                  )}
+                  {member.award && (
+                    <div className="mt-4">
+                      <h3 className="text-sm font-bold text-navy">{member.award.title}</h3>
+                      <p className="mt-1 text-sm italic text-grey-mid">{member.award.copy}</p>
+                    </div>
                   )}
                   <div className="mt-4 space-y-3 text-grey-mid leading-relaxed">
                     {member.bio.map((paragraph) => (
@@ -157,10 +178,31 @@ export default function TeamPage() {
               </article>
             ))}
           </div>
-          <p className="mt-10 text-grey-mid">
-            For how we work day to day, read <Link href="/about/">our story</Link>, or{" "}
-            <Link href="/contact/">contact</Link> us directly.
-          </p>
+          <div className="mt-12 rounded-lg border border-surface-muted bg-white p-6 text-center shadow-sm md:p-8">
+            <h2 className="font-sans text-xl font-bold text-navy md:text-2xl">
+              One Team. Clinic &amp; Laboratory Under One Roof.
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl italic text-grey-mid leading-relaxed">
+              Our team works together from consultation through to laboratory construction and
+              follow-up care, helping maintain direct communication and continuity throughout your
+              treatment.
+            </p>
+            <div className="mt-6 flex flex-wrap justify-center gap-3">
+              <ButtonLink href="/book/" className="uppercase tracking-wide">
+                Book a consultation
+              </ButtonLink>
+              <ButtonLink href="/about/" variant="outline" className="uppercase tracking-wide">
+                Our story
+              </ButtonLink>
+              <ButtonLink
+                href="/dental-lab-services/"
+                variant="outline"
+                className="uppercase tracking-wide"
+              >
+                Work with our lab
+              </ButtonLink>
+            </div>
+          </div>
         </div>
       </section>
     </>

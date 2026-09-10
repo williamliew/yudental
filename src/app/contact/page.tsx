@@ -4,7 +4,7 @@ import { createPageMetadata } from "@/lib/metadata";
 import { SITE } from "@/lib/site";
 
 export const metadata = createPageMetadata({
-  title: "Contact us — Te Aro, Wellington",
+  title: "Contact",
   description: "Contact Yu Dental Laboratory in Te Aro, Wellington. Phone, map, hours and parking.",
   path: "/contact/",
 });
@@ -13,8 +13,8 @@ export default function ContactPage() {
   return (
     <>
       <PageBanner
-        title="Contact Us"
-        tagline="Find us on the map, check opening hours and parking notes."
+        title="Contact & Visit Yu Dental Laboratory"
+        tagline="Visit our denture clinic and dental laboratory in Te Aro, Wellington. Find our address, opening hours, parking information and directions below."
       />
       <div className="mx-auto max-w-[var(--max-width-content)] space-y-8 px-4 py-12 md:px-6 md:py-16">
         <div className="grid gap-6 md:grid-cols-2">
@@ -50,13 +50,16 @@ export default function ContactPage() {
               Our clinic entrance is at street level for convenient access. If you require any
               assistance when visiting us, please let us know; we&apos;re happy to help.
             </p>
-            <h3 className="mt-6 font-sans text-base font-bold text-navy">Prefer to call?</h3>
+            <h3 className="mt-6 font-sans text-base font-bold text-navy">
+              Have a question before booking?
+            </h3>
             <p className="mt-2 text-grey-mid">
               Call us on{" "}
               <a href={`tel:${SITE.phoneTel}`} className="font-semibold">
-                {SITE.phone}
+                04 388 7491
               </a>{" "}
-              during opening hours.
+              during opening hours. We&apos;re happy to discuss your denture needs or help you
+              arrange an appointment.
             </p>
           </div>
         </div>

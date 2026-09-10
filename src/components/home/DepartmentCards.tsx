@@ -41,7 +41,7 @@ export function DepartmentCards() {
           className="group rounded-lg border border-surface-muted bg-white p-6 text-left no-underline shadow-sm transition-shadow hover:shadow-md md:p-8"
         >
           <h3 className="font-sans text-xl font-bold text-navy group-hover:text-teal">
-            For Dentist
+            For Dentists
           </h3>
           <p className="mt-3 text-grey-mid leading-relaxed">
             Locally made Dental Prosthetics, all digital scans accepted, nationwide courier, and

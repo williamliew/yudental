@@ -27,12 +27,12 @@ const AFFILIATIONS = [
 
 export function Affiliations() {
   return (
-    <Section className="text-center" ariaLabelledBy="affiliations-heading">
+    <Section className="bg-surface-muted text-center" ariaLabelledBy="affiliations-heading">
       <h2
         id="affiliations-heading"
         className="font-sans text-2xl font-bold text-navy md:text-3xl"
       >
-        Affiliations &amp; Regulatory Bodies
+        Affiliations &amp; Support
       </h2>
       <p className="mx-auto mt-3 max-w-2xl text-grey-mid">
         Organisations and frameworks connected with our laboratory practice.

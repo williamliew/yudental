@@ -25,7 +25,7 @@ export function Footer() {
             <Link
               href="/"
               className="inline-flex items-center gap-3 no-underline"
-              aria-label={`${SITE.name} home`}
+              aria-label={`${SITE.legalName} home`}
             >
               <Image
                 src="/yu-dental.png"
@@ -35,7 +35,7 @@ export function Footer() {
                 className="h-16 w-auto md:h-[4.5rem]"
               />
               <span className="font-display text-lg font-bold leading-tight text-white md:text-xl">
-                Yu Dental Laboratory Ltd
+                {SITE.legalName}
               </span>
             </Link>
             <p className="mt-4 text-sm text-white/75">
@@ -66,6 +66,7 @@ export function Footer() {
             </address>
             <p className="mt-4 text-sm text-white/85">{SITE.hours}</p>
             <p className="text-sm text-white/85">Saturday &amp; Sunday closed</p>
+            <p className="text-sm text-white/85">Closed on All Public Holidays</p>
           </div>
 
           <div>

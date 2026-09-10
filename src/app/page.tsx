@@ -3,6 +3,7 @@ import { DepartmentCards } from "@/components/home/DepartmentCards";
 import { Hero } from "@/components/home/Hero";
 import { ProcessSteps } from "@/components/home/ProcessSteps";
 import { ServiceIconGrid } from "@/components/home/ServiceIconGrid";
+import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { createPageMetadata } from "@/lib/metadata";
 import { SITE } from "@/lib/site";
 
@@ -18,6 +19,7 @@ export default function HomePage() {
       <Hero />
       <DepartmentCards />
       <ServiceIconGrid />
+      <WhyChooseUs />
       <ProcessSteps />
       <Affiliations />
     </>
