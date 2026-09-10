@@ -31,7 +31,7 @@ export function FamilyArchiveGallery() {
           id="family-archive-heading"
           className="text-center font-sans text-2xl font-bold text-navy md:text-3xl"
         >
-          From the family archive
+          From the Family Archive
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-grey-mid">
           Photographs from our workshop and laboratory over the years.
@@ -53,7 +53,7 @@ export function FamilyArchiveGallery() {
         </ul>
         <div className="mt-10 text-center">
           <h3 className="font-sans text-xl font-bold text-navy md:text-2xl">
-            From our family to yours
+            From our Family to Yours
           </h3>
           <p className="mx-auto mt-4 max-w-2xl italic text-grey-mid leading-relaxed">
             Whether you&apos;re looking for denture care or a dental practice looking for a

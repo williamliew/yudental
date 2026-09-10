@@ -178,14 +178,10 @@ export default function DentalLabServicesPage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-sans text-lg font-bold text-navy">Turnaround Time</h3>
-                <p className="mt-3 text-sm text-grey-mid">
-                  The turnaround time is subject to change and serves as a general guideline only.
-                </p>
-                <h4 className="mt-4 font-sans text-base font-bold text-navy">
+                <h3 className="font-sans text-lg font-bold text-navy">
                   Typical laboratory turnaround times
-                </h4>
-                <p className="mt-2 text-sm text-grey-mid">
+                </h3>
+                <p className="mt-3 text-sm text-grey-mid">
                   The following timeframes are provided as a general guide. Turnaround may vary
                   depending on case complexity, materials and laboratory workload. We&apos;ll confirm
                   timing when your case is received.
@@ -200,13 +196,15 @@ export default function DentalLabServicesPage() {
               </div>
             </article>
             <article className="relative overflow-hidden rounded-lg bg-white shadow-sm">
-              <div
-                className="h-32 bg-cover bg-center opacity-30"
-                style={{
-                  backgroundImage:
-                    "url(https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=600&h=400&fit=crop)",
-                }}
-              />
+              <div className="relative h-40 overflow-hidden bg-surface-muted md:h-44">
+                <Image
+                  src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=600&h=400&fit=crop"
+                  alt="Nationwide courier delivery for dental laboratory cases"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 400px"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="font-sans text-lg font-bold text-navy">Nationwide Delivery</h3>
                 <p className="mt-3 text-sm text-grey-mid">

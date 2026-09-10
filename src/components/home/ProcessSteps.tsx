@@ -8,11 +8,8 @@ export function ProcessSteps() {
     <Section className="text-center" ariaLabelledBy="process-heading">
       <header>
         <h2 id="process-heading" className="font-sans text-2xl font-bold text-navy md:text-3xl">
-          Our Process
-        </h2>
-        <h3 className="mt-3 text-lg font-semibold text-navy md:text-xl">
           Your New Denture Journey
-        </h3>
+        </h2>
         <p className="mx-auto mt-3 max-w-2xl text-lg text-grey-dark">
           New dentures generally require around six appointments and can often be completed within
           approximately two weeks, depending on your individual treatment needs.
@@ -38,8 +35,9 @@ export function ProcessSteps() {
         ))}
       </ol>
       <p className="mt-10 text-sm text-grey-mid text-balance">
-        Lab work for practices: <Link href="/dental-lab-services/">For Dentists</Link>. Full
-        treatment detail: <Link href="/denture-services/">Denture Services</Link>.
+        Visit our clinic: <Link href="/book/">Book online</Link>.{" "}
+        <span aria-hidden="true">|</span> Referrals for practices:{" "}
+        <Link href="/dental-lab-services/">For Dentists</Link>.
       </p>
     </Section>
   );

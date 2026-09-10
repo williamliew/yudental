@@ -66,7 +66,7 @@ export function Footer() {
             </address>
             <p className="mt-4 text-sm text-white/85">{SITE.hours}</p>
             <p className="text-sm text-white/85">Saturday &amp; Sunday closed</p>
-            <p className="text-sm text-white/85">Closed on All Public Holidays</p>
+            <p className="mt-2 text-sm text-white/85">Closed on All Public Holidays</p>
           </div>
 
           <div>

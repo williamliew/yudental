@@ -13,6 +13,10 @@ type Qualification = {
   title: string;
   institution?: string;
   note?: string;
+  award?: {
+    title: string;
+    copy: string;
+  };
 };
 
 type TeamMember = {
@@ -22,10 +26,6 @@ type TeamMember = {
   quals: Qualification[];
   accreditationsLabel?: string;
   accreditations?: string[];
-  award?: {
-    title: string;
-    copy: string;
-  };
   bio: string[];
 };
 
@@ -33,7 +33,7 @@ const TEAM: TeamMember[] = [
   {
     id: "steven-yu",
     name: "Steven Yu",
-    role: "Founder & Director | Dental Technician",
+    role: "Director",
     quals: [
       {
         title: "Diploma of Dental Technology",
@@ -41,26 +41,30 @@ const TEAM: TeamMember[] = [
       },
     ],
     bio: [
-      "Steven Yu trained in dental technology in China and Hong Kong before moving to New Zealand in 1983. He worked in Wellington laboratories for 13 years, then completed his Diploma of Dental Technology at C.I.T Wellington in 1999 at age 50. He founded Yu Dental Laboratory with Leanne and continues as Director, overseeing case quality and the standards every appliance must meet before it leaves the bench.",
+      "Steven Yu, Director, founded the laboratory in 2000 after decades of experience in New Zealand. He holds a Diploma in Dental Technology (C.I.T Wellington, 1999) and is actively involved in case planning and quality assurance for all appliances produced.",
     ],
   },
   {
     id: "leanne-yu",
     name: "Leanne Yu",
-    role: "Co-Owner | Laboratory Coordinator",
+    role: "Co-owner and coordinator",
     quals: [],
     bio: [
-      "Leanne has been part of Yu Dental since the laboratory was established, working alongside Steven as the business grew from the family home into today's Wellington clinic and laboratory. With extensive hands-on experience in dental manufacturing, she now coordinates cases, manages laboratory workflows and helps ensure each case progresses smoothly from arrival through to delivery.",
+      "Leanne Yu is the Co-owner and Coordinator. She started with Steven when the lab opened, learned how to make dental products, and now handles case coordination and daily clinic operations.",
     ],
   },
   {
     id: "allan-yu",
     name: "Allan Yu",
-    role: "Dental Prosthetist/Technician",
+    role: "Dental Prosthetist & Dental Technologist",
     quals: [
       {
         title: "Master of Science (MSc) in Dental Technology — Distinction",
         institution: "Cardiff Metropolitan University, Cardiff, Wales, UK",
+        award: {
+          title: "Programme Award",
+          copy: "Highest Postgraduate Academic Performance – MSc Dental Technology",
+        },
       },
       {
         title: "Advanced Diploma of Dental Prosthetics",
@@ -83,12 +87,8 @@ const TEAM: TeamMember[] = [
       "Registered Dental Technician – Dental Council of New Zealand",
       "Formerly registered Dental Prosthetist (Australia) – AHPRA",
     ],
-    award: {
-      title: "Programme Award",
-      copy: "Highest Postgraduate Academic Performance – MSc Dental Technology",
-    },
     bio: [
-      "Allan combines clinical denture care with dental laboratory expertise, working directly with patients while also collaborating with dentists on complex prosthetic cases. After training in dental technology and dental prosthetics at RMIT University in Melbourne, he completed an MSc in Dental Technology with Distinction at Cardiff Metropolitan University, receiving the Programme Award for the highest postgraduate academic performance in the programme. At Yu Dental, Allan works across both the clinic and laboratory, with particular interests in removable prosthodontics, complex denture treatment, implant-retained prostheses and digital dental workflows.",
+      "Allan joined the family business after training in dental technology and dental prosthetics in Australia and completing his Master's in Dental Technology in the UK. He provides clinical denture care alongside complex technical and laboratory work, bringing the clinical and laboratory sides of Yu Dental together.",
     ],
   },
 ];
@@ -145,6 +145,12 @@ export default function TeamPage() {
                             {qual.institution && (
                               <span className="mt-0.5 block">{qual.institution}</span>
                             )}
+                            {qual.award && (
+                              <div className="mt-3">
+                                <span className="block font-bold text-navy">{qual.award.title}</span>
+                                <span className="mt-0.5 block italic">{qual.award.copy}</span>
+                              </div>
+                            )}
                             {qual.note && <span className="mt-0.5 block">{qual.note}</span>}
                           </li>
                         ))}
@@ -162,12 +168,6 @@ export default function TeamPage() {
                         ))}
                       </ul>
                     </>
-                  )}
-                  {member.award && (
-                    <div className="mt-4">
-                      <h3 className="text-sm font-bold text-navy">{member.award.title}</h3>
-                      <p className="mt-1 text-sm italic text-grey-mid">{member.award.copy}</p>
-                    </div>
                   )}
                   <div className="mt-4 space-y-3 text-grey-mid leading-relaxed">
                     {member.bio.map((paragraph) => (
