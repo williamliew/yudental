@@ -12,7 +12,7 @@ export function ProcessSteps() {
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-lg text-grey-dark">
           New dentures generally require around six appointments and can often be completed within
-          approximately two weeks, depending on your individual treatment needs.
+          approximately two to four weeks, depending on your individual treatment needs.
         </p>
       </header>
       <ol className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">

@@ -21,9 +21,9 @@ const FAQS: FaqItem[] = [
     question: "1. What types of dentures do you offer?",
     answer: (
       <p>
-        We provide full dentures, partial dentures, and implant-retained overdentures. Our team will
-        guide you to the best option for your needs. See our{" "}
-        <Link href="/denture-services/">Denture Services</Link> page for more detail.
+        We provide full dentures, partial dentures, cobalt chrome dentures, implant-retained
+        overdentures and implant bar-retained overdentures. We can discuss the different options with
+        you and help determine which may be most suitable for your needs.
       </p>
     ),
   },
@@ -32,16 +32,18 @@ const FAQS: FaqItem[] = [
     answer: (
       <p>
         Most patients can expect their new dentures within 2–4 weeks, depending on the type of
-        denture and individual requirements.
+        denture and individual requirements. We&apos;ll explain the expected number of appointments
+        and timeframe at your consultation.
       </p>
     ),
   },
   {
-    question: "3. Can you repair or adjust my existing dentures?",
+    question: "3. Do you repair, reline and adjust existing dentures?",
     answer: (
       <p>
-        Yes. We offer relines and same-day repairs in most cases to restore comfort and function
-        quickly.
+        Yes. We provide denture repairs, relines and adjustments to help restore comfort, fit and
+        function. Many repairs can be completed on the same day, depending on the repair required
+        and our availability.
       </p>
     ),
   },
@@ -49,8 +51,9 @@ const FAQS: FaqItem[] = [
     question: "4. Do I need a referral to book a consultation?",
     answer: (
       <p>
-        A referral is necessary if you have any remaining teeth. You can schedule an appointment
-        with us directly, whether you are a new patient or need to replace an existing appliance.
+        If you have no remaining natural teeth, you can book directly with us without a referral. If
+        you still have natural teeth, a referral from your dentist is required. If you&apos;re
+        unsure, simply give us a call and we&apos;ll let you know what you need before booking.
       </p>
     ),
   },
@@ -129,6 +132,26 @@ const FAQS: FaqItem[] = [
           </p>
         </div>
       </div>
+    ),
+  },
+  {
+    question: "10. What happens at my first denture consultation?",
+    answer: (
+      <p>
+        Your first consultation is an opportunity to discuss your concerns, existing dentures and
+        what you would like to improve. We&apos;ll assess your needs, explain suitable treatment
+        options and discuss the expected appointments, timeframe and costs before treatment begins.
+      </p>
+    ),
+  },
+  {
+    question: "11. What should I bring to my consultation?",
+    answer: (
+      <p>
+        Please bring any dentures or oral appliances you currently use, along with any relevant
+        information or referral from your dentist. If you have a SuperGold card or are seeking a
+        WINZ quote, please let us know when booking.
+      </p>
     ),
   },
 ];

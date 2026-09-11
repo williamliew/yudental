@@ -23,6 +23,13 @@ const AFFILIATIONS = [
     width: 180,
     height: 151,
   },
+  {
+    href: "https://www.nzcouriers.co.nz/",
+    src: "/images/affiliations/nz-couriers-logo.png",
+    alt: "New Zealand Couriers",
+    width: 320,
+    height: 153,
+  },
 ] as const;
 
 export function Affiliations() {

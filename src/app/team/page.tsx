@@ -41,7 +41,10 @@ const TEAM: TeamMember[] = [
       },
     ],
     bio: [
-      "Steven Yu, Director, founded the laboratory in 2000 after decades of experience in New Zealand. He holds a Diploma in Dental Technology (C.I.T Wellington, 1999) and is actively involved in case planning and quality assurance for all appliances produced.",
+      "Steven Yu comes from a family with a long tradition in dental technology. His father was a dental technician, as were his brothers, and it was his father who first taught him the tools of the trade and introduced him to the craft.",
+      "Steven went on to train in dental technology in China and Hong Kong before moving to New Zealand in 1983. He worked in Wellington dental laboratories for 13 years before completing his Diploma of Dental Technology at C.I.T. Wellington in 1999, at the age of 50.",
+      "Together with Leanne, Steven founded Yu Dental Laboratory, carrying forward the skills and craftsmanship passed down through his family. He continues as Director, overseeing case quality and maintaining the standards every appliance must meet before it leaves the bench.",
+      "Today, that tradition continues through the next generation, with Steven having passed his knowledge and experience on to his son, Allan.",
     ],
   },
   {
@@ -50,7 +53,10 @@ const TEAM: TeamMember[] = [
     role: "Co-owner and coordinator",
     quals: [],
     bio: [
-      "Leanne Yu is the Co-owner and Coordinator. She started with Steven when the lab opened, learned how to make dental products, and now handles case coordination and daily clinic operations.",
+      "Leanne has been part of Yu Dental since the laboratory was established, working alongside Steven as the business grew from the family home into today's Wellington clinic and laboratory.",
+      "With extensive hands-on experience in dental manufacturing, she now coordinates cases, manages laboratory workflows and helps ensure each case progresses smoothly from arrival through to delivery.",
+      "Beyond her role in the laboratory, Leanne is the pillar of the Yu family. Her calm and steady presence has helped hold both the family and the business together over the years, maintaining perspective and keeping the peace during the inevitable pressures and stressful moments of running a family business.",
+      "Her contribution to Yu Dental extends well beyond the day-to-day running of the laboratory; she has been a constant presence throughout its journey and an important part of the family values on which the business was built.",
     ],
   },
   {
@@ -88,7 +94,11 @@ const TEAM: TeamMember[] = [
       "Formerly registered Dental Prosthetist (Australia) – AHPRA",
     ],
     bio: [
-      "Allan joined the family business after training in dental technology and dental prosthetics in Australia and completing his Master's in Dental Technology in the UK. He provides clinical denture care alongside complex technical and laboratory work, bringing the clinical and laboratory sides of Yu Dental together.",
+      "Allan combines clinical denture care with dental laboratory expertise, working directly with patients while also collaborating with dentists on complex prosthetic cases.",
+      "His introduction to dental technology began while studying for his Bachelor of Commerce and Administration at Victoria University of Wellington, when his father, Steven, taught him the tools of the trade and gave him his first hands-on experience in the dental laboratory.",
+      "Allan later moved to Melbourne to formally train in dental technology and dental prosthetics at RMIT University, including clinical training at the Royal Melbourne Dental Hospital. During his time in Melbourne, he also gained practical experience working across various dental laboratories, developing his technical skills and understanding of different laboratory workflows.",
+      "He subsequently completed an MSc in Dental Technology with Distinction at Cardiff Metropolitan University in Wales, receiving the Programme Award for the highest postgraduate academic performance in the programme.",
+      "At Yu Dental, Allan brings these different areas of experience together, working across both the clinic and laboratory. His particular interests include removable prosthodontics, complex denture treatment, implant-retained prostheses and digital dental workflows.",
     ],
   },
 ];

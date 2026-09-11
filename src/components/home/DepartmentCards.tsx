@@ -1,5 +1,8 @@
 import { Section } from "@/components/ui/Section";
+import { SITE } from "@/lib/site";
 import Link from "next/link";
+
+const LAB_PRESCRIPTION_PDF = "/downloads/Yu_Dental_Laboratory_Job_Sheet.pdf";
 
 export function DepartmentCards() {
   return (
@@ -21,36 +24,65 @@ export function DepartmentCards() {
         </p>
       </div>
       <div className="mt-10 grid gap-6 md:grid-cols-2">
-        <Link
-          href="/denture-services/"
-          className="group rounded-lg border border-surface-muted bg-white p-6 text-left no-underline shadow-sm transition-shadow hover:shadow-md md:p-8"
+        <article
+          className="rounded-lg border border-surface-muted bg-white p-6 text-left shadow-sm md:p-8"
         >
-          <h3 className="font-sans text-xl font-bold text-navy group-hover:text-teal">
-            For Patients
-          </h3>
+          <h3 className="font-sans text-xl font-bold text-navy">For Patients</h3>
+          <p className="mt-2 font-semibold text-navy">New Dentures, Relines &amp; Repairs</p>
           <p className="mt-3 text-grey-mid leading-relaxed">
-            New dentures, relines, repairs and same-day fixes where possible. Book online or call.
-            SuperGold cardholders welcome; ask us about fees and WINZ quotes at your first visit.
+            Personal denture care, from new dentures and relines to repairs and same-day fixes where
+            possible. SuperGold cardholders welcome. Ask us about fees and WINZ quotes at your
+            consultation.
           </p>
-          <span className="mt-4 inline-block text-sm font-semibold text-teal">
+          <p className="mt-3 text-grey-mid leading-relaxed">
+            <Link href="/book/" className="font-semibold no-underline hover:underline">
+              Book online
+            </Link>{" "}
+            or{" "}
+            <a href={`tel:${SITE.phoneTel}`} className="font-semibold no-underline hover:underline">
+              call us
+            </a>{" "}
+            to arrange your free consultation.
+          </p>
+          <Link
+            href="/denture-services/"
+            className="mt-4 inline-block text-sm font-semibold text-teal no-underline hover:underline"
+          >
             View Denture Services →
-          </span>
-        </Link>
-        <Link
-          href="/dental-lab-services/"
-          className="group rounded-lg border border-surface-muted bg-white p-6 text-left no-underline shadow-sm transition-shadow hover:shadow-md md:p-8"
+          </Link>
+        </article>
+        <article
+          className="rounded-lg border border-surface-muted bg-white p-6 text-left shadow-sm md:p-8"
         >
-          <h3 className="font-sans text-xl font-bold text-navy group-hover:text-teal">
-            For Dentists
-          </h3>
-          <p className="mt-3 text-grey-mid leading-relaxed">
-            Locally made Dental Prosthetics, all digital scans accepted, nationwide courier, and
-            direct communication on every case. Refer online or download our referral form.
+          <h3 className="font-sans text-xl font-bold text-navy">For Dentists</h3>
+          <p className="mt-2 font-semibold text-navy">
+            Locally Crafted. Digitally Connected. Nationwide Service.
           </p>
-          <span className="mt-4 inline-block text-sm font-semibold text-teal">
+          <p className="mt-3 text-grey-mid leading-relaxed">
+            Dental prosthetics crafted in our Wellington laboratory, with nationwide courier service
+            and direct communication on every case. Selected digital denture workflows accepted.
+          </p>
+          <p className="mt-3 text-grey-mid leading-relaxed">
+            <Link href="/denture-referrals/" className="font-semibold no-underline hover:underline">
+              Refer a patient online
+            </Link>{" "}
+            or{" "}
+            <a
+              href={LAB_PRESCRIPTION_PDF}
+              download="Yu_Dental_Laboratory_Job_Sheet.pdf"
+              className="font-semibold no-underline hover:underline"
+            >
+              download our lab form
+            </a>{" "}
+            to send a case.
+          </p>
+          <Link
+            href="/dental-lab-services/"
+            className="mt-4 inline-block text-sm font-semibold text-teal no-underline hover:underline"
+          >
             View Dental Laboratory Services →
-          </span>
-        </Link>
+          </Link>
+        </article>
       </div>
     </Section>
   );

@@ -61,6 +61,10 @@ export default function DentalLabServicesPage() {
         tagline="Dental appliances and services for referring practices."
         backgroundImage="/images/for-dentists.jpg"
       />
+      <p className="mx-auto max-w-3xl px-4 pt-8 text-center text-grey-mid leading-relaxed md:px-6">
+        Quality dental laboratory services for referring practices, with local craftsmanship and
+        direct communication on every case.
+      </p>
       <section className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="lab-welcome-title">
         <div className="mx-auto max-w-[var(--max-width-content)]">
           <h2
@@ -143,7 +147,7 @@ export default function DentalLabServicesPage() {
           </h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             <article className="relative overflow-hidden rounded-lg bg-white shadow-sm">
-              <div className="relative h-40 overflow-hidden bg-surface-muted md:h-44">
+              <div className="relative aspect-[3/2] overflow-hidden bg-surface-muted">
                 <Image
                   src="/images/lab-prescription-form.png"
                   alt="Yu Dental Laboratory lab prescription form"
@@ -168,12 +172,12 @@ export default function DentalLabServicesPage() {
               </div>
             </article>
             <article className="relative overflow-hidden rounded-lg bg-white shadow-sm">
-              <div className="relative h-40 overflow-hidden bg-surface-muted md:h-44">
+              <div className="relative aspect-[3/2] overflow-hidden bg-surface-muted">
                 <Image
                   src="/images/turnaround-time.png"
                   alt="Turnaround time for dental laboratory cases"
                   fill
-                  className="object-cover object-center"
+                  className="object-contain object-bottom"
                   sizes="(max-width: 768px) 100vw, 400px"
                 />
               </div>
@@ -196,10 +200,10 @@ export default function DentalLabServicesPage() {
               </div>
             </article>
             <article className="relative overflow-hidden rounded-lg bg-white shadow-sm">
-              <div className="relative h-40 overflow-hidden bg-surface-muted md:h-44">
+              <div className="relative aspect-[3/2] overflow-hidden bg-surface-muted">
                 <Image
-                  src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=600&h=400&fit=crop"
-                  alt="Nationwide courier delivery for dental laboratory cases"
+                  src="/images/nationwide-delivery.jpg"
+                  alt="New Zealand Couriers nationwide delivery"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 400px"

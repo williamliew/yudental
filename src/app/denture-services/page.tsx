@@ -25,7 +25,7 @@ const TREATMENTS: Treatment[] = [
     title: "Full Dentures",
     spriteId: "full-dentures",
     body:
-      "Full dentures are used to replace all of the teeth in either the upper or lower jaw, and sometimes both. The process begins with taking impressions of your mouth to ensure a perfect fit. We also work with you to choose the colour and mould of the teeth so they look natural. You'll visit our Te Aro clinic for a total of about six appointments spread over two weeks to complete the process. After getting your dentures, we recommend coming in for annual check-ups. This helps ensure they remain comfortable and fit well as your mouth changes over time.",
+      "Full dentures are used to replace all of the teeth in either the upper or lower jaw, and sometimes both. The process begins with taking impressions of your mouth to help achieve a comfortable and accurate fit. We also work with you to choose the colour and mould of the teeth so they look natural. You'll visit our Te Aro clinic for a total of about six appointments spread over two - four weeks to complete the process. After getting your dentures, we recommend coming in for annual check-ups. This helps ensure they remain comfortable and fit well as your mouth changes over time.",
   },
   {
     title: "Partial Dentures",
@@ -95,7 +95,8 @@ const TREATMENTS: Treatment[] = [
   {
     title: "Sleep Apnoea Device (MDSA)",
     spriteId: "sleep-apnoea-mdsa",
-    body: "A sleep apnoea device, often referred to as a mandibular advancement device (MAD), is designed to treat obstructive sleep apnoea. This custom-fitted oral appliance works by repositioning the jaw and tongue to keep the airway open during sleep, reducing snoring and improving overall sleep quality. These devices are a comfortable alternative to CPAP machines for many patients and can be tailored to fit the individual's mouth and specific needs.",
+    body:
+      "A mandibular advancement device (MAD) is a custom-made oral appliance designed to hold the lower jaw in a forward position during sleep, helping to maintain an open airway. For suitable patients, these appliances may help reduce snoring and manage obstructive sleep apnoea. Suitability should be determined following appropriate clinical assessment and diagnosis.",
   },
   {
     title: "Whitening Trays",
@@ -105,7 +106,8 @@ const TREATMENTS: Treatment[] = [
   {
     title: "Bruxism / TMJ Splints",
     spriteId: "bruxism-splints",
-    body: "Bruxism and TMJ splints are oral appliances developed to relieve the strain on the jaw caused by teeth grinding (bruxism) and temporomandibular joint disorders (TMJ). These splints help to realign the jaw and reduce muscle tension, providing relief from associated pain and discomfort. They can prevent further wear on teeth and are often recommended for use during sleep to protect tooth surfaces and promote jaw relaxation. Regular consultations can help in adjusting the splint for optimal results.",
+    body:
+      "Bruxism and TMJ splints are oral appliances developed to relieve the strain on the jaw caused by teeth grinding (bruxism) and temporomandibular joint disorders (TMJ). These splints are protecting the teeth from grinding and reducing loading on the jaw muscles/joints, providing relief from associated pain and discomfort. They can prevent further wear on teeth and are often recommended for use during sleep to protect tooth surfaces and promote jaw relaxation. Regular consultations can help in adjusting the splint for optimal results.",
   },
 ];
 
@@ -146,10 +148,11 @@ export default function DentureServicesPage() {
                 and eligible veterans. It can include discounts on goods and services from
                 participating businesses, and other benefits such as free off-peak public transport.
               </p>
-              <p className="mt-3 font-semibold text-grey-dark">
-                SuperGold cardholders are welcome here. <Link href="/contact/">Contact us</Link> or
-                mention your card when you <Link href="/book/">book online</Link> so we can explain
-                what applies to your denture treatment.
+              <p className="mt-3 leading-relaxed text-grey-dark">
+                SuperGold cardholders are welcome and can enjoy additional discounts on denture
+                treatment costs. Please <Link href="/contact/">contact us</Link> or mention your
+                card when you <Link href="/book/">book online</Link>, and we will explain the
+                discounts that apply to your denture treatment.
               </p>
               <p className="mt-3 text-sm">
                 <a href="https://www.supergold.govt.nz/" target="_blank" rel="noopener noreferrer">
@@ -176,8 +179,8 @@ export default function DentureServicesPage() {
           ))}
         </div>
         <p className="mt-8 text-grey-mid">
-          Ready to book? Use <Link href="/book/">Book online</Link> to choose patient type and
-          treatment.
+          Ready to take the next step? <Link href="/book/">Book online</Link> to choose a day and
+          time that suits you.
         </p>
       </div>
     </>

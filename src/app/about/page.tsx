@@ -1,6 +1,7 @@
 import { FamilyArchiveGallery } from "@/components/about/FamilyArchiveGallery";
 import { PageBanner } from "@/components/layout/PageBanner";
 import { createPageMetadata } from "@/lib/metadata";
+import Link from "next/link";
 
 export const metadata = createPageMetadata({
   title: "Our story",
@@ -45,23 +46,26 @@ const TIMELINE = [
 
 const PEOPLE = [
   {
+    id: "steven-yu",
     name: "Steven Yu",
     role: "Director",
     ariaLabel: "Portrait placeholder for Steven Yu",
     copy: "Steven Yu, Director, founded the laboratory in 2000 after decades of experience in New Zealand. He holds a Diploma in Dental Technology (C.I.T Wellington, 1999) and is actively involved in case planning and quality assurance for all appliances produced.",
   },
   {
+    id: "leanne-yu",
     name: "Leanne Yu",
     role: "Co-owner and coordinator",
     ariaLabel: "Portrait placeholder for Leanne Yu",
     copy: "Leanne Yu is the Co-owner and Coordinator. She started with Steven when the lab opened, learned how to make dental products, and now handles case coordination and daily clinic operations.",
   },
   {
+    id: "allan-yu",
     name: "Allan Yu",
     role: "Dental Prosthetist & Dental Technologist",
     ariaLabel: "Portrait placeholder for Allan Yu",
     copy:
-      "Allan joined the family business after training in dental technology and dental prosthetics in Australia and completing his Master's in Dental Technology in the UK. He provides clinical denture care alongside complex technical and laboratory work, bringing the clinical and laboratory sides of Yu Dental together.",
+      "Allan joined the family business after training in dental technology and dental prosthetics in Australia and completing his Master's in Dental Technology in the UK. He provides clinical denture care alongside complex technical and laboratory work, bringing the clinical and laboratory sides of Yu Dental Laboratory together.",
   },
 ] as const;
 
@@ -70,8 +74,12 @@ export default function AboutPage() {
     <>
       <PageBanner
         title="Our Story"
-        lead="From a home workshop in Wellington to a combined denture clinic and laboratory in Te Aro."
+        tagline="From a home workshop in Wellington to a combined denture clinic and laboratory in Te Aro."
       />
+      <p className="mx-auto max-w-3xl px-4 pt-8 text-center text-grey-mid leading-relaxed md:px-6">
+        From a small home workshop in Wellington to a family-run denture clinic and dental
+        laboratory in the heart of Te Aro.
+      </p>
       <div
         className="mx-auto max-w-[var(--max-width-content)] px-4 py-8 md:px-6"
         role="img"
@@ -86,11 +94,6 @@ export default function AboutPage() {
         />
       </div>
       <div className="mx-auto max-w-[var(--max-width-content)] space-y-4 px-4 pb-12 text-grey-mid leading-relaxed md:px-6">
-        <p>
-          Yu Dental began as a small family-run dental laboratory in Wellington in 2000. What
-          started from our home has grown into the combined denture clinic and dental laboratory we
-          operate today in Te Aro.
-        </p>
         <p>
           Although our surroundings have changed, the way we work has not. We remain family-run,
           our dental appliances are made locally in our own laboratory, and we continue to value
@@ -155,12 +158,26 @@ export default function AboutPage() {
                       "url(https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&h=400&fit=crop)",
                   }}
                 />
-                <h3 className="font-sans text-lg font-bold text-navy">{person.name}</h3>
+                <h3 className="font-sans text-lg font-bold text-navy">
+                  <Link
+                    href={`/team/#${person.id}`}
+                    className="text-navy no-underline hover:text-teal hover:underline"
+                  >
+                    {person.name}
+                  </Link>
+                </h3>
                 <p className="mt-1 text-sm font-semibold text-teal">{person.role}</p>
                 <p className="mt-3 text-sm text-grey-mid leading-relaxed">{person.copy}</p>
               </article>
             ))}
           </div>
+          <p className="mt-10 text-center text-grey-mid">
+            Meet the people behind Yu Dental Laboratory.{" "}
+            <Link href="/team/" className="font-semibold text-teal no-underline hover:underline">
+              Click here to read more about the team
+            </Link>
+            .
+          </p>
         </div>
       </section>
       <FamilyArchiveGallery />

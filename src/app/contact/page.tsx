@@ -54,12 +54,8 @@ export default function ContactPage() {
               Have a question before booking?
             </h3>
             <p className="mt-2 text-grey-mid">
-              Call us on{" "}
-              <a href={`tel:${SITE.phoneTel}`} className="font-semibold">
-                04 388 7491
-              </a>{" "}
-              during opening hours. We&apos;re happy to discuss your denture needs or help you
-              arrange an appointment.
+              We&apos;re happy to discuss your denture needs or help you arrange an appointment.
+              Give us a call during opening hours.
             </p>
           </div>
         </div>
