@@ -15,22 +15,44 @@ export function ProcessSteps() {
           approximately two to four weeks, depending on your individual treatment needs.
         </p>
       </header>
-      <ol className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
+      <ol className="mt-10 grid items-start gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
         {HOME_PROCESS_TILES.map((step, index) => (
-          <li key={step.id} className="flex flex-col items-center text-center">
-            <div className="flex h-24 w-24 items-center justify-center rounded-full border border-teal/20 bg-white p-3 shadow-sm md:h-28 md:w-28 lg:h-32 lg:w-32">
-              <Image
-                src={step.src}
-                alt=""
-                width={step.width}
-                height={step.height}
-                className="h-full w-full object-contain"
-                loading="lazy"
-              />
-            </div>
-            <span className="mt-4 max-w-[16rem] text-base font-semibold leading-snug text-navy md:text-lg">
-              <span className="text-teal">{index + 1}.</span> {step.label}
-            </span>
+          <li key={step.id} className="w-full">
+            <details className="group w-full rounded-lg border border-surface-muted bg-white p-4 text-left shadow-sm">
+              <summary
+                className="flex cursor-pointer list-none flex-col items-center text-center marker:content-none [&::-webkit-details-marker]:hidden"
+              >
+                <div className="flex h-24 w-24 items-center justify-center rounded-full border border-teal/20 bg-white p-3 shadow-sm md:h-28 md:w-28">
+                  <Image
+                    src={step.src}
+                    alt=""
+                    width={step.width}
+                    height={step.height}
+                    className="h-full w-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+                <span
+                  className="mt-4 flex min-h-[2.75rem] max-w-[16rem] items-start justify-center text-base font-semibold leading-snug text-navy md:min-h-[3.25rem] md:text-lg"
+                >
+                  <span>
+                    <span className="text-teal">{index + 1}.</span> {step.label}
+                  </span>
+                </span>
+                <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-teal">
+                  What to expect
+                  <span
+                    className="transition-transform group-open:rotate-180"
+                    aria-hidden="true"
+                  >
+                    ▾
+                  </span>
+                </span>
+              </summary>
+              <p className="mt-4 border-t border-surface-muted pt-4 text-sm text-grey-mid leading-relaxed">
+                {step.description}
+              </p>
+            </details>
           </li>
         ))}
       </ol>

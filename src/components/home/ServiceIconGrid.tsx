@@ -26,19 +26,19 @@ export function ServiceIconGrid() {
           <li key={service.id}>
             <Link
               href={`/denture-services/#${service.accordionId}`}
-              aria-label={getServiceLinkLabel(service.label)}
               className="block rounded-lg transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
             >
               <Image
                 src={service.src}
                 alt=""
+                aria-hidden="true"
                 width={service.width}
                 height={service.height}
                 className="h-auto w-full"
                 loading="lazy"
                 sizes="(max-width: 768px) 50vw, 25vw"
               />
-              <span className="mt-2 block text-sm font-semibold text-navy">{service.label}</span>
+              <span className="sr-only">{getServiceLinkLabel(service.label)}</span>
             </Link>
           </li>
         ))}

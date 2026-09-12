@@ -28,11 +28,11 @@ export function Footer() {
               aria-label={`${SITE.legalName} home`}
             >
               <Image
-                src="/yu-dental.png"
+                src="/yu-dental-dark.jpg"
                 alt=""
-                width={200}
-                height={67}
-                className="h-16 w-auto md:h-[4.5rem]"
+                width={1024}
+                height={1024}
+                className="h-16 w-16 shrink-0 md:h-[4.5rem] md:w-[4.5rem]"
               />
               <span className="font-display text-lg font-bold leading-tight text-white md:text-xl">
                 {SITE.legalName}

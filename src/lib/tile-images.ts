@@ -11,6 +11,10 @@ export type ServiceTileImage = TileImage & {
   accordionId: string;
 };
 
+export type ProcessTileImage = TileImage & {
+  description: string;
+};
+
 export const HOME_SERVICE_TILES: ServiceTileImage[] = [
   {
     id: "dentures-and-partials",
@@ -78,13 +82,15 @@ export const HOME_SERVICE_TILES: ServiceTileImage[] = [
   },
 ] as const;
 
-export const HOME_PROCESS_TILES: TileImage[] = [
+export const HOME_PROCESS_TILES: ProcessTileImage[] = [
   {
     id: "consultation-primary-impressions",
     label: "Consultation and Primary Impressions",
     src: "/images/process/consultation-and-primary-impressions.png",
     width: 512,
     height: 512,
+    description:
+      "We'll discuss your needs, assess your mouth and take initial impressions to begin planning your new dentures. This visit allows us to understand your goals and recommend the most suitable treatment for you.",
   },
   {
     id: "secondary-impression",
@@ -92,6 +98,8 @@ export const HOME_PROCESS_TILES: TileImage[] = [
     src: "/images/process/secondary-impressions.png",
     width: 512,
     height: 512,
+    description:
+      "More detailed impressions are taken using custom-made trays to accurately capture the shape of your mouth, helping us achieve a comfortable and precise fit for your new dentures.",
   },
   {
     id: "bite-registration",
@@ -99,6 +107,8 @@ export const HOME_PROCESS_TILES: TileImage[] = [
     src: "/images/process/bite-registration.jpg",
     width: 512,
     height: 512,
+    description:
+      "We record how your upper and lower jaws meet, measure your vertical dimension, and select your preferred tooth shade to help achieve the correct bite, facial support and natural appearance for your new dentures.",
   },
   {
     id: "wax-teeth-try-in",
@@ -106,6 +116,8 @@ export const HOME_PROCESS_TILES: TileImage[] = [
     src: "/images/process/wax-teeth-try-in.jpg",
     width: 512,
     height: 512,
+    description:
+      "Your denture teeth are set in wax so you can preview the appearance, tooth position and bite before your dentures are finished. This gives us the opportunity to make any adjustments to ensure you're happy with the look and feel.",
   },
   {
     id: "denture-insert",
@@ -113,6 +125,8 @@ export const HOME_PROCESS_TILES: TileImage[] = [
     src: "/images/process/denture-insertion.png",
     width: 512,
     height: 512,
+    description:
+      "Your completed dentures are fitted and carefully checked for comfort, fit, bite and appearance. We'll make any necessary adjustments and provide guidance on wearing and caring for your new dentures.",
   },
   {
     id: "post-insert-visit",
@@ -120,6 +134,8 @@ export const HOME_PROCESS_TILES: TileImage[] = [
     src: "/images/process/post-denture-insert-visit.png",
     width: 512,
     height: 512,
+    description:
+      "A follow-up visit allows us to check how your new dentures are settling in and make any necessary adjustments for comfort, fit and bite. We'll also address any concerns you may have.",
   },
 ] as const;
 

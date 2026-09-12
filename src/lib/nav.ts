@@ -12,7 +12,7 @@ export const NAV_ITEMS: NavItem[] = [
   { key: "denture-referrals", href: "/denture-referrals/", label: "Refer a patient" },
   { key: "team", href: "/team/", label: "Our team" },
   { key: "faq", href: "/faq/", label: "FAQ" },
-  { key: "contact", href: "/contact/", label: "Contact" },
+  { key: "contact", href: "/contact/", label: "Contact & location" },
 ];
 
 export function getNavKeyFromPath(pathname: string): string | undefined {

@@ -1,5 +1,6 @@
 import { PromiseSection } from "@/components/dental-lab/PromiseSection";
 import { PageBanner } from "@/components/layout/PageBanner";
+import { ButtonLink } from "@/components/ui/ButtonLink";
 import { createPageMetadata } from "@/lib/metadata";
 import Image from "next/image";
 import Link from "next/link";
@@ -50,7 +51,11 @@ const LAB_SERVICE_CATEGORIES = [
 
 const LAB_PRESCRIPTION_PDF = "/downloads/Yu_Dental_Laboratory_Job_Sheet.pdf";
 
-const ACCEPTED_SCANNERS = ["3Shape TRIOS®", "iTero®", "Dentsply Sirona®"] as const;
+const ACCEPTED_SCANNERS = [
+  { label: "3Shape TRIOS®", href: "/dental-lab-services/3shape-trios/" },
+  { label: "iTero®", href: "/dental-lab-services/itero/" },
+  { label: "Dentsply Sirona®", href: "/dental-lab-services/dentsply-sirona/" },
+] as const;
 
 const LAB_PARTNER_EMAIL = "yudlab@gmail.com";
 
@@ -94,6 +99,18 @@ export default function DentalLabServicesPage() {
               service we offer to your practice.
             </p>
           </div>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <ButtonLink href="/denture-referrals/" className="uppercase tracking-wide">
+              Refer a patient
+            </ButtonLink>
+            <a
+              href={LAB_PRESCRIPTION_PDF}
+              download="Yu_Dental_Laboratory_Job_Sheet.pdf"
+              className="inline-flex items-center justify-center rounded border border-teal bg-teal px-5 py-2.5 text-sm font-semibold uppercase tracking-wide text-white no-underline transition-colors duration-200 hover:border-teal-hover hover:bg-teal-hover"
+            >
+              Send a case
+            </a>
+          </div>
           <div
             className="mt-10 overflow-hidden rounded-lg border border-surface-muted bg-white"
             aria-labelledby="accepted-scanners-heading"
@@ -116,7 +133,16 @@ export default function DentalLabServicesPage() {
                 >
                   Accepted Scanners
                 </h3>
-                <p className="mt-4 text-grey-mid">{ACCEPTED_SCANNERS.join(" | ")}</p>
+                <p className="mt-4 text-grey-mid">
+                  {ACCEPTED_SCANNERS.map((scanner, index) => (
+                    <span key={scanner.href}>
+                      {index > 0 ? <span aria-hidden="true"> | </span> : null}
+                      <Link href={scanner.href} className="font-semibold no-underline hover:underline">
+                        {scanner.label}
+                      </Link>
+                    </span>
+                  ))}
+                </p>
                 <p className="mt-4 text-grey-mid leading-relaxed">
                   If you would like to partner with us, you can add us via our email,{" "}
                   <a href={`mailto:${LAB_PARTNER_EMAIL}`}>{LAB_PARTNER_EMAIL}</a>, through your
@@ -227,6 +253,8 @@ export default function DentalLabServicesPage() {
               throughout Wellington and across New Zealand.
             </p>
             <p className="mt-4 text-sm font-semibold text-navy">
+              <Link href="/denture-referrals/">Refer a Patient</Link>
+              <span aria-hidden="true"> | </span>
               <a href={LAB_PRESCRIPTION_PDF} download="Yu_Dental_Laboratory_Job_Sheet.pdf">
                 Send a Case
               </a>
