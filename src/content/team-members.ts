@@ -10,18 +10,18 @@ export const TEAM_MEMBERS: TeamMemberBase[] = [
   {
     id: "steven-yu",
     name: "Steven Yu",
-    role: "Director",
+    role: "Founder & Director | Dental Technician",
     ariaLabel: "Portrait placeholder for Steven Yu",
     shortBio:
-      "Steven Yu, Director, founded the laboratory in 2000 after decades of experience in New Zealand. He holds a Diploma in Dental Technology (C.I.T. Wellington, 1999) and is actively involved in case planning and quality assurance for all appliances produced.",
+      "Steven Yu founded the laboratory in 2000 after decades of experience in New Zealand. He holds a Diploma in Dental Technology (C.I.T. Wellington, 1999) and is actively involved in case planning and quality assurance for all appliances produced.",
   },
   {
     id: "leanne-yu",
     name: "Leanne Yu",
-    role: "Co-owner and coordinator",
+    role: "Co-Owner | Laboratory Coordinator",
     ariaLabel: "Portrait placeholder for Leanne Yu",
     shortBio:
-      "Leanne Yu is the co-owner and coordinator. She started with Steven when the lab opened, learned how to make dental products, and now handles case coordination and daily clinic operations.",
+      "Leanne Yu has been part of Yu Dental since the laboratory was established. She started with Steven when the lab opened, learned how to make dental products, and now handles case coordination and daily clinic operations.",
   },
   {
     id: "allan-yu",
