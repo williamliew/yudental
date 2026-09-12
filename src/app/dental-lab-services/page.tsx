@@ -49,7 +49,7 @@ const LAB_SERVICE_CATEGORIES = [
 
 const LAB_PRESCRIPTION_PDF = "/downloads/Yu_Dental_Laboratory_Job_Sheet.pdf";
 
-const ACCEPTED_SCANNERS = ["3Shape", "Dentsply Sirona", "iTero"] as const;
+const ACCEPTED_SCANNERS = ["3Shape TRIOS®", "iTero®", "Dentsply Sirona®"] as const;
 
 const LAB_PARTNER_EMAIL = "yudlab@gmail.com";
 
@@ -119,7 +119,7 @@ export default function DentalLabServicesPage() {
                 >
                   Accepted Scanners
                 </h3>
-                <p className="mt-4 text-grey-mid">{ACCEPTED_SCANNERS.join(" · ")}</p>
+                <p className="mt-4 text-grey-mid">{ACCEPTED_SCANNERS.join(" | ")}</p>
                 <p className="mt-4 text-grey-mid leading-relaxed">
                   If you would like to partner with us, you can add us via our email,{" "}
                   <a href={`mailto:${LAB_PARTNER_EMAIL}`}>{LAB_PARTNER_EMAIL}</a>, through your
