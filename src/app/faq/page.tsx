@@ -1,4 +1,5 @@
 import { AccordionItem, PageBanner } from "@/components/layout/PageBanner";
+import { WinzLink } from "@/components/ui/WinzLink";
 import { getFaqPageJsonLd } from "@/lib/jsonld";
 import { createPageMetadata } from "@/lib/metadata";
 import Image from "next/image";
@@ -74,7 +75,8 @@ const FAQS: FaqItem[] = [
     answer: (
       <p>
         Fees depend on the type of denture and materials. We explain costs at your consultation.
-        SuperGold cardholders and WINZ quotes welcome — mention your card when you book.
+        SuperGold cardholders and <WinzLink>WINZ quotes</WinzLink> welcome — mention your card when
+        you book.
       </p>
     ),
   },
@@ -92,11 +94,11 @@ const FAQS: FaqItem[] = [
   {
     question: "Do you accept digital scans from my dentist?",
     plainTextAnswer:
-      "Yes. We accept digital scans from iTero, 3Shape, and Dentsply Sirona workflows. Dentists can visit our For Dentists page for information on our laboratory services and how to send a digital case.",
+      "Yes. We accept digital scans from 3Shape TRIOS®, iTero® and Dentsply Sirona® workflows. Dentists can visit our For Dentists page for information on our laboratory services and how to send a digital case.",
     answer: (
       <p>
         Yes. We accept digital scans from{" "}
-        <strong>iTero, 3Shape, and Dentsply Sirona workflows.</strong> Dentists can visit our{" "}
+        <strong>3Shape TRIOS®, iTero® and Dentsply Sirona® workflows.</strong> Dentists can visit our{" "}
         <Link href="/dental-lab-services/" className="font-semibold">
           For Dentists
         </Link>{" "}
@@ -173,8 +175,8 @@ const FAQS: FaqItem[] = [
     answer: (
       <p>
         Please bring any dentures or oral appliances you currently use, along with any relevant
-        information or referral from your dentist. If you have a SuperGold card or are seeking a
-        WINZ quote, please let us know when booking.
+        information or referral from your dentist. If you have a SuperGold card or are seeking a{" "}
+        <WinzLink>WINZ quote</WinzLink>, please let us know when booking.
       </p>
     ),
   },
@@ -189,7 +191,10 @@ const FAQS: FaqItem[] = [
           <strong>EFTPOS, Visa, Mastercard, Bank Transfers and Cash.</strong>
         </p>
         <p>
-          <strong>WINZ quotes are available</strong>, and{" "}
+          <strong>
+            <WinzLink>WINZ quotes are available</WinzLink>
+          </strong>
+          , and{" "}
           <strong>SuperGold Card holders</strong> are welcome to ask us about applicable fees.
         </p>
         <p>

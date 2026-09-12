@@ -1,4 +1,5 @@
 import { Section } from "@/components/ui/Section";
+import { WinzLink } from "@/components/ui/WinzLink";
 import { SITE } from "@/lib/site";
 import Link from "next/link";
 
@@ -32,8 +33,8 @@ export function DepartmentCards() {
           <p className="mt-2 font-semibold text-navy">New Dentures, Relines &amp; Repairs</p>
           <p className="mt-3 text-grey-mid leading-relaxed">
             Personal denture care, from new dentures and relines to repairs and same-day fixes where
-            possible. SuperGold cardholders welcome. Ask us about fees and WINZ quotes at your
-            consultation.
+            possible. SuperGold cardholders welcome. Ask us about fees and{" "}
+            <WinzLink>WINZ quotes</WinzLink> at your consultation.
           </p>
           <p className="mt-3 text-grey-mid leading-relaxed">
             <Link href="/book/" className="font-semibold no-underline hover:underline">

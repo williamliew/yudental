@@ -18,6 +18,7 @@ export const SITE = {
   email: "yudlab@gmail.com",
   /** Default social sharing image (absolute path from site root). */
   ogImage: "/images/homepage.png",
+  workAndIncomeUrl: "https://www.workandincome.govt.nz",
   /** Set true when a public domain referrals inbox is ready to display on the site. */
   showReferralsEmailOnSite: false,
   /** Public referrals address; only shown when showReferralsEmailOnSite is true. */
