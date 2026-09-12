@@ -31,11 +31,19 @@ export default function ContactPage() {
                 {SITE.phone}
               </a>
             </p>
+            <p className="mt-3 text-grey-mid">
+              <strong>Email:</strong>{" "}
+              <a href={`mailto:${SITE.email}`} className="font-semibold">
+                {SITE.email}
+              </a>
+            </p>
             <h3 className="mt-8 font-sans text-xl font-bold text-navy">Opening Hours</h3>
             <p className="mt-3 text-grey-mid">
               {SITE.hours}
               <br />
               Saturday &amp; Sunday closed
+              <br />
+              Public Holidays - Closed
             </p>
           </div>
           <div className="rounded-lg border border-surface-muted bg-white p-6 shadow-sm md:p-8">
@@ -54,8 +62,11 @@ export default function ContactPage() {
               Have a question before booking?
             </h3>
             <p className="mt-2 text-grey-mid">
-              We&apos;re happy to discuss your denture needs or help you arrange an appointment.
-              Give us a call during opening hours.
+              We&apos;re happy to discuss your denture needs or help you arrange an appointment.{" "}
+              <a href={`tel:${SITE.phoneTel}`} className="font-semibold">
+                Call us
+              </a>{" "}
+              during opening hours.
             </p>
           </div>
         </div>

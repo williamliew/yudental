@@ -1,5 +1,6 @@
 import { FamilyArchiveGallery } from "@/components/about/FamilyArchiveGallery";
 import { PageBanner } from "@/components/layout/PageBanner";
+import { TEAM_MEMBERS } from "@/content/team-members";
 import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 
@@ -44,37 +45,13 @@ const TIMELINE = [
   },
 ] as const;
 
-const PEOPLE = [
-  {
-    id: "steven-yu",
-    name: "Steven Yu",
-    role: "Director",
-    ariaLabel: "Portrait placeholder for Steven Yu",
-    copy: "Steven Yu, Director, founded the laboratory in 2000 after decades of experience in New Zealand. He holds a Diploma in Dental Technology (C.I.T Wellington, 1999) and is actively involved in case planning and quality assurance for all appliances produced.",
-  },
-  {
-    id: "leanne-yu",
-    name: "Leanne Yu",
-    role: "Co-owner and coordinator",
-    ariaLabel: "Portrait placeholder for Leanne Yu",
-    copy: "Leanne Yu is the Co-owner and Coordinator. She started with Steven when the lab opened, learned how to make dental products, and now handles case coordination and daily clinic operations.",
-  },
-  {
-    id: "allan-yu",
-    name: "Allan Yu",
-    role: "Dental Prosthetist & Dental Technologist",
-    ariaLabel: "Portrait placeholder for Allan Yu",
-    copy:
-      "Allan joined the family business after training in dental technology and dental prosthetics in Australia and completing his Master's in Dental Technology in the UK. He provides clinical denture care alongside complex technical and laboratory work, bringing the clinical and laboratory sides of Yu Dental Laboratory together.",
-  },
-] as const;
-
 export default function AboutPage() {
   return (
     <>
       <PageBanner
         title="Our Story"
         tagline="From a home workshop in Wellington to a combined denture clinic and laboratory in Te Aro."
+        backgroundImage="/images/dental-laboratory-service.png"
       />
       <p className="mx-auto max-w-3xl px-4 pt-8 text-center text-grey-mid leading-relaxed md:px-6">
         From a small home workshop in Wellington to a family-run denture clinic and dental
@@ -144,7 +121,7 @@ export default function AboutPage() {
             bringing different experience and skills to the clinic and laboratory.
           </p>
           <div className="mt-10 grid gap-8 md:grid-cols-3">
-            {PEOPLE.map((person) => (
+            {TEAM_MEMBERS.map((person) => (
               <article
                 key={person.name}
                 className="rounded-lg border border-surface-muted bg-white p-6 shadow-sm"
@@ -167,7 +144,7 @@ export default function AboutPage() {
                   </Link>
                 </h3>
                 <p className="mt-1 text-sm font-semibold text-teal">{person.role}</p>
-                <p className="mt-3 text-sm text-grey-mid leading-relaxed">{person.copy}</p>
+                <p className="mt-3 text-sm text-grey-mid leading-relaxed">{person.shortBio}</p>
               </article>
             ))}
           </div>

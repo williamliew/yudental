@@ -1,4 +1,5 @@
 import { AccordionItem, PageBanner } from "@/components/layout/PageBanner";
+import { getFaqPageJsonLd } from "@/lib/jsonld";
 import { createPageMetadata } from "@/lib/metadata";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,12 +14,15 @@ export const metadata = createPageMetadata({
 
 type FaqItem = {
   question: string;
+  plainTextAnswer: string;
   answer: ReactNode;
 };
 
 const FAQS: FaqItem[] = [
   {
-    question: "1. What types of dentures do you offer?",
+    question: "What types of dentures do you offer?",
+    plainTextAnswer:
+      "We provide full dentures, partial dentures, cobalt chrome dentures, implant-retained overdentures and implant bar-retained overdentures. We can discuss the different options with you and help determine which may be most suitable for your needs.",
     answer: (
       <p>
         We provide full dentures, partial dentures, cobalt chrome dentures, implant-retained
@@ -28,7 +32,9 @@ const FAQS: FaqItem[] = [
     ),
   },
   {
-    question: "2. How long does it take to get new dentures?",
+    question: "How long does it take to get new dentures?",
+    plainTextAnswer:
+      "Most patients can expect their new dentures within 2–4 weeks, depending on the type of denture and individual requirements. We'll explain the expected number of appointments and timeframe at your consultation.",
     answer: (
       <p>
         Most patients can expect their new dentures within 2–4 weeks, depending on the type of
@@ -38,7 +44,9 @@ const FAQS: FaqItem[] = [
     ),
   },
   {
-    question: "3. Do you repair, reline and adjust existing dentures?",
+    question: "Do you repair, reline and adjust existing dentures?",
+    plainTextAnswer:
+      "Yes. We provide denture repairs, relines and adjustments to help restore comfort, fit and function. Many repairs can be completed on the same day, depending on the repair required and our availability.",
     answer: (
       <p>
         Yes. We provide denture repairs, relines and adjustments to help restore comfort, fit and
@@ -48,7 +56,9 @@ const FAQS: FaqItem[] = [
     ),
   },
   {
-    question: "4. Do I need a referral to book a consultation?",
+    question: "Do I need a referral to book a consultation?",
+    plainTextAnswer:
+      "If you have no remaining natural teeth, you can book directly with us without a referral. If you still have natural teeth, a referral from your dentist is required. If you're unsure, simply give us a call and we'll let you know what you need before booking.",
     answer: (
       <p>
         If you have no remaining natural teeth, you can book directly with us without a referral. If
@@ -58,7 +68,9 @@ const FAQS: FaqItem[] = [
     ),
   },
   {
-    question: "5. How much do dentures cost?",
+    question: "How much do dentures cost?",
+    plainTextAnswer:
+      "Fees depend on the type of denture and materials. We explain costs at your consultation. SuperGold cardholders and WINZ quotes welcome — mention your card when you book.",
     answer: (
       <p>
         Fees depend on the type of denture and materials. We explain costs at your consultation.
@@ -67,7 +79,9 @@ const FAQS: FaqItem[] = [
     ),
   },
   {
-    question: "6. Can you repair my denture today?",
+    question: "Can you repair my denture today?",
+    plainTextAnswer:
+      "Many repairs and adjustments can be done same day if we have capacity. Call us in the morning with your situation; we will tell you if we can fit you in.",
     answer: (
       <p>
         Many repairs and adjustments can be done same day if we have capacity. Call us in the
@@ -76,7 +90,9 @@ const FAQS: FaqItem[] = [
     ),
   },
   {
-    question: "7. Do you accept digital scans from my dentist?",
+    question: "Do you accept digital scans from my dentist?",
+    plainTextAnswer:
+      "Yes. We accept digital scans from iTero, 3Shape, and Dentsply Sirona workflows. Dentists can visit our For Dentists page for information on our laboratory services and how to send a digital case.",
     answer: (
       <p>
         Yes. We accept digital scans from{" "}
@@ -89,7 +105,9 @@ const FAQS: FaqItem[] = [
     ),
   },
   {
-    question: "8. Do you see patients from outside Wellington?",
+    question: "Do you see patients from outside Wellington?",
+    plainTextAnswer:
+      "Yes. Patients travel from across the Wellington region; we can discuss appointment spacing if you are coming from further away.",
     answer: (
       <p>
         Yes. Patients travel from across the Wellington region; we can discuss appointment spacing
@@ -98,7 +116,9 @@ const FAQS: FaqItem[] = [
     ),
   },
   {
-    question: "9. Do you offer SuperGold card discounts?",
+    question: "Do you offer SuperGold card discounts?",
+    plainTextAnswer:
+      "SuperGold cardholders are welcome. When you book or visit, tell us you hold a card and we will explain how our fees relate to your treatment plan. The New Zealand SuperGold card is a government-issued card for New Zealand residents aged 65 and over and eligible veterans.",
     answer: (
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
         <div className="mx-auto shrink-0 rounded-md bg-white p-3 ring-1 ring-navy/10 sm:mx-0">
@@ -135,7 +155,9 @@ const FAQS: FaqItem[] = [
     ),
   },
   {
-    question: "10. What happens at my first denture consultation?",
+    question: "What happens at my first denture consultation?",
+    plainTextAnswer:
+      "Your first consultation is an opportunity to discuss your concerns, existing dentures and what you would like to improve. We'll assess your needs, explain suitable treatment options and discuss the expected appointments, timeframe and costs before treatment begins.",
     answer: (
       <p>
         Your first consultation is an opportunity to discuss your concerns, existing dentures and
@@ -145,7 +167,9 @@ const FAQS: FaqItem[] = [
     ),
   },
   {
-    question: "11. What should I bring to my consultation?",
+    question: "What should I bring to my consultation?",
+    plainTextAnswer:
+      "Please bring any dentures or oral appliances you currently use, along with any relevant information or referral from your dentist. If you have a SuperGold card or are seeking a WINZ quote, please let us know when booking.",
     answer: (
       <p>
         Please bring any dentures or oral appliances you currently use, along with any relevant
@@ -156,9 +180,21 @@ const FAQS: FaqItem[] = [
   },
 ];
 
+const FAQ_JSON_LD = getFaqPageJsonLd(
+  FAQS.map((faq) => ({
+    question: faq.question,
+    answer: faq.plainTextAnswer,
+  })),
+);
+
 export default function FaqPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: static FAQ JSON-LD for SEO
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSON_LD) }}
+      />
       <PageBanner
         title="Frequently Asked Questions"
         tagline="Straight answers about dentures, timing and bookings."
@@ -167,7 +203,7 @@ export default function FaqPage() {
         <div className="mx-auto max-w-3xl">
           <div className="rounded-lg border border-surface-muted bg-white px-4 shadow-sm md:px-6">
             {FAQS.map((faq) => (
-              <AccordionItem key={faq.question} title={faq.question}>
+              <AccordionItem key={faq.question} title={faq.question} headingLevel="h2">
                 {faq.answer}
               </AccordionItem>
             ))}

@@ -168,7 +168,12 @@ export default function DentureServicesPage() {
         </p>
         <div className="rounded-lg border border-surface-muted bg-white px-4 shadow-sm md:px-6">
           {TREATMENTS.map((treatment) => (
-            <AccordionItem key={treatment.title} id={treatment.spriteId} title={treatment.title}>
+            <AccordionItem
+              key={treatment.title}
+              id={treatment.spriteId}
+              title={treatment.title}
+              headingLevel="h3"
+            >
               <div className="flex gap-4">
                 <ServiceSpriteIcon spriteId={treatment.spriteId} size={64} />
                 <div className="min-w-0 flex-1">

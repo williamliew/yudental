@@ -44,7 +44,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h2 className="text-sm font-bold uppercase tracking-wide text-white">Services</h2>
+            <p className="text-sm font-bold uppercase tracking-wide text-white">Services</p>
             <ul className="mt-4 space-y-2 text-sm">
               {SERVICE_LINKS.map((item) => (
                 <li key={item.href}>
@@ -57,7 +57,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h2 className="text-sm font-bold uppercase tracking-wide text-white">Location</h2>
+            <p className="text-sm font-bold uppercase tracking-wide text-white">Location</p>
             <address className="mt-4 space-y-1 text-sm not-italic text-white/85">
               <p>{SITE.address.street}</p>
               <p>
@@ -70,7 +70,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h2 className="text-sm font-bold uppercase tracking-wide text-white">Call us</h2>
+            <p className="text-sm font-bold uppercase tracking-wide text-white">Call us</p>
             <p className="mt-4">
               <a
                 href={`tel:${SITE.phoneTel}`}
@@ -79,7 +79,7 @@ export function Footer() {
                 {SITE.phone}
               </a>
             </p>
-            <h2 className="mt-6 text-sm font-bold uppercase tracking-wide text-white">Email us</h2>
+            <p className="mt-6 text-sm font-bold uppercase tracking-wide text-white">Email us</p>
             <p className="mt-4">
               <a
                 href={`mailto:${SITE.email}`}
@@ -93,7 +93,7 @@ export function Footer() {
 
         {isHome ? (
           <div className="mt-12">
-            <h2 className="mb-4 text-lg font-bold text-white">Find us</h2>
+            <p className="mb-4 text-lg font-bold text-white">Find us</p>
             <MapEmbed onDark />
           </div>
         ) : null}

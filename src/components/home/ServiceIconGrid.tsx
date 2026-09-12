@@ -38,6 +38,7 @@ export function ServiceIconGrid() {
                 loading="lazy"
                 sizes="(max-width: 768px) 50vw, 25vw"
               />
+              <span className="mt-2 block text-sm font-semibold text-navy">{service.label}</span>
             </Link>
           </li>
         ))}

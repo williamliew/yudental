@@ -1,5 +1,6 @@
 import { PageBanner } from "@/components/layout/PageBanner";
 import { ButtonLink } from "@/components/ui/ButtonLink";
+import { TEAM_MEMBERS } from "@/content/team-members";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
@@ -19,25 +20,19 @@ type Qualification = {
   };
 };
 
-type TeamMember = {
-  id: string;
-  name: string;
-  role: string;
+type TeamMemberProfile = {
   quals: Qualification[];
   accreditationsLabel?: string;
   accreditations?: string[];
   bio: string[];
 };
 
-const TEAM: TeamMember[] = [
-  {
-    id: "steven-yu",
-    name: "Steven Yu",
-    role: "Director",
+const TEAM_PROFILES: Record<string, TeamMemberProfile> = {
+  "steven-yu": {
     quals: [
       {
         title: "Diploma of Dental Technology",
-        institution: "C.I.T Wellington, 1999",
+        institution: "C.I.T. Wellington, 1999",
       },
     ],
     bio: [
@@ -47,10 +42,7 @@ const TEAM: TeamMember[] = [
       "Today, that tradition continues through the next generation, with Steven having passed his knowledge and experience on to his son, Allan.",
     ],
   },
-  {
-    id: "leanne-yu",
-    name: "Leanne Yu",
-    role: "Co-owner and coordinator",
+  "leanne-yu": {
     quals: [],
     bio: [
       "Leanne has been part of Yu Dental since the laboratory was established, working alongside Steven as the business grew from the family home into today's Wellington clinic and laboratory.",
@@ -59,10 +51,7 @@ const TEAM: TeamMember[] = [
       "Her contribution to Yu Dental extends well beyond the day-to-day running of the laboratory; she has been a constant presence throughout its journey and an important part of the family values on which the business was built.",
     ],
   },
-  {
-    id: "allan-yu",
-    name: "Allan Yu",
-    role: "Dental Prosthetist & Dental Technologist",
+  "allan-yu": {
     quals: [
       {
         title: "Master of Science (MSc) in Dental Technology — Distinction",
@@ -101,7 +90,12 @@ const TEAM: TeamMember[] = [
       "At Yu Dental, Allan brings these different areas of experience together, working across both the clinic and laboratory. His particular interests include removable prosthodontics, complex denture treatment, implant-retained prostheses and digital dental workflows.",
     ],
   },
-];
+};
+
+const TEAM = TEAM_MEMBERS.map((member) => ({
+  ...member,
+  ...TEAM_PROFILES[member.id],
+}));
 
 export default function TeamPage() {
   return (

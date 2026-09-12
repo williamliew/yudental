@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 
-const DEFAULT_BANNER_BACKGROUND =
-  "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1600&h=600&fit=crop";
+const DEFAULT_BANNER_BACKGROUND = "/images/homepage.png";
 
 type PageBannerProps = {
   title: string;
@@ -13,7 +12,6 @@ type PageBannerProps = {
 
 export function PageBanner({ title, tagline, lead, backgroundImage }: PageBannerProps) {
   const backgroundUrl = backgroundImage ?? DEFAULT_BANNER_BACKGROUND;
-  const usesCustomBackground = Boolean(backgroundImage);
 
   return (
     <section
@@ -21,9 +19,7 @@ export function PageBanner({ title, tagline, lead, backgroundImage }: PageBanner
       aria-labelledby="page-banner-heading"
     >
       <div
-        className={`absolute inset-0 bg-cover bg-center ${
-          usesCustomBackground ? "opacity-45" : "opacity-35 grayscale"
-        }`}
+        className="absolute inset-0 bg-cover bg-center opacity-45"
         style={{
           backgroundImage: `url(${backgroundUrl})`,
         }}
@@ -51,14 +47,17 @@ export function PageBanner({ title, tagline, lead, backgroundImage }: PageBanner
 type AccordionItemProps = {
   id?: string;
   title: string;
+  headingLevel?: "h2" | "h3";
   children: ReactNode;
 };
 
-export function AccordionItem({ id, title, children }: AccordionItemProps) {
+export function AccordionItem({ id, title, headingLevel, children }: AccordionItemProps) {
+  const TitleTag = headingLevel ?? "span";
+
   return (
     <details id={id} className="group scroll-mt-28 border-b border-surface-muted last:border-b-0">
       <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 font-semibold text-navy marker:content-none [&::-webkit-details-marker]:hidden">
-        <span>{title}</span>
+        <TitleTag className={headingLevel ? "font-semibold text-navy" : undefined}>{title}</TitleTag>
         <span className="text-teal transition-transform group-open:rotate-180" aria-hidden="true">
           ▾
         </span>
