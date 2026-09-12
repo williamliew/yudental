@@ -15,12 +15,13 @@ export function DepartmentCards() {
       </h2>
       <div className="mx-auto mt-4 max-w-3xl space-y-3 text-grey-mid">
         <p>
-          Patients choose us for expert denture relines, repairs, and comprehensive care, while
-          referring dental practices trust us for quality dental laboratory services.
+          Patients choose us for quality dentures, expert relines and repairs, and personalised
+          denture care, while referring dental practices trust us for reliable, high-quality dental
+          laboratory services.
         </p>
         <p>
-          Every case is carefully planned and crafted right here in Wellington, ensuring the highest
-          standards for our patients &amp; clients.
+          Every case is carefully planned and crafted in our Wellington clinic and laboratory, with a
+          focus on quality, precision and care for every patient and dental practice we work with.
         </p>
       </div>
       <div className="mt-10 grid gap-6 md:grid-cols-2">

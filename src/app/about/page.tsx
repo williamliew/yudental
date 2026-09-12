@@ -50,13 +50,9 @@ export default function AboutPage() {
     <>
       <PageBanner
         title="Our Story"
-        tagline="From a home workshop in Wellington to a combined denture clinic and laboratory in Te Aro."
+        tagline="From a small home workshop in Wellington to a family-run denture clinic and dental laboratory in the heart of Te Aro."
         backgroundImage="/images/dental-laboratory-service.png"
       />
-      <p className="mx-auto max-w-3xl px-4 pt-8 text-center text-grey-mid leading-relaxed md:px-6">
-        From a small home workshop in Wellington to a family-run denture clinic and dental
-        laboratory in the heart of Te Aro.
-      </p>
       <div
         className="mx-auto max-w-[var(--max-width-content)] px-4 py-8 md:px-6"
         role="img"

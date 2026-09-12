@@ -17,6 +17,13 @@ export const metadata = createPageMetadata({
 type Treatment = {
   title: string;
   spriteId: ServiceSpriteId;
+  accordionId?: string;
+  illustration?: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
   body: ReactNode;
 };
 
@@ -26,6 +33,35 @@ const TREATMENTS: Treatment[] = [
     spriteId: "full-dentures",
     body:
       "Full dentures are used to replace all of the teeth in either the upper or lower jaw, and sometimes both. The process begins with taking impressions of your mouth to help achieve a comfortable and accurate fit. We also work with you to choose the colour and mould of the teeth so they look natural. You'll visit our Te Aro clinic for a total of about six appointments spread over two - four weeks to complete the process. After getting your dentures, we recommend coming in for annual check-ups. This helps ensure they remain comfortable and fit well as your mouth changes over time.",
+  },
+  {
+    title: "Full & Partial Immediate Dentures",
+    spriteId: "full-dentures",
+    accordionId: "immediate-dentures",
+    illustration: {
+      src: "/images/services/immediate-dentures.jpg",
+      alt: "Illustration of full and partial dentures",
+      width: 1024,
+      height: 682,
+    },
+    body: (
+      <div className="space-y-4">
+        <p>
+          Immediate dentures are made in advance and fitted{" "}
+          <strong>on the same day your natural teeth are removed,</strong> so you can leave with your
+          new teeth in place. We work closely with your dentist to carefully plan and coordinate your
+          treatment, whether you require a full or partial immediate denture.
+        </p>
+        <p>
+          As your gums and bone naturally heal and reshape following extractions, the fit of your
+          denture will change.{" "}
+          <strong>
+            A reline is commonly required around 6 months after treatment
+          </strong>{" "}
+          to improve the fit, comfort and stability of your denture once healing has progressed.
+        </p>
+      </div>
+    ),
   },
   {
     title: "Partial Dentures",
@@ -170,12 +206,25 @@ export default function DentureServicesPage() {
           {TREATMENTS.map((treatment) => (
             <AccordionItem
               key={treatment.title}
-              id={treatment.spriteId}
+              id={treatment.accordionId ?? treatment.spriteId}
               title={treatment.title}
               headingLevel="h3"
             >
-              <div className="flex gap-4">
-                <ServiceSpriteIcon spriteId={treatment.spriteId} size={64} />
+              <div className="flex items-start gap-4">
+                {treatment.illustration ? (
+                  <div className="flex h-16 w-28 shrink-0 items-center justify-center overflow-hidden rounded-md bg-white md:w-32">
+                    <Image
+                      src={treatment.illustration.src}
+                      alt={treatment.illustration.alt}
+                      width={treatment.illustration.width}
+                      height={treatment.illustration.height}
+                      className="max-h-full max-w-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                ) : (
+                  <ServiceSpriteIcon spriteId={treatment.spriteId} size={64} />
+                )}
                 <div className="min-w-0 flex-1">
                   {typeof treatment.body === "string" ? <p>{treatment.body}</p> : treatment.body}
                 </div>

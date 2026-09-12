@@ -16,6 +16,7 @@ const LAB_SERVICE_CATEGORIES = [
     title: "Dentures & Removable Prosthetics",
     items: [
       "Full & Partial Dentures",
+      "Full & Partial Immediate Dentures",
       "Precision Attachment Dentures",
       "Cobalt Chrome Frameworks",
       "Repairs, Relines & Additions",
@@ -58,13 +59,9 @@ export default function DentalLabServicesPage() {
     <>
       <PageBanner
         title="For Dentists"
-        tagline="Dental appliances and services for referring practices."
+        tagline="Quality dental laboratory services for referring practices, with local craftsmanship and direct communication on every case."
         backgroundImage="/images/for-dentists.jpg"
       />
-      <p className="mx-auto max-w-3xl px-4 pt-8 text-center text-grey-mid leading-relaxed md:px-6">
-        Quality dental laboratory services for referring practices, with local craftsmanship and
-        direct communication on every case.
-      </p>
       <section className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="lab-welcome-title">
         <div className="mx-auto max-w-[var(--max-width-content)]">
           <h2
@@ -212,9 +209,10 @@ export default function DentalLabServicesPage() {
               <div className="p-6">
                 <h3 className="font-sans text-lg font-bold text-navy">Nationwide Delivery</h3>
                 <p className="mt-3 text-sm text-grey-mid">
-                  We provide overnight courier service for practices throughout New Zealand. Please
-                  allow an additional working day for courier delivery when planning patient
-                  appointments.
+                  We use overnight courier services throughout New Zealand. Referring practices are
+                  responsible for cases and courier costs when sending work to our laboratory. We
+                  arrange and cover the return courier of completed cases. Please allow an
+                  additional working day for delivery when planning patient appointments.
                 </p>
               </div>
             </article>

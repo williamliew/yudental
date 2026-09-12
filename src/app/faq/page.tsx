@@ -178,6 +178,27 @@ const FAQS: FaqItem[] = [
       </p>
     ),
   },
+  {
+    question: "Payment & Fees",
+    plainTextAnswer:
+      "Payment is due at the time of treatment unless otherwise arranged. We accept EFTPOS, Visa, Mastercard, bank transfers and cash. WINZ quotes are available, and SuperGold cardholders are welcome to ask us about applicable fees. Treatment costs and payment arrangements will be discussed with you before treatment begins.",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Payment is due at the time of treatment unless otherwise arranged. We accept{" "}
+          <strong>EFTPOS, Visa, Mastercard, Bank Transfers and Cash.</strong>
+        </p>
+        <p>
+          <strong>WINZ quotes are available</strong>, and{" "}
+          <strong>SuperGold Card holders</strong> are welcome to ask us about applicable fees.
+        </p>
+        <p>
+          Treatment costs and payment arrangements will be discussed with you before treatment
+          begins.
+        </p>
+      </div>
+    ),
+  },
 ];
 
 const FAQ_JSON_LD = getFaqPageJsonLd(
