@@ -1,5 +1,5 @@
 import { ReferralForm } from "@/components/forms/ReferralForm";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 
 vi.mock("next/script", () => ({
   default: () => null,
@@ -52,22 +52,4 @@ describe("ReferralForm", () => {
     expect(text).not.toMatch(/mailto:/i);
   });
 
-  it("explains that documents will be requested after submit", () => {
-    render(<ReferralForm />);
-
-    expect(
-      screen.getByText(
-        /we will contact you to request any referral letters or supporting documents/i,
-      ),
-    ).toBeInTheDocument();
-  });
-
-  it("shows clinic phone for urgent enquiries", () => {
-    render(<ReferralForm />);
-
-    expect(screen.getByRole("link", { name: "04-388 7491" })).toHaveAttribute(
-      "href",
-      "tel:+6443887491",
-    );
-  });
 });

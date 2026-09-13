@@ -6,10 +6,10 @@ export type NavItem = {
 
 export const NAV_ITEMS: NavItem[] = [
   { key: "home", href: "/", label: "Home" },
-  { key: "about", href: "/about/", label: "About" },
   { key: "denture-services", href: "/denture-services/", label: "Denture services" },
   { key: "dental-lab-services", href: "/dental-lab-services/", label: "For dentists" },
   { key: "denture-referrals", href: "/denture-referrals/", label: "Refer a patient" },
+  { key: "about", href: "/about/", label: "About" },
   { key: "team", href: "/team/", label: "Our team" },
   { key: "faq", href: "/faq/", label: "FAQ" },
   { key: "contact", href: "/contact/", label: "Contact & location" },

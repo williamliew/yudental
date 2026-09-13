@@ -13,11 +13,15 @@ const HALAXY_BOOKING_URL =
 export default function BookPage() {
   return (
     <>
-      <PageBanner title="Book an Appointment" tagline="Choose your treatment and book online." />
+      <PageBanner title="Book an Appointment" tagline="Book a Free Consultation" />
       <div className="mx-auto max-w-4xl px-4 py-12 md:px-6 md:py-16">
         <p className="text-grey-mid leading-relaxed">
-          Use the booking form below to request an appointment. New and existing patients can choose
-          their treatment and preferred times directly online.
+          Use the booking form below to request your appointment.{" "}
+          <strong>
+            New patients are always welcome, and we&apos;re pleased to welcome existing patients
+            back.
+          </strong>{" "}
+          Simply choose your preferred appointment time and submit your request online.
         </p>
         <div className="mt-8 h-[min(80vh,900px)] min-h-[600px] rounded-lg border border-surface-muted bg-white shadow-sm">
           <iframe

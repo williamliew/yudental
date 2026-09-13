@@ -59,33 +59,20 @@ function getReferralSuccessMessage(): string {
 export function ReferralForm() {
   return (
     <div className="rounded-lg border border-surface-muted bg-white p-6 shadow-sm md:p-8">
-      <div className="space-y-2 text-sm text-grey-mid">
-        <p>
-          Submit patient details below. We will contact you to request any referral letters or
-          supporting documents.
-        </p>
-        {SITE.showReferralsEmailOnSite && SITE.referralsEmail ? (
-          <p>
-            You can also email documents to{" "}
-            <a
-              href={`mailto:${SITE.referralsEmail}?subject=${encodeURIComponent("Referral")}`}
-              className="font-semibold text-teal underline-offset-2 hover:underline"
-            >
-              {SITE.referralsEmail}
-            </a>
-            .
-          </p>
-        ) : null}
-        <p>
-          For urgent enquiries, call{" "}
-          <a href={`tel:${SITE.phoneTel}`} className="font-semibold text-teal hover:underline">
-            {SITE.phone}
+      {SITE.showReferralsEmailOnSite && SITE.referralsEmail ? (
+        <p className="text-sm text-grey-mid">
+          You can also email documents to{" "}
+          <a
+            href={`mailto:${SITE.referralsEmail}?subject=${encodeURIComponent("Referral")}`}
+            className="font-semibold text-teal underline-offset-2 hover:underline"
+          >
+            {SITE.referralsEmail}
           </a>
           .
         </p>
-      </div>
+      ) : null}
 
-      <div className="mt-6">
+      <div className={SITE.showReferralsEmailOnSite && SITE.referralsEmail ? "mt-6" : undefined}>
         <Web3Form
           id="referral-form"
           successMessage={getReferralSuccessMessage()}
