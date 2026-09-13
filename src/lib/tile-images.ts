@@ -130,7 +130,7 @@ export const HOME_PROCESS_TILES: ProcessTileImage[] = [
   },
   {
     id: "post-insert-visit",
-    label: "Post Insert Visit",
+    label: "Follow Up Check",
     src: "/images/process/post-denture-insert-visit.png",
     width: 512,
     height: 512,
