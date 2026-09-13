@@ -13,6 +13,7 @@ type PromiseSectionProps = {
   servicesTitle?: string;
   services?: ReadonlyArray<string | ReactNode>;
   serviceCategories?: ReadonlyArray<ServiceCategory>;
+  className?: string;
 };
 
 export function PromiseSection({
@@ -22,9 +23,10 @@ export function PromiseSection({
   servicesTitle = "Services",
   services,
   serviceCategories,
+  className,
 }: PromiseSectionProps) {
   return (
-    <Section ariaLabelledBy="promise-heading">
+    <Section className={className} ariaLabelledBy="promise-heading">
       <h2
         id="promise-heading"
         className="text-center font-sans text-2xl font-bold text-navy md:text-3xl"

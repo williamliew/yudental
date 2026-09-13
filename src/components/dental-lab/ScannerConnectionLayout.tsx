@@ -71,10 +71,10 @@ export function ScannerConnectionLayout({
             </div>
             <div className="overflow-hidden rounded-lg border border-surface-muted bg-white p-4">
               <Image
-                src="/images/digital-scans/digitally-accepted-scans-workflow.png"
+                src="/images/digital-scans/connect-with-us.jpg"
                 alt={illustrationAlt}
                 width={1024}
-                height={1024}
+                height={682}
                 className="h-auto w-full"
                 loading="lazy"
               />

@@ -118,10 +118,10 @@ export default function DentalLabServicesPage() {
             <div className="flex flex-col md:flex-row">
               <div className="shrink-0 border-b border-surface-muted bg-white p-4 md:w-72 md:border-r md:border-b-0 lg:w-80 lg:p-6">
                 <Image
-                  src="/images/digital-scans/digitally-accepted-scans-workflow.png"
-                  alt="Digitally accepted scans from dentist to lab via email: dentist workstation, STL file transfer, and dental lab workstation"
+                  src="/images/digital-scans/connect-with-us.jpg"
+                  alt="Dental scanner workstation sending digital scan data through the cloud to Yu Dental Laboratory"
                   width={1024}
-                  height={1024}
+                  height={682}
                   className="h-auto w-full"
                   loading="lazy"
                 />
@@ -155,12 +155,13 @@ export default function DentalLabServicesPage() {
         </div>
       </section>
       <PromiseSection
+        className="bg-surface-muted"
         heading="Our Commitment to Your Practice"
         promiseCopy="We combine skilled workmanship, modern materials and direct communication to support predictable clinical outcomes. From straightforward cases to more complex removable prosthodontic work, we work closely with you throughout the case."
         servicesTitle="Dental Laboratory Services"
         serviceCategories={LAB_SERVICE_CATEGORIES}
       />
-      <section className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="process-heading">
+      <section className="bg-white px-4 py-12 md:px-6 md:py-16" aria-labelledby="process-heading">
         <div className="mx-auto max-w-[var(--max-width-content)]">
           <h2
             id="process-heading"

@@ -1,5 +1,6 @@
 import { ScannerConnectionLayout } from "@/components/dental-lab/ScannerConnectionLayout";
 import { createPageMetadata } from "@/lib/metadata";
+import { SITE } from "@/lib/site";
 
 const CONNECT_CASE_CENTER_URL = "https://customer.connectcasecenter.com/register/selectType";
 const DS_CORE_URL =
@@ -23,7 +24,7 @@ export default function DentsplySironaPage() {
         <>
           <li>Scan your patient using <strong>CEREC® Connect</strong>.</li>
           <li>Upload the scan to the <strong>Connect Case Center</strong>.</li>
-          <li>Select <strong>Yu Dental Laboratory LTD</strong> as your laboratory.</li>
+          <li>Select <strong>{SITE.legalName}</strong> as your laboratory.</li>
           <li><strong>Send the case to us.</strong></li>
         </>
       }
@@ -42,7 +43,7 @@ export default function DentsplySironaPage() {
           .
         </p>
       }
-      illustrationAlt="Digital scan workflow from CEREC workstation to Yu Dental Laboratory"
+      illustrationAlt="Dental scanner sending digital scan data through the cloud to Yu Dental Laboratory"
     />
   );
 }

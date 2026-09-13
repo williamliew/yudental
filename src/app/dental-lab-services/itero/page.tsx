@@ -1,5 +1,6 @@
 import { ScannerConnectionLayout } from "@/components/dental-lab/ScannerConnectionLayout";
 import { createPageMetadata } from "@/lib/metadata";
+import { SITE } from "@/lib/site";
 
 const ITERO_ADD_LAB_URL =
   "https://learn.itero.com/en-US/video/C0CA4199-2BC7-46F7-BD63AD9D0855CDAB";
@@ -17,7 +18,7 @@ export default function IteroPage() {
       bannerTitle="Sending Your iTero™ Scans"
       bannerTagline="Connect your iTero™ account with Yu Dental Laboratory to send your digital scans directly to us."
       sectionTitle="Connect with us on iTero™"
-      intro={<p>Find or add Yu Dental Laboratory to your iTero™ laboratory list.</p>}
+      intro={<p>Find or add {SITE.legalName} to your iTero™ laboratory list.</p>}
       steps={
         <>
           <li>
@@ -25,14 +26,14 @@ export default function IteroPage() {
               Add a Lab
               <span className="sr-only"> (opens in new tab)</span>
             </a>{" "}
-            and select <strong>Yu Dental Laboratory</strong>.
+            and select <strong>{SITE.legalName}</strong>.
           </li>
           <li>Scan your patient.</li>
           <li>Review your scan.</li>
           <li><strong>Send your case to us.</strong></li>
         </>
       }
-      illustrationAlt="Digital scan workflow from iTero workstation to Yu Dental Laboratory"
+      illustrationAlt="Dental scanner sending digital scan data through the cloud to Yu Dental Laboratory"
     />
   );
 }

@@ -1,5 +1,6 @@
 import { ScannerConnectionLayout } from "@/components/dental-lab/ScannerConnectionLayout";
 import { createPageMetadata } from "@/lib/metadata";
+import { SITE } from "@/lib/site";
 
 export const metadata = createPageMetadata({
   title: "Sending 3Shape TRIOS scans",
@@ -25,13 +26,13 @@ export default function ThreeShapeTriosPage() {
           <li>Log in to your <strong>3Shape Communicate®</strong> account.</li>
           <li>Go to <strong>Connections → Add Connection</strong>.</li>
           <li>Search for <strong>yudlab@gmail.com</strong>.</li>
-          <li>Select <strong>Yu Dental Laboratory LTD</strong>.</li>
+          <li>Select <strong>{SITE.legalName}</strong>.</li>
           <li>Accept the agreement and click <strong>Connect</strong>.</li>
           <li>Once approved, refresh your TRIOS® lab connections.</li>
           <li><strong>You&apos;re ready to send your scans to us.</strong></li>
         </>
       }
-      illustrationAlt="Digital scan workflow from dentist workstation to Yu Dental Laboratory via secure transfer"
+      illustrationAlt="Dental scanner sending digital scan data through the cloud to Yu Dental Laboratory"
       cta={{
         label: "3Shape Communicate®",
         href: "https://portal.3shapecommunicate.com/login",
