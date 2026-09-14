@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 const SERVICE_LINKS = [
   { href: "/denture-services/", label: "Denture services" },
   { href: "/dental-lab-services/", label: "Dental lab services" },
-  { href: "/denture-referrals/", label: "Refer a patient" },
+  { href: "/denture-referrals/", label: "Patient referral" },
   { href: "/book/", label: "Book online" },
 ] as const;
 

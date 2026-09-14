@@ -16,7 +16,7 @@ export const metadata = createPageMetadata({
 export default function DentsplySironaPage() {
   return (
     <ScannerConnectionLayout
-      bannerTitle="Connect Your CEREC® Scanner with Yu Dental Laboratory"
+      bannerTitle="Connect to Yu Dental Laboratory with CEREC®"
       bannerTagline="Connect through the Sirona Connect Online Portal to send your CEREC® digital scans directly to Yu Dental Laboratory for fabrication."
       sectionTitle="Sending Your CEREC® Scans"
       intro={<p>Once registered with CEREC® Connect:</p>}

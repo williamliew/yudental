@@ -167,7 +167,7 @@ export default function DentalLabServicesPage() {
             id="process-heading"
             className="text-center font-sans text-2xl font-bold text-navy md:text-3xl"
           >
-            The Process
+            Our Laboratory Process
           </h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             <article className="relative overflow-hidden rounded-lg bg-white shadow-sm">
