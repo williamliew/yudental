@@ -14,17 +14,10 @@ export function DepartmentCards() {
       >
         Patients and Referring Dental Professionals
       </h2>
-      <div className="mx-auto mt-4 max-w-3xl space-y-3 text-grey-mid">
-        <p>
-          Patients choose us for quality dentures, expert relines and repairs, and personalised
-          denture care, while referring dental practices trust us for reliable, high-quality dental
-          laboratory services.
-        </p>
-        <p>
-          Every case is carefully planned and crafted in our Wellington clinic and laboratory, with a
-          focus on quality, precision and care for every patient and dental practice we work with.
-        </p>
-      </div>
+      <p className="mx-auto mt-4 max-w-3xl text-grey-mid">
+        Every case is carefully planned and crafted in our Wellington clinic and laboratory, with a
+        focus on quality, precision and care for every patient and dental practice we work with.
+      </p>
       <div className="mt-10 grid gap-6 md:grid-cols-2">
         <article
           className="rounded-lg border border-surface-muted bg-white p-6 text-left shadow-sm md:p-8"

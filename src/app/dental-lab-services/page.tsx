@@ -76,11 +76,11 @@ export default function DentalLabServicesPage() {
             Welcome to the Dental Laboratory
           </h2>
           <p className="mt-4 text-lg text-grey-mid leading-relaxed">
-            At Yu Dental Laboratory, we focus on creating high-quality aesthetic dental appliances
-            designed for dental practices across New Zealand. Whether you need a single tooth
-            replacement or a complete denture, we prioritise precision and care in every product we
-            deliver. Based in Wellington, we provide nationwide courier services to collaborate
-            effectively with dental professionals throughout the country.
+            At Yu Dental Laboratory, we focus on creating high-quality, aesthetic dental appliances
+            for dental practices across New Zealand. Whether you need a single-tooth replacement or
+            a complete denture, we prioritise precision and care in every case. Based in
+            Wellington, we use nationwide courier services to receive and return cases, allowing us
+            to work closely with dental professionals throughout New Zealand.
           </p>
           <div className="mt-6 space-y-4 text-grey-mid leading-relaxed">
             <p>

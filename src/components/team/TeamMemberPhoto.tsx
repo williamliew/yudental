@@ -23,7 +23,7 @@ export function TeamMemberPhoto({
 
   return (
     <div
-      className={`overflow-hidden rounded-lg border border-surface-muted/80 bg-white ${layoutClass} ${className}`}
+      className={`overflow-hidden rounded-lg ${layoutClass} ${className}`}
     >
       <Image
         src={src}
