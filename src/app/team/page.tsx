@@ -1,4 +1,5 @@
 import { PageBanner } from "@/components/layout/PageBanner";
+import { TeamMemberPhoto } from "@/components/team/TeamMemberPhoto";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { TEAM_MEMBERS } from "@/content/team-members";
 import { createPageMetadata } from "@/lib/metadata";
@@ -45,7 +46,7 @@ const TEAM_PROFILES: Record<string, TeamMemberProfile> = {
   "leanne-yu": {
     quals: [],
     bio: [
-      "Leanne has been part of Yu Dental since the laboratory was established, working alongside Steven as the business grew from the family home into today's Wellington clinic and laboratory.",
+      "Leanne has been part of Yu Dental Laboratory since it was established, working alongside Steven as the business grew from the family home into today's Wellington clinic and laboratory.",
       "With extensive hands-on experience in dental manufacturing, she now coordinates cases, manages laboratory workflows and helps ensure each case progresses smoothly from arrival through to delivery.",
       "Beyond her role in the laboratory, Leanne is the pillar of the Yu family. Her calm and steady presence has helped hold both the family and the business together over the years, maintaining perspective and keeping the peace during the inevitable pressures and stressful moments of running a family business.",
       "Her contribution to Yu Dental extends well beyond the day-to-day running of the laboratory; she has been a constant presence throughout its journey and an important part of the family values on which the business was built.",
@@ -102,40 +103,23 @@ export default function TeamPage() {
     <>
       <PageBanner
         title="Our Team"
-        tagline="Meet the Yu Dental Team. Two generations. One family. Decades of dental laboratory experience."
+        tagline="The Family Behind the Bench. Two generations. One family. Decades of dental laboratory experience."
       />
       <section className="px-4 py-12 md:px-6 md:py-16" aria-label="Our team">
         <div className="mx-auto max-w-[var(--max-width-content)]">
-          <p className="max-w-3xl text-grey-mid leading-relaxed">
+          <p className="mx-auto max-w-3xl text-center text-grey-mid leading-relaxed">
             Our family works together at our Wellington denture clinic and dental laboratory,
             combining traditional craftsmanship with clinical experience and modern digital
             techniques.
           </p>
-          <div
-            className="mt-8 h-56 rounded-lg bg-cover bg-center md:h-72"
-            role="img"
-            aria-label="Yu Dental Laboratory team"
-            style={{
-              backgroundImage:
-                "url(https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1200&h=600&fit=crop)",
-            }}
-          />
           <div className="mt-12 space-y-12">
             {TEAM.map((member) => (
               <article
                 key={member.id}
                 id={member.id}
-                className="grid gap-6 rounded-lg border border-surface-muted bg-white p-6 shadow-sm md:grid-cols-[200px_1fr] md:p-8"
+                className="grid gap-6 rounded-lg border border-surface-muted bg-white p-6 shadow-sm md:grid-cols-[220px_1fr] md:items-start md:p-8"
               >
-                <div
-                  className="h-48 rounded-lg bg-surface-muted bg-cover bg-center md:h-auto"
-                  role="img"
-                  aria-label={`Headshot placeholder for ${member.name}`}
-                  style={{
-                    backgroundImage:
-                      "url(https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&h=400&fit=crop)",
-                  }}
-                />
+                <TeamMemberPhoto src={member.imageSrc} alt={member.ariaLabel} />
                 <div>
                   <h2 className="font-sans text-2xl font-bold text-navy">{member.name}</h2>
                   <p className="mt-1 text-sm font-semibold text-teal">{member.role}</p>
@@ -151,7 +135,9 @@ export default function TeamPage() {
                             )}
                             {qual.award && (
                               <div className="mt-3">
-                                <span className="block font-bold text-navy">{qual.award.title}</span>
+                                <span className="block font-bold text-navy">
+                                  {qual.award.title}
+                                </span>
                                 <span className="mt-0.5 block italic">{qual.award.copy}</span>
                               </div>
                             )}

@@ -1,7 +1,9 @@
 import { FamilyArchiveGallery } from "@/components/about/FamilyArchiveGallery";
 import { PageBanner } from "@/components/layout/PageBanner";
+import { TeamMemberPhoto } from "@/components/team/TeamMemberPhoto";
 import { TEAM_MEMBERS } from "@/content/team-members";
 import { createPageMetadata } from "@/lib/metadata";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = createPageMetadata({
@@ -15,13 +17,12 @@ const TIMELINE = [
   {
     title: "Where It All Began",
     era: "1998",
-    copy:
-      "The idea for Yu Dental began at our family home in Wellington, with a vision of building an independent dental laboratory focused on quality craftsmanship and personal service.",
+    copy: "The idea for Yu Dental began at our family home in Wellington, with a vision of building an independent dental laboratory focused on quality craftsmanship and personal service.",
   },
   {
     title: "Officially a Family Endeavour",
     era: "2000",
-    copy: "The laboratory was officially registered as a Limited Liability Company, marking a commitment to serve their community and support local families.",
+    copy: "Yu Dental Laboratory was officially registered as a Limited Liability Company, representing an important milestone in our family's commitment to delivering trusted, locally made dental prosthetics and personalised care.",
   },
   {
     title: "The Home Workshop Years",
@@ -53,23 +54,21 @@ export default function AboutPage() {
         tagline="From a small home workshop in Wellington to a family-run denture clinic and dental laboratory in the heart of Te Aro."
         backgroundImage="/images/dental-laboratory-service.png"
       />
-      <div
-        className="mx-auto max-w-[var(--max-width-content)] px-4 py-8 md:px-6"
-        role="img"
-        aria-label="Family or laboratory portrait placeholder: replace with your chosen photograph"
-      >
-        <div
-          className="h-64 rounded-lg bg-cover bg-center md:h-80"
-          style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1200&h=600&fit=crop)",
-          }}
+      <div className="mx-auto max-w-[var(--max-width-content)] px-4 py-8 md:px-6">
+        <Image
+          src="/images/our-story.jpg"
+          alt="Yu Dental Laboratory storefront at 12 College Street, Te Aro, Wellington"
+          width={1024}
+          height={768}
+          className="h-auto w-full rounded-lg"
+          sizes="(max-width: 768px) 100vw, var(--max-width-content)"
+          priority
         />
       </div>
       <div className="mx-auto max-w-[var(--max-width-content)] space-y-4 px-4 pb-12 text-grey-mid leading-relaxed md:px-6">
         <p>
-          Although our surroundings have changed, the way we work has not. We remain family-run,
-          our dental appliances are made locally in our own laboratory, and we continue to value
+          Although our surroundings have changed, the way we work has not. We remain family-run, our
+          dental appliances are made locally in our own laboratory, and we continue to value
           personal relationships with the patients and dentists who place their trust in us.
         </p>
         <p>
@@ -122,14 +121,11 @@ export default function AboutPage() {
                 key={person.name}
                 className="rounded-lg border border-surface-muted bg-white p-6 shadow-sm"
               >
-                <div
-                  className="mb-4 h-40 rounded bg-surface-muted bg-cover bg-center"
-                  role="img"
-                  aria-label={person.ariaLabel}
-                  style={{
-                    backgroundImage:
-                      "url(https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&h=400&fit=crop)",
-                  }}
+                <TeamMemberPhoto
+                  src={person.imageSrc}
+                  alt={person.ariaLabel}
+                  layout="card"
+                  className="mb-4"
                 />
                 <h3 className="font-sans text-lg font-bold text-navy">
                   <Link
