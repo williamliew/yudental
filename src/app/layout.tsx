@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { FixedContactTab } from "@/components/layout/FixedContactTab";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
       </head>
       <body>
+        <GoogleAnalytics />
         <a
           href="#main-content"
           className="absolute left-4 top-4 z-[100] -translate-y-20 rounded bg-navy px-4 py-2 text-white no-underline focus:translate-y-0"

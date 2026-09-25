@@ -16,6 +16,8 @@ export const SITE = {
   },
   hours: "Monday – Friday 8.30am – 5pm",
   email: "yudlab@gmail.com",
+  /** Google Analytics 4 measurement ID (public). */
+  googleAnalyticsMeasurementId: "G-JTNXVCFWMV",
   /** Default social sharing image (absolute path from site root). */
   ogImage: "/images/homepage.png",
   workAndIncomeUrl: "https://www.workandincome.govt.nz",
