@@ -54,6 +54,9 @@ const defaultUrl = `${SITE.url}/`;
 
 export const rootMetadata: Metadata = {
   metadataBase: new URL(SITE.url),
+  verification: {
+    google: "7SlO4y7P2CbCnCQGQbD3Y_fsZ36r3Bh6pdVN_-6zMHI",
+  },
   title: {
     default: defaultTitle,
     template: `%s | ${SITE.name}`,
